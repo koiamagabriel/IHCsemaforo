@@ -17,42 +17,38 @@ Leia obrigatoriamente o [Guia para definir o escopo de IHC a partir do tema do T
 
 ## Identificação
 
-**Título do projeto de IHC:** {{TÍTULO DO PROJETO}}  
-**TCC/projeto de origem:** {{TÍTULO ORIGINAL DO TCC}}  
-**Orientador(a):** {{NOME}}  
+**Título do projeto de IHC:** Interface para Simulação e Análise de Controle Semafórico Inteligente  
+**TCC/projeto de origem:** Algoritmo Híbrido de Controle Semafórico Baseado em Max Pressure e Lógica Actuated em Ambiente de Simulação  
+**Orientador(a):** Ricardo de Carvalho Destro  
 **Disciplina:** Interação Humano-Computador  
-**Instituição:** {{INSTITUIÇÃO}}  
-**Semestre:** {{ANO/SEMESTRE}}
+**Instituição:** Centro Universitário FEI  
+**Semestre:** 2026/2
 
 ### Equipe
 
 | Nome completo | Matrícula | GitHub | Responsabilidade principal |
 |---|---:|---|---|
-| {{Nome 1}} | {{matrícula}} | {{@usuario}} | {{...}} |
-| {{Nome 2}} | {{matrícula}} | {{@usuario}} | {{...}} |
+| Gabriel Koiama de Rocha Lira | {{MATRÍCULA}} | @koiamagabriel | Desenvolvimento do projeto de IHC |
+| João Pedro Lopes Santana Villas Bôas | {{MATRÍCULA}} | {{@GITHUB}} | Desenvolvimento do projeto de IHC |
 
 ## Relação entre TCC e projeto de IHC
 
 | Item | Descrição |
 |---|---|
-| Tema central do TCC | {{...}} |
-| Resultado técnico esperado do TCC | {{algoritmo, estudo, sistema, modelo, análise, API...}} |
-| O TCC já previa interface? | sim / não / parcialmente |
-| Capacidade técnica que pode gerar valor para pessoas | {{...}} |
-| Usuário principal adotado em IHC | {{...}} |
-| Objetivo principal desse usuário | {{...}} |
-| Interface/recorte explorado na disciplina | {{...}} |
-| Relação com o escopo formal do TCC | parte prevista / extensão conceitual / protótipo demonstrativo / outra |
+| Tema central do TCC | Desenvolvimento de um algoritmo híbrido de controle semafórico inteligente baseado em Max Pressure e lógica actuated. |
+| Resultado técnico esperado do TCC | Algoritmo de controle semafórico implementado em Python e integrado ao SUMO por meio do TraCI, permitindo comparar diferentes estratégias de controle. |
+| O TCC já previa interface? | Sim |
+| Capacidade técnica que pode gerar valor para pessoas | Simular diferentes cenários de tráfego e avaliar o comportamento de estratégias de controle semafórico a partir dos resultados obtidos e com eles. |
+| Usuário principal adotado em IHC | Pesquisador ou analista de mobilidade urbana. |
+| Objetivo principal desse usuário | Configurar uma simulação de tráfego, executá-la, analisar os resultados dos diferentes métodos de controle semafórico e com isso, descobrir o melhor método de controle. |
+| Interface/recorte explorado na disciplina | Interfaces para definição da malha viária, configuração da simulação e visualização dos resultados por meio de dashboard e relatório. |
+| Relação com o escopo formal do TCC | extensão conceitual / protótipo demonstrativo |
 
 > **Importante:** a tabela acima explica a relação entre os dois trabalhos. Ela não altera o compromisso formal do TCC.
 
 ## Resumo do projeto pela perspectiva do usuário
 
-Escreva **um parágrafo curto e concreto** explicando: quem é o usuário escolhido, o que precisa alcançar, qual problema enfrenta ou qual atividade precisa executar, em qual contexto e como a contribuição do TCC se relaciona com essa situação.
-
-Evite começar pela tecnologia.
-
-> **Estrutura sugerida:** “`{{tipo de usuário}}` precisa `{{objetivo}}` em `{{contexto}}`. Atualmente enfrenta `{{problema/limitação}}` e utiliza `{{processo/alternativa atual}}`. O tema do TCC investiga `{{contribuição técnica}}`. Para fins da disciplina de IHC, será explorada uma interface que permita `{{forma de uso da contribuição}}`.”
+Um **pesquisador ou analista de mobilidade urbana** precisa configurar e analisar simulações de controle semafórico. Para isso, é necessário definir a malha viária, configurar parâmetros da simulação, escolher o método de controle e interpretar os resultados obtidos. O TCC investiga um algoritmo híbrido baseado em Max Pressure e lógica actuated. Para a disciplina de IHC, será explorado um conjunto de interfaces que permita ao usuário **definir onde simular, configurar como a simulação será realizada e analisar os resultados gerados**.
 
 Se alguma afirmação ainda não estiver sustentada por evidência, registre-a como hipótese na [Entrega 1](docs/01_conhecendo_o_problema.md).
 
@@ -82,7 +78,11 @@ A reflexão sobre usuários ajuda a equipe a explicar o projeto para públicos e
 
 **problema humano → contribuição computacional → forma de uso → impacto potencial**.
 
-O protótipo de IHC pode, portanto, funcionar como uma demonstração do potencial de mercado, transferência tecnológica ou impacto extensionista do tema do TCC, sem necessariamente integrar a implementação final do trabalho de conclusão.
+No projeto, a interface permitirá representar de maneira mais simples o funcionamento da solução:
+
+**definição da malha viária → configuração da simulação → execução → análise dos resultados**.
+
+O protótipo de IHC pode, portanto, funcionar como uma demonstração do potencial de aplicação do TCC, sem necessariamente integrar a implementação final do trabalho de conclusão.
 
 ## Como usar este repositório
 
@@ -123,7 +123,11 @@ O projeto deve formar uma cadeia de evidências:
 
 **tema/contribuição do TCC → possível aplicação → usuários/stakeholders → objetivos → problema/contexto → alternativas → necessidades → personas → cenários → tarefas → modelo conceitual → MoLIC → protótipo → planejamento → inspeção → teste com usuários → melhorias**.
 
-Uma entrega não deve “reiniciar” o projeto. Se o escopo de IHC foi criado para um DBA, por exemplo, as personas, tarefas, MoLIC, protótipo e avaliação devem permanecer coerentes com esse perfil, salvo quando novas evidências justificarem a revisão.
+No nosso projeto, o fluxo principal será:
+
+**definição da malha viária → configuração da simulação → execução → dashboard/relatório de resultados**.
+
+Uma entrega não deve “reiniciar” o projeto. As personas, tarefas, MoLIC, protótipo e avaliação devem permanecer coerentes com esse fluxo, salvo quando novas evidências justificarem a revisão.
 
 ## Documentos de apoio
 
