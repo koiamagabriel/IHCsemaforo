@@ -406,13 +406,15 @@ O recorte inicial considera o seguinte fluxo:
 
 A equipe pode registrar possibilidades para investigação. **Não significa que todas serão implementadas.**
 
+Marque apenas as que parecem plausíveis e explique o objetivo correspondente.
+
 | Possibilidade | Pode fazer sentido? | Objetivo/tarefa que justificaria | Evidência atual |
 |---|---|---|---|
-| Dashboard/visão geral | sim, como hipótese inicial | Interpretar as principais métricas após a execução. | H — formato ainda precisa ser validado |
-| Configuração/parametrização | sim | Definir as condições utilizadas no experimento. | F — experimentos possuem parâmetros; interação ainda será definida |
-| Entrada/upload/seleção de dados | sim | Definir a malha ou cenário utilizado na simulação. | H — recorte inicial discutido em aula |
+| Dashboard/visão geral | sim, como hipótese inicial | Interpretar as principais métricas após a execução. | H03 — formato ainda precisa ser validado |
+| Configuração/parametrização | sim | Definir as condições utilizadas no experimento. | F — os experimentos possuem parâmetros; interação ainda será definida |
+| Entrada/upload/seleção de dados | sim | Definir a malha ou cenário utilizado na simulação. | H02 — recorte inicial discutido em aula |
 | Acompanhamento de processamento | talvez | Saber se a simulação está em execução, concluída ou apresentou falha. | H |
-| Relatório/resultados | sim, como hipótese inicial | Interpretar e comunicar os resultados do experimento. | F/H — métricas existem; formato ainda será validado |
+| Relatório/resultados | sim, como hipótese inicial | Interpretar e comunicar os resultados do experimento. | H03 — métricas existem; formato ainda será validado |
 | Histórico com busca/filtros | talvez | Recuperar experimentos anteriores e reproduzir comparações. | ? |
 | Comparação de resultados | sim | Comparar o desempenho dos métodos sob condições equivalentes. | F — faz parte da metodologia do TCC |
 | Explicabilidade/detalhamento | talvez | Investigar detalhes de uma execução ou resultado. | ? |
@@ -434,7 +436,7 @@ A equipe pode registrar possibilidades para investigação. **Não significa que
 | Benefício esperado | Problema/necessidade | Usuário | Status/evidência |
 |---|---|---|---|
 | Facilitar a configuração dos experimentos. | Necessidade de definir corretamente cenário, parâmetros e método. | Pesquisador/analista | H — H02 |
-| Facilitar a interpretação dos resultados. | Diferentes métricas precisam ser analisadas após cada execução. | Pesquisador/analista | H |
+| Facilitar a interpretação dos resultados. | Diferentes métricas precisam ser analisadas após cada execução. | Pesquisador/analista | H — H03 |
 | Facilitar a comparação entre estratégias. | O TCC compara métodos sob condições equivalentes. | Pesquisador/analista | F/H |
 | Reduzir a necessidade de interação direta com detalhes técnicos internos. | O ambiente experimental possui diferentes configurações e componentes técnicos. | Pesquisador/analista | H — H02 |
 
@@ -442,14 +444,14 @@ A equipe pode registrar possibilidades para investigação. **Não significa que
 
 | ID | O usuário precisa conseguir... | Para alcançar... | Prioridade inicial |
 |---|---|---|---|
-| F01 | Definir ou selecionar a malha viária. | Estabelecer onde o experimento será realizado. | alta |
-| F02 | Configurar parâmetros do experimento. | Definir as condições da simulação. | alta |
-| F03 | Selecionar a estratégia de controle. | Determinar qual método será avaliado. | alta |
-| F04 | Iniciar uma simulação. | Executar o experimento configurado. | alta |
-| F05 | Verificar o estado da execução. | Saber se o experimento está em andamento, concluído ou apresentou problema. | média |
-| F06 | Consultar as métricas obtidas. | Compreender o desempenho da execução. | alta |
-| F07 | Comparar resultados. | Avaliar diferenças entre métodos ou cenários. | alta |
-| F08 | Consultar ou gerar uma síntese dos resultados. | Registrar e comunicar os resultados do experimento. | média |
+| T01 | Definir ou selecionar a malha viária. | Estabelecer onde o experimento será realizado. | alta |
+| T02 | Configurar parâmetros do experimento. | Definir as condições da simulação. | alta |
+| T03 | Selecionar a estratégia de controle. | Determinar qual método será avaliado. | alta |
+| T04 | Iniciar uma simulação. | Executar o experimento configurado. | alta |
+| T05 | Verificar o estado da execução. | Saber se o experimento está em andamento, concluído ou apresentou problema. | média |
+| T06 | Consultar as métricas obtidas. | Compreender o desempenho da execução. | alta |
+| T07 | Comparar resultados. | Avaliar diferenças entre métodos ou cenários. | alta |
+| T08 | Consultar ou gerar uma síntese dos resultados. | Registrar e comunicar os resultados do experimento. | média |
 
 ## 9.3 Tecnologias/restrições já definidas no TCC
 
@@ -472,11 +474,11 @@ A tecnologia aparece **agora**, depois do entendimento do uso.
 
 | ID | Hipótese/dúvida | Por que importa | Como poderá ser investigada |
 |---|---|---|---|
-| H01 | Pesquisadores ou analistas de mobilidade representam adequadamente o usuário prioritário da interface. | O perfil escolhido influencia tarefas, linguagem, contexto e decisões de interação. | Entregas 2, 3 e 7 |
+| H01 | Pesquisadores ou analistas de mobilidade representam adequadamente o usuário prioritário da interface. | O perfil escolhido influencia tarefas, linguagem, contexto, personas e decisões de interação. | Entregas 2, 3 e 7 |
 | H02 | Organizar a interação em definição da malha, configuração/execução e análise dos resultados facilita a realização dos experimentos em relação à interação direta com as ferramentas técnicas. | Esse fluxo é a base inicial do recorte de IHC e precisa ser validado. | Entregas 3, 5, 6 e 7 |
 | H03 | Uma apresentação comparativa das métricas por meio de dashboard ou relatório facilita a interpretação do desempenho dos métodos. | A forma de apresentar os resultados influencia a comparação e compreensão dos experimentos. | Entregas 2, 6, 7 e 12–14 |
 
-Registre em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
+As hipóteses H01, H02 e H03 estão registradas em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md) e deverão ser atualizadas ao longo do semestre conforme novas evidências forem obtidas.
 
 ---
 
@@ -552,7 +554,7 @@ Essa síntese ajuda a apresentar o projeto para público não especializado sem 
 - [x] Possibilidades como dashboard, relatório, histórico, filtros e CRUD foram tratadas como hipóteses de solução, não como requisitos automáticos.
 - [x] Cada possibilidade de interface tem um objetivo/tarefa que poderia justificá-la.
 - [x] Afirmações relevantes estão marcadas `[F]`, `[H]` ou `[?]`.
-- [ ] Hipóteses prioritárias receberam IDs e foram para a rastreabilidade.
+- [x] Hipóteses prioritárias receberam IDs e foram para a rastreabilidade.
 - [x] O recorte de IHC é viável para modelar, prototipar e avaliar no semestre.
 - [x] A equipe consegue explicar problema humano → contribuição computacional → forma de uso.
 
@@ -563,4 +565,5 @@ Essa síntese ajuda a apresentar o projeto para público não especializado sem 
 - LIRA, Gabriel Koiama de Rocha; VILLAS BÔAS, João Pedro Lopes Santana. **Algoritmo Híbrido de Controle Semafórico Baseado em Max Pressure e Lógica Actuated em Ambiente de Simulação**. Trabalho de Conclusão de Curso, Centro Universitário FEI, 2026.
 - [Guia de uso, formatação e apresentação](../GUIA_DE_USO.md).
 - [Guia para definir o escopo de IHC a partir do tema do TCC](../GUIA_ESCOPO_IHC.md).
+- [Matriz de rastreabilidade de IHC](../RASTREABILIDADE.md).
 - Orientações e discussão realizadas com o professor durante a disciplina de Interação Humano-Computador.
