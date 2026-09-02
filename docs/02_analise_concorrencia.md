@@ -66,7 +66,7 @@ A existência dessas ferramentas e de recursos voltados à configuração, execu
 
 ### Análise C01 — Aimsun Next
 
-**Autor(a):** Gabriel Koiama de Rocha Lira — {{MATRÍCULA}}  
+**Autor(a):** Gabriel Koiama de Rocha Lira — 22.125.067-3
 **Tipo:** indireto  
 **Link oficial:** https://www.aimsun.com/aimsun-next/  
 **Data de acesso:** 02/09/2026
@@ -145,7 +145,7 @@ Esses padrões apresentam relação principalmente com T01, T02, T04, T05, T06 e
 
 ### Análise C02 — PTV Vissim
 
-**Autor(a):** João Pedro Lopes Santana Villas Bôas — {{MATRÍCULA}}  
+**Autor(a):** João Pedro Lopes Santana Villas Bôas — 22.125.065-7
 **Tipo:** indireto  
 **Link oficial:** https://www.ptvgroup.com/en/products/ptv-vissim  
 **Data de acesso:** 02/09/2026
@@ -229,7 +229,7 @@ Analise interfaces que moldam a expectativa do público, mesmo que não sejam co
 
 | Software | Por que o público usa | Padrões relevantes | Prints | O que aprender |
 |---|---|---|---|---|
-| SUMO / NetEdit / SUMO-GUI | O SUMO é uma ferramenta voltada à simulação de tráfego e já faz parte do ambiente técnico utilizado no próprio TCC. O NetEdit permite trabalhar graficamente com redes e elementos utilizados pelas simulações, enquanto o SUMO-GUI permite acompanhar visualmente a execução. | editor visual de rede, seleção de objetos, edição de propriedades, modos de edição, controles de simulação, representação visual dos veículos e semáforos | `../assets/02_concorrencia/software_sumo_netedit.png` | Como o SUMO já disponibiliza ferramentas específicas para criação e visualização da rede, a interface do TCC não precisa necessariamente reproduzir todas essas funções. Deve ser investigado quais operações precisam ser integradas ou simplificadas para o fluxo experimental definido. |
+| SUMO / NetEdit / SUMO-GUI | O SUMO é uma ferramenta voltada à simulação de tráfego e já faz parte do ambiente técnico utilizado no próprio TCC. O NetEdit permite trabalhar graficamente com redes e elementos utilizados pelas simulações, enquanto o SUMO-GUI permite acompanhar visualmente a execução. | editor visual de rede, seleção de objetos, edição de propriedades, modos de edição, controles de simulação, representação visual dos veículos e semáforos | ![Interface do SUMO NetEdit](../assets/02_concorrencia/software_sumo_netedit.png) | Como o SUMO já disponibiliza ferramentas específicas para criação e visualização da rede, a interface do TCC não precisa necessariamente reproduzir todas essas funções. Deve ser investigado quais operações precisam ser integradas ou simplificadas para o fluxo experimental definido. |
 
 ## 3.1 Padrões de interface relevantes ao escopo de IHC
 
@@ -286,6 +286,7 @@ Liste recomendações com origem explícita.
 - PTV GROUP. **PTV Vissim Help**. Documentação oficial da interface, configuração, execução e avaliação do software. Acesso em: 02 set. 2026.
 - ECLIPSE SUMO. **NetEdit**. Disponível em: https://eclipse.dev/sumo/docs/Netedit/index.html. Acesso em: 02 set. 2026.
 - ECLIPSE SUMO. **SUMO — Simulation of Urban MObility**. Documentação oficial. Acesso em: 02 set. 2026.
+- ECLIPSE SUMO. **Port Tutorial — Network Editing with NetEdit**. Disponível em: https://eclipse.dev/sumo/docs/Tutorials/port.html. Acesso em: 02 set. 2026.
 - LIRA, Gabriel Koiama de Rocha; VILLAS BÔAS, João Pedro Lopes Santana. **Algoritmo Híbrido de Controle Semafórico Baseado em Max Pressure e Lógica Actuated em Ambiente de Simulação**. Centro Universitário FEI, 2026.
 - [Entrega 1 — Conhecendo o projeto, o usuário e o problema](01_conhecendo_o_problema.md).
 - [Matriz de rastreabilidade de IHC](../RASTREABILIDADE.md).
