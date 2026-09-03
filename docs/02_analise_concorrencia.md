@@ -287,6 +287,11 @@ Liste recomendações com origem explícita.
 - PTV GROUP. **PTV Vissim**. Disponível em: https://www.ptvgroup.com/en/products/ptv-vissim. Acesso em: 02 set. 2026.
 - PTV GROUP. **PTV Vissim 2026 Help — User Interface**. Disponível em: https://cgi.ptvgroup.com/vision-help/VISSIM_2026_EN-DE/en-us/Content/2_Programmbedienung/Programmoberflaeche.htm. Acesso em: 02 set. 2026.
 - PTV GROUP. **PTV Vissim 2026 Help — Simulation Parameters**. Disponível em: https://cgi.ptvgroup.com/vision-help/VISSIM_2026_EN-DE/en-us/Content/9_SimulationundTest/Simulationsparameter_setzen.htm. Acesso em: 02 set. 2026.
+- PTV GROUP. **Scenario Manager in Vissim and Viswalk — Part II.3**. Disponível em: https://blog.ptvgroup.com/en/technologyplus/scenario-manager-in-vissim-and-viswalk-part-ii-3/. Acesso em: 02 set. 2026.
+- PTV GROUP. **PTV Vissim — Step-by-Step Tutorial for Simulating Signalized Urban Intersections**. Material oficial da PTV. Disponível em: https://www.ptvgroup.com/sites/default/files/2025-08/PTV%20Vissim%20-%20Step-by-Step%20Tutorial%20for%20Simulating%20Signalized%20Urban%20Intersections%201.pdf. Acesso em: 02 set. 2026.
+- PTV GROUP. **PTV Vissim 2026 Help — Checking the Runtime Warnings**. Disponível em: https://cgi.ptvgroup.com/vision-help/VISSIM_2026_EN-DE/en-us/Content/14_LaufzeitmeldungenFehler/Laufzeitwarnungen_errDatei.htm. Acesso em: 02 set. 2026.
+- PTV GROUP. **Scenario Manager in Vissim and Viswalk — Part II.4**. Disponível em: https://blog.ptvgroup.com/en/technologyplus/scenario-manager-in-vissim-and-viswalk-part-ii-4/. Acesso em: 02 set. 2026.
+- PTV GROUP. **PTV Vissim 2026 Help — Creating Charts**. Disponível em: https://cgi.ptvgroup.com/vision-help/VISSIM_2026_EN-DE/en-us/Content/12_Diagramme/Diag_anlegen.htm. Acesso em: 02 set. 2026.
 - ECLIPSE SUMO. **NetEdit**. Disponível em: https://eclipse.dev/sumo/docs/Netedit/. Acesso em: 02 set. 2026.
 - ECLIPSE SUMO. **Port Tutorial — Network Editing with NetEdit**. Disponível em: https://eclipse.dev/sumo/docs/Tutorials/port.html. Acesso em: 02 set. 2026.
 - LIRA, Gabriel Koiama de Rocha; VILLAS BÔAS, João Pedro Lopes Santana. **Algoritmo Híbrido de Controle Semafórico Baseado em Max Pressure e Lógica Actuated em Ambiente de Simulação**. Centro Universitário FEI, 2026.
