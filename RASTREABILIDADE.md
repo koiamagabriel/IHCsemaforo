@@ -10,7 +10,7 @@ Para projetos cujo TCC não previa interface, esta matriz é especialmente impor
 |---|---|---|---|
 | Tema do TCC | Algoritmo híbrido de controle semafórico baseado em Max Pressure e lógica actuated em ambiente de simulação. | TCC1 — título, introdução e metodologia. | definido |
 | Resultado técnico esperado | Algoritmo híbrido de controle semafórico acompanhado de avaliação experimental em ambiente de simulação. | TCC1 — objetivos e metodologia. | definido |
-| O TCC previa interface? | parcialmente | A equipe já considerava o desenvolvimento de uma interface antes da disciplina de IHC, porém ela ainda não está formalmente detalhada no documento atual do TCC1. | definido |
+| O TCC previa interface? | sim, parcialmente definida | A equipe já considerava o desenvolvimento de uma interface antes da disciplina de IHC, porém ela ainda não está formalmente detalhada no documento atual do TCC1. | definido |
 | Capacidade/contribuição central | Selecionar dinamicamente os movimentos semafóricos prioritários e controlar a permanência ou troca do verde de acordo com o estado observado do tráfego. | TCC1 — proposta do algoritmo Max Pressure + lógica actuated. | definido |
 | Possíveis beneficiários/stakeholders | Pesquisadores de mobilidade, analistas/engenheiros de tráfego, gestores de mobilidade, órgãos responsáveis pelo trânsito e, indiretamente, usuários das vias. | Entrega 1 — Seção 2. Os perfis profissionais ainda precisam ser investigados. | H |
 | Usuário escolhido para IHC | Pesquisador ou analista de mobilidade urbana. | H01 — perfil possui relação plausível com configuração, execução e análise de experimentos de controle semafórico. | H |
