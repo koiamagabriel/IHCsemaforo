@@ -59,8 +59,8 @@ Uma hipótese explicitada é melhor do que uma suposição escondida.
 
 | Nome completo | Matrícula | GitHub |
 |---|---:|---|
-| Gabriel Koiama de Rocha Lira | {{MATRÍCULA}} | @koiamagabriel |
-| João Pedro Lopes Santana Villas Bôas | {{MATRÍCULA}} | {{@GITHUB}} |
+| Gabriel Koiama de Rocha Lira | 22.125.067-3 | @koiamagabriel |
+| João Pedro Lopes Santana Villas Bôas | 22.125.065-7 | @JPLopes05 |
 
 ## 0.2 Título atual do TCC
 
