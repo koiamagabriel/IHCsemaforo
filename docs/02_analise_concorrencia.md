@@ -1,7 +1,7 @@
 # Entrega 2 — Público-alvo e análise de concorrência
 
 **Data:** 02/09/2026  
-**Status:** 🟨 em andamento  
+**Status:** 🟩 Concluído  
 **Responsabilidade mínima:** cada integrante analisa pelo menos 1 concorrente/interface representativa; a equipe produz síntese comparativa.
 
 ## Objetivo da atividade
@@ -89,7 +89,7 @@ Essa organização possui relação com o caráter experimental do TCC, no qual 
 | Organização de cenários e experimentos | O software diferencia cenários, experimentos e replicações, permitindo que diferentes alternativas sejam associadas ao mesmo contexto de simulação. | ![Organização de cenários e experimentos no Aimsun Next](../assets/02_concorrencia/c01_aimsun_02_experimentos.png) | A separação explícita entre cenário, configuração experimental e execução facilita compreender quais condições originaram cada resultado. |
 | Configuração de parâmetros | Configurações são organizadas em editores e grupos de propriedades relacionados ao cenário ou ao experimento selecionado. | ![Configuração de experimento no Aimsun Next](../assets/02_concorrencia/c01_aimsun_03_configuracao.png) | O agrupamento de parâmetros evita apresentar todas as configurações simultaneamente, embora seja necessário compreender a hierarquia utilizada pela ferramenta. |
 | Execução da simulação | A interface apresenta controles para iniciar, pausar, avançar e interromper a simulação. | ![Controles de execução do Aimsun Next](../assets/02_concorrencia/c01_aimsun_04_execucao.png) | Ações relacionadas à execução permanecem identificáveis e próximas ao contexto da simulação que está sendo realizada. |
-| Feedback sobre a execução | Durante a simulação, o usuário possui informações relacionadas à execução ativa e ao estado do processamento. | ![Controles e estado da execução no Aimsun Next](../assets/02_concorrencia/c01_aimsun_04_execucao.png) | O feedback reduz a incerteza sobre o estado atual do experimento e possui relação direta com T05. |
+| Feedback sobre a execução | Durante a simulação, o usuário possui informações relacionadas à execução ativa e ao estado do processamento. | [ver print da execução](../assets/02_concorrencia/c01_aimsun_04_execucao.png) | O feedback reduz a incerteza sobre o estado atual do experimento e possui relação direta com T05. |
 | Verificação da configuração | A ferramenta possui mecanismos para identificar problemas ou inconsistências antes ou durante a realização dos experimentos. | ![Check and Fix do Aimsun Next](../assets/02_concorrencia/c01_aimsun_05_validacao.png) | A prevenção de erros antes da execução pode evitar que uma simulação seja realizada com condições incompletas ou inconsistentes. |
 | Visualização dos resultados | Os resultados das execuções podem ser associados às respectivas replicações e analisados por diferentes formas de saída e séries de dados. | ![Resumo de resultados de uma replicação no Aimsun Next](../assets/02_concorrencia/c01_aimsun_06_resultados.png) | Manter o resultado associado à execução que o originou favorece rastreabilidade e comparação. |
 
@@ -168,7 +168,7 @@ A interface combina elementos como editor visual da rede, painéis de propriedad
 | Organização dos elementos do projeto | Objetos e configurações podem ser acessados por painéis, listas e estruturas de navegação. | ![Organização de modificações no PTV Vissim](../assets/02_concorrencia/c02_vissim_02_organizacao.png) | Diferentes representações facilitam acesso a objetos, mas o grande volume de informações pode aumentar a complexidade da interface. |
 | Configuração da simulação | A ferramenta permite definir parâmetros e condições antes de iniciar as execuções. | ![Parâmetros de simulação no PTV Vissim](../assets/02_concorrencia/c02_vissim_03_configuracao.png) | Torna explícitas as condições utilizadas no experimento, algo importante para T02. |
 | Execução da simulação | A simulação pode ser iniciada e acompanhada visualmente por controles presentes na própria interface. | ![Simulação em execução no PTV Vissim](../assets/02_concorrencia/c02_vissim_04_execucao.png) | O usuário consegue observar o comportamento do cenário enquanto o processamento ocorre, aproximando-se do acompanhamento visual previsto no projeto. |
-| Feedback e estado | Informações sobre a execução ficam disponíveis durante a simulação. | ![Execução e estado da simulação no PTV Vissim](../assets/02_concorrencia/c02_vissim_04_execucao.png) | Permite compreender se a simulação está ativa e acompanhar sua evolução. |
+| Feedback e estado | Informações sobre a execução ficam disponíveis durante a simulação. | [ver print da execução](../assets/02_concorrencia/c02_vissim_04_execucao.png) | Permite compreender se a simulação está ativa e acompanhar sua evolução. |
 | Validação e prevenção de erros | A ferramenta utiliza verificações e indicações para configurações que possuem problemas ou valores inválidos. | ![Mensagens de erro no PTV Vissim](../assets/02_concorrencia/c02_vissim_05_validacao.png) | Feedback próximo à configuração problemática pode reduzir erros antes da execução. |
 | Resultados e avaliações | Informações produzidas pelas simulações podem ser apresentadas por listas, valores e diferentes formas de avaliação. | ![Resultados de simulação no PTV Vissim](../assets/02_concorrencia/c02_vissim_06_resultados.png) | Permite analisar resultados sem depender exclusivamente de arquivos técnicos externos. |
 | Visualizações gráficas | Resultados podem ser representados graficamente para facilitar a interpretação de determinados atributos ou execuções. | ![Gráfico comparativo de simulation runs no PTV Vissim](../assets/02_concorrencia/c02_vissim_07_graficos.png) | Gráficos podem apoiar T06 e T07 quando utilizados de acordo com a métrica e o objetivo da comparação. |
@@ -280,12 +280,14 @@ Liste recomendações com origem explícita.
 ## Referências
 
 - AIMSUN. **Aimsun Next**. Disponível em: https://www.aimsun.com/aimsun-next/. Acesso em: 02 set. 2026.
-- AIMSUN. **Aimsun Next User Manual — Graphical User Interface**. Documentação oficial do produto. Acesso em: 02 set. 2026.
-- AIMSUN. **Aimsun Next User Manual — Dynamic Scenarios and Experiments**. Documentação oficial do produto. Acesso em: 02 set. 2026.
+- AIMSUN. **Aimsun Next User Manual — Exploring the User Interface**. Disponível em: https://docs.aimsun.com/next/26.0.0/UsersManual/AimsunGraphicalUserInterface.html. Acesso em: 02 set. 2026.
+- AIMSUN. **Aimsun Next User Manual — Scenarios, Experiments, Results and Replications**. Disponível em: https://docs.aimsun.com/next/latest/UsersManual/ScenariosExperimentsResultsReplications.html. Acesso em: 02 set. 2026.
+- AIMSUN. **Aimsun Next User Manual — Check and Fix Tool**. Disponível em: https://docs.aimsun.com/next/26.0.0/UsersManual/CheckAndFixErrors.html. Acesso em: 02 set. 2026.
+- AIMSUN. **Aimsun Next User Manual — Dynamic Scenarios and Experiments**. Disponível em: https://docs.aimsun.com/next/26.0.1/UsersManual/DynamicScenariosAndExperiments.html. Acesso em: 02 set. 2026.
 - PTV GROUP. **PTV Vissim**. Disponível em: https://www.ptvgroup.com/en/products/ptv-vissim. Acesso em: 02 set. 2026.
-- PTV GROUP. **PTV Vissim Help**. Documentação oficial da interface, configuração, execução e avaliação do software. Acesso em: 02 set. 2026.
-- ECLIPSE SUMO. **NetEdit**. Disponível em: https://eclipse.dev/sumo/docs/Netedit/index.html. Acesso em: 02 set. 2026.
-- ECLIPSE SUMO. **SUMO — Simulation of Urban MObility**. Documentação oficial. Acesso em: 02 set. 2026.
+- PTV GROUP. **PTV Vissim 2026 Help — User Interface**. Disponível em: https://cgi.ptvgroup.com/vision-help/VISSIM_2026_EN-DE/en-us/Content/2_Programmbedienung/Programmoberflaeche.htm. Acesso em: 02 set. 2026.
+- PTV GROUP. **PTV Vissim 2026 Help — Simulation Parameters**. Disponível em: https://cgi.ptvgroup.com/vision-help/VISSIM_2026_EN-DE/en-us/Content/9_SimulationundTest/Simulationsparameter_setzen.htm. Acesso em: 02 set. 2026.
+- ECLIPSE SUMO. **NetEdit**. Disponível em: https://eclipse.dev/sumo/docs/Netedit/. Acesso em: 02 set. 2026.
 - ECLIPSE SUMO. **Port Tutorial — Network Editing with NetEdit**. Disponível em: https://eclipse.dev/sumo/docs/Tutorials/port.html. Acesso em: 02 set. 2026.
 - LIRA, Gabriel Koiama de Rocha; VILLAS BÔAS, João Pedro Lopes Santana. **Algoritmo Híbrido de Controle Semafórico Baseado em Max Pressure e Lógica Actuated em Ambiente de Simulação**. Centro Universitário FEI, 2026.
 - [Entrega 1 — Conhecendo o projeto, o usuário e o problema](01_conhecendo_o_problema.md).
@@ -294,10 +296,10 @@ Liste recomendações com origem explícita.
 ## Checklist
 
 - [x] O mapa inicial de alternativas da Entrega 1 foi revisitado e aprofundado.
-- [ ] Hipóteses relevantes sobre mercado/padrões foram atualizadas na rastreabilidade quando surgiram evidências.
+- [X] Hipóteses relevantes sobre mercado/padrões foram atualizadas na rastreabilidade quando surgiram evidências.
 - [x] Há pelo menos uma análise completa por integrante.
-- [ ] Cada análise contém prints legíveis da interface.
-- [ ] Prints mostram telas/estados relevantes, não apenas logos/homepage.
+- [X] Cada análise contém prints legíveis da interface.
+- [X] Prints mostram telas/estados relevantes, não apenas logos/homepage.
 - [x] Foram analisados concorrentes e/ou interfaces representativas ao público.
 - [x] Em TCC sem interface original, foram investigadas ferramentas profissionais análogas às atividades do usuário escolhido. *(Não se aplica diretamente ao projeto, pois a interface já era parcialmente prevista; ainda assim, ferramentas profissionais representativas foram analisadas.)*
 - [x] Padrões como dashboard, relatório, filtros e CRUD foram analisados como soluções para tarefas, não como requisitos automáticos.
