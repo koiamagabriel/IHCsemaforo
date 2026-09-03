@@ -37,7 +37,8 @@ Leia obrigatoriamente o [Guia para definir o escopo de IHC a partir do tema do T
 |---|---|
 | Tema central do TCC | Desenvolvimento de um algoritmo híbrido de controle semafórico inteligente baseado em Max Pressure e lógica actuated. |
 | Resultado técnico esperado do TCC | Sistema de controle semafórico inteligente implementado em Python e integrado ao SUMO por meio do TraCI, acompanhado de uma interface que permita configurar, executar, acompanhar e analisar as simulações e comparar diferentes estratégias de controle. |
-| O TCC já previa interface? | Sim — prevista pela equipe, mas ainda não formalmente detalhada no documento do TCC1. || Capacidade técnica que pode gerar valor para pessoas | Permitir a configuração de cenários e parâmetros de simulação, a execução e o acompanhamento visual dos experimentos e a análise dos resultados produzidos pelas diferentes estratégias de controle semafórico. |
+| O TCC já previa interface? | Sim — prevista pela equipe, mas ainda não formalmente detalhada no documento do TCC1. |
+| Capacidade técnica que pode gerar valor para pessoas | Permitir a configuração de cenários e parâmetros de simulação, a execução e o acompanhamento visual dos experimentos e a análise dos resultados produzidos pelas diferentes estratégias de controle semafórico. |
 | Usuário principal adotado em IHC | Pesquisador ou analista de mobilidade urbana. |
 | Objetivo principal desse usuário | Configurar uma simulação de tráfego, executá-la e acompanhar seu funcionamento, além de analisar e comparar os resultados obtidos pelas diferentes estratégias de controle semafórico. |
 | Interface/recorte explorado na disciplina | Interface para configuração do experimento, execução e acompanhamento visual da simulação e análise e comparação dos resultados obtidos. |
