@@ -28,8 +28,8 @@ Leia obrigatoriamente o [Guia para definir o escopo de IHC a partir do tema do T
 
 | Nome completo | Matrícula | GitHub | Responsabilidade principal |
 |---|---:|---|---|
-| Gabriel Koiama de Rocha Lira | {{MATRÍCULA}} | @koiamagabriel | Desenvolvimento do projeto de IHC |
-| João Pedro Lopes Santana Villas Bôas | {{MATRÍCULA}} | {{@GITHUB}} | Desenvolvimento do projeto de IHC |
+| Gabriel Koiama de Rocha Lira | 22.125.067-3 | @koiamagabriel | Desenvolvimento do projeto de IHC |
+| João Pedro Lopes Santana Villas Bôas | 22.125.065-7 | @JPLopes05 | Desenvolvimento do projeto de IHC |
 
 ## Relação entre TCC e projeto de IHC
 
@@ -37,8 +37,7 @@ Leia obrigatoriamente o [Guia para definir o escopo de IHC a partir do tema do T
 |---|---|
 | Tema central do TCC | Desenvolvimento de um algoritmo híbrido de controle semafórico inteligente baseado em Max Pressure e lógica actuated. |
 | Resultado técnico esperado do TCC | Sistema de controle semafórico inteligente implementado em Python e integrado ao SUMO por meio do TraCI, acompanhado de uma interface que permita configurar, executar, acompanhar e analisar as simulações e comparar diferentes estratégias de controle. |
-| O TCC já previa interface? | Sim |
-| Capacidade técnica que pode gerar valor para pessoas | Permitir a configuração de cenários e parâmetros de simulação, a execução e o acompanhamento visual dos experimentos e a análise dos resultados produzidos pelas diferentes estratégias de controle semafórico. |
+| O TCC já previa interface? | Sim — prevista pela equipe, mas ainda não formalmente detalhada no documento do TCC1. || Capacidade técnica que pode gerar valor para pessoas | Permitir a configuração de cenários e parâmetros de simulação, a execução e o acompanhamento visual dos experimentos e a análise dos resultados produzidos pelas diferentes estratégias de controle semafórico. |
 | Usuário principal adotado em IHC | Pesquisador ou analista de mobilidade urbana. |
 | Objetivo principal desse usuário | Configurar uma simulação de tráfego, executá-la e acompanhar seu funcionamento, além de analisar e comparar os resultados obtidos pelas diferentes estratégias de controle semafórico. |
 | Interface/recorte explorado na disciplina | Interface para configuração do experimento, execução e acompanhamento visual da simulação e análise e comparação dos resultados obtidos. |
@@ -102,8 +101,8 @@ A interface faz parte da solução prevista no TCC, permitindo que o usuário re
 
 | # | Entrega | Quantidade mínima / responsabilidade | Status |
 |---:|---|---|---|
-| 1 | [Conhecendo o projeto, o usuário e o problema](docs/01_conhecendo_o_problema.md) | 1 solução consolidada por equipe | ⬜ |
-| 2 | [Público-alvo e análise de concorrência](docs/02_analise_concorrencia.md) | no mínimo 1 concorrente/interface representativa por integrante + síntese | ⬜ |
+| 1 | [Conhecendo o projeto, o usuário e o problema](docs/01_conhecendo_o_problema.md) | 1 solução consolidada por equipe | 🟩 |
+| 2 | [Público-alvo e análise de concorrência](docs/02_analise_concorrencia.md) | no mínimo 1 concorrente/interface representativa por integrante + síntese | 🟩 |
 | 3 | [Personas, empatia, contexto e jornada](docs/03_personas_contexto_jornada.md) | 1 persona por integrante; demais artefatos consolidados | ⬜ |
 | 4 | [Cenários de análise/problema](docs/04_cenarios_problema.md) | 1 solução completa por integrante | ⬜ |
 | 5 | [Análise de tarefas: HTA, GOMS e CTT](docs/05_analise_tarefas.md) | cada integrante: pelo menos 1 HTA + 1 GOMS + 1 CTT | ⬜ |
@@ -127,7 +126,7 @@ O projeto deve formar uma cadeia de evidências:
 
 No nosso projeto, o fluxo principal será:
 
-**definição da malha viária → configuração da simulação → execução → dashboard/relatório de resultados**.
+**definição da malha viária → configuração da simulação e da estratégia de controle → execução e acompanhamento visual → análise e comparação dos resultados**.
 
 Uma entrega não deve “reiniciar” o projeto. As personas, tarefas, MoLIC, protótipo e avaliação devem permanecer coerentes com esse fluxo, salvo quando novas evidências justificarem a revisão.
 
