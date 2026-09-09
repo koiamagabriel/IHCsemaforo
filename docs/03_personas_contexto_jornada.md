@@ -71,6 +71,40 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 - preservar acesso às métricas detalhadas sem exigir contato com detalhes internos do código.
 > Repita para P02, P03... Cada integrante deve produzir ao menos uma persona.
 
+
+### Persona P02 — Carlos Mendes
+
+**Autor(a):** João Pedro Lopes Santana Villas Bôas — 22.125.065-7  
+**Tipo:** secundária  
+**Base de evidências:** proto-persona a validar, construída a partir do TCC1, da Entrega 1 e da análise documental realizada na Entrega 2  
+**Hipóteses da Entrega 1 relacionadas:** H03
+
+![Persona P02](../assets/03_personas/persona_p02.svg)
+
+| Campo | Descrição |
+|---|---|
+| Faixa etária / contexto relevante | [H] Profissional adulto atuando em contexto organizacional relacionado à mobilidade urbana. A idade específica não é considerada determinante para a interação. |
+| Ocupação/papel | [H] Gestor ou coordenador de mobilidade que consulta resultados de estudos e simulações para apoiar avaliações técnicas e decisões. |
+| Conhecimento do domínio | [H] Possui conhecimento sobre mobilidade urbana, indicadores de tráfego e interpretação de resultados, mas não necessariamente conhece os detalhes internos de implementação dos algoritmos avaliados. |
+| Experiência tecnológica | [H] Utiliza computadores, relatórios, planilhas, dashboards ou ferramentas de análise no contexto profissional, mas sua familiaridade com simuladores específicos ainda precisa ser investigada. |
+| Objetivos | [H] Compreender o desempenho das diferentes estratégias de controle, identificar diferenças relevantes entre os resultados e utilizar essas informações para apoiar avaliações ou decisões. |
+| Necessidades | [H] Visualizar as principais métricas de forma consolidada; compreender quais condições produziram cada resultado; comparar estratégias ou cenários; e acessar detalhes adicionais quando necessário. |
+| Dores/frustrações | [H] Excesso de parâmetros técnicos ou detalhes internos pode dificultar a identificação das informações relevantes; resultados sem contexto podem dificultar a comparação; e grande quantidade de métricas simultâneas pode tornar a análise confusa. |
+| Motivadores | [H] Obter informações confiáveis, comparáveis e compreensíveis que apoiem a avaliação do comportamento das estratégias de controle semafórico. |
+| Restrições/acessibilidade | [?] Ainda não existem evidências sobre necessidades específicas de acessibilidade desse perfil. A clareza das informações e a redução de complexidade técnica desnecessária podem influenciar a utilização da interface. |
+| Ambiente típico de uso | [H] Computador desktop ou notebook em ambiente profissional ou institucional, principalmente durante a consulta e análise de resultados de estudos de mobilidade. |
+| Comportamentos relevantes | [H] Prioriza informações consolidadas e comparações entre resultados, consultando detalhes técnicos somente quando eles são necessários para compreender ou justificar uma análise. |
+
+**Decisões de design influenciadas por P02:**
+
+- apresentar inicialmente as métricas mais relevantes de forma consolidada;
+- permitir acesso a informações detalhadas sem obrigar o usuário a visualizar todos os parâmetros técnicos;
+- deixar explícitos o cenário, a estratégia e as condições experimentais associados a cada resultado;
+- utilizar terminologia do domínio de mobilidade sem depender de nomes internos do código;
+- favorecer comparação visual entre estratégias e cenários;
+- apresentar resultados de forma que diferenças relevantes possam ser identificadas rapidamente;
+- permitir consultar uma síntese dos resultados sem eliminar a possibilidade de aprofundamento.
+- 
 ### Síntese das personas
 
 Explique diferenças entre os perfis e qual persona é prioritária. Evite personas duplicadas que só mudam nome/foto.
