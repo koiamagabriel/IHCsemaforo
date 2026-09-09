@@ -1,7 +1,7 @@
 # Entrega 3 — Personas, mapa de empatia, contexto de uso e jornada
 
-**Data:** {{dd/mm/aaaa}}  
-**Status:** ⬜ não iniciada  
+**Data:** {{09/09/2026}}  
+**Status:** 🟨 em andamento 
 **Responsabilidade:** 1 persona por integrante; 1 mapa de empatia, 1 contexto de uso consolidado e 1 jornada por equipe (salvo orientação diferente do docente).
 
 ## Objetivo da atividade
@@ -28,37 +28,47 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 
 | Item da Entrega 1 | Status inicial | Evidência disponível agora | Como será tratado nesta entrega |
 |---|---|---|---|
-| {{usuário/objetivo/característica/H01...}} | F / H / ? | {{...}} | incorporar / manter como hipótese / descartar / investigar |
+| H01 — Pesquisadores ou analistas de mobilidade representam adequadamente o usuário prioritário da interface | H | A Entrega 2 identificou Aimsun Next e PTV Vissim como ferramentas profissionais que materializam atividades semelhantes de configuração, execução e análise de simulações, mas isso ainda não constitui validação direta com usuários. | incorporar P01 como proto-persona primária e manter H01 como hipótese a validar |
+| H02 — A organização da interação em definição da malha, configuração/execução e análise pode facilitar a realização dos experimentos | H | A Entrega 2 encontrou padrões de configuração, execução, feedback e análise em ferramentas profissionais, mas não houve avaliação com usuários. | utilizar como base das necessidades de P01 sem considerar H02 validada |
+| H03 — Uma apresentação comparativa das métricas pode facilitar a interpretação dos métodos | H | Aimsun Next e PTV Vissim utilizam resumos, listas, gráficos e formas de comparação de resultados. | incorporar como hipótese nas necessidades de P01 e P02 e manter aberta para validação |
+| Pesquisador ou analista de mobilidade urbana | H | Permanece como usuário prioritário do projeto e possui relação com T01–T08. | representar por P01 |
+| Gestor de mobilidade | H | Foi identificado na Entrega 1 como stakeholder que poderia consultar resultados consolidados para apoiar avaliações e decisões. | representar por P02 como persona secundária, sem alterar o usuário prioritário |
+| Uso principalmente em computadores desktop/notebooks | H | O escopo envolve mapas, parâmetros, execução e resultados; não houve validação direta com usuários. | manter como hipótese no contexto de uso |
 
 ## 1. Personas
 
-### Persona P01 — {{nome fictício}}
+### Persona P01 — Marina Ribeiro
 
-**Autor(a):** {{nome — matrícula}}  
-**Tipo:** primária / secundária  
-**Base de evidências:** entrevista / questionário / literatura / observação / proto-persona a validar / combinação  
-**Hipóteses da Entrega 1 relacionadas:** {{H01, H02 ou —}}
+**Autor(a):** Gabriel Koiama de Rocha Lira — 22.125.067-3  
+**Tipo:** primária  
+**Base de evidências:** proto-persona a validar / combinação entre TCC1, Entrega 1 e análise documental da Entrega 2  
+**Hipóteses da Entrega 1 relacionadas:** H01, H02, H03
 
 ![Persona P01](../assets/03_personas/persona_p01.svg)
 
 | Campo | Descrição |
 |---|---|
-| Faixa etária / contexto relevante | {{somente o que impacta o uso}} |
-| Ocupação/papel | {{...}} |
-| Conhecimento do domínio | {{...}} |
-| Experiência tecnológica | {{...}} |
-| Objetivos | {{...}} |
-| Necessidades | {{...}} |
-| Dores/frustrações | {{...}} |
-| Motivadores | {{...}} |
-| Restrições/acessibilidade | {{...}} |
-| Ambiente típico de uso | {{...}} |
-| Comportamentos relevantes | {{...}} |
+| Faixa etária / contexto relevante | [H] Profissional adulto atuando em ambiente acadêmico, laboratorial ou técnico. A idade específica não é considerada determinante para a interação. |
+| Ocupação/papel | [H] Pesquisadora ou analista de mobilidade responsável por preparar, executar e analisar estudos de controle de tráfego. |
+| Conhecimento do domínio | [H] Possui conhecimento de tráfego, métricas de desempenho e experimentação, mas não necessariamente conhece a implementação interna do algoritmo híbrido. |
+| Experiência tecnológica | [H] Está habituada ao uso de computadores e ferramentas técnicas de análise ou simulação, mas seu nível de experiência com SUMO e outras ferramentas específicas ainda precisa ser validado. |
+| Objetivos | [H] Configurar experimentos corretamente, executar diferentes estratégias de controle e comparar seus resultados sob condições equivalentes. |
+| Necessidades | [H] Identificar claramente cenário, parâmetros e estratégia utilizados; acompanhar o estado da execução; acessar métricas relevantes; relacionar cada resultado à configuração que o produziu. |
+| Dores/frustrações | [H] Risco de configurar experimentos de forma inconsistente, perder a relação entre configuração e resultado, lidar com excesso de parâmetros técnicos e ter dificuldade para comparar múltiplas execuções. |
+| Motivadores | [H] Obter resultados reproduzíveis e comparáveis e compreender de forma confiável o comportamento das diferentes estratégias de controle. |
+| Restrições/acessibilidade | [?] Ainda não existem evidências sobre necessidades específicas de acessibilidade. A quantidade de informações e o espaço disponível em tela podem influenciar o uso. |
+| Ambiente típico de uso | [H] Computador desktop ou notebook em ambiente acadêmico, laboratorial ou profissional. |
+| Comportamentos relevantes | [H] Realiza múltiplos experimentos, altera condições de cenário ou demanda, verifica resultados e compara estratégias antes de concluir uma análise. |
 
 **Decisões de design influenciadas por P01:**
 
-- {{...}}
-
+- manter cenário, estratégia e principais parâmetros claramente identificados durante o experimento;
+- agrupar configurações relacionadas para evitar excesso de informações simultâneas;
+- validar parâmetros importantes antes da execução;
+- apresentar feedback claro sobre o estado da simulação;
+- manter os resultados vinculados à configuração e estratégia que os originaram;
+- permitir comparação direta entre tempo fixo, Max Pressure e Max Pressure + actuated;
+- preservar acesso às métricas detalhadas sem exigir contato com detalhes internos do código.
 > Repita para P02, P03... Cada integrante deve produzir ao menos uma persona.
 
 ### Síntese das personas
