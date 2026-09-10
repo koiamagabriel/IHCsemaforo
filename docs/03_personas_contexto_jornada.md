@@ -1,7 +1,7 @@
 # Entrega 3 — Personas, mapa de empatia, contexto de uso e jornada
 
 **Data:** {{09/09/2026}}  
-**Status:** 🟨 em andamento 
+**Status:**  🟩 Concluído  
 **Responsabilidade:** 1 persona por integrante; 1 mapa de empatia, 1 contexto de uso consolidado e 1 jornada por equipe (salvo orientação diferente do docente).
 
 ## Objetivo da atividade
@@ -192,4 +192,4 @@ P01 permanece como persona prioritária porque percorre todas as etapas do fluxo
 - [x] Em TCC sem interface original, a persona possui relação explícita com a contribuição técnica. *(O projeto já previa parcialmente uma interface; ainda assim, as personas foram explicitamente relacionadas às atividades e à contribuição técnica do TCC.)*
 - [x] Papéis administrativos, técnicos e decisórios só foram criados quando possuem objetivos/tarefas diferentes.
 - [x] Jornada possui etapas, dores e oportunidades e não é apenas wireflow.
-- [ ] IDs das personas foram adicionados à rastreabilidade.
+- [x] IDs das personas foram adicionados à rastreabilidade.
