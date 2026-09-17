@@ -1,7 +1,7 @@
 # Entrega 4 — Cenários de análise/problema
 
-**Data:** {{dd/mm/aaaa}}  
-**Status:** ⬜ não iniciada  
+**Data:** 16/09/2026  
+**Status:** 🟩 Concluído  
 **Responsabilidade:** 1 solução completa por integrante
 
 ## Objetivo da atividade
@@ -21,6 +21,8 @@ Exemplo: em vez de “o DBA abre o novo dashboard e executa o algoritmo”, desc
 A interface da disciplina aparecerá somente depois, nos cenários de interação.
 
 Se o integrante escolher um novo problema/situação, explique por que ele passou a ser relevante e indique a evidência que motivou sua inclusão.
+
+---
 
 ## Cenário C01 — Preparação e execução de experimentos sob condições comparáveis
 
@@ -94,6 +96,8 @@ As próximas entregas deverão investigar como essas tarefas são realizadas atu
 Também permanecem questões que ainda precisam de evidência direta, principalmente: quais etapas do processo atual são mais trabalhosas para pesquisadores ou analistas externos à equipe; quais parâmetros eles consideram mais difíceis de compreender ou conferir; como identificam erros durante uma execução; e quais informações consideram indispensáveis para reproduzir ou revisar um experimento.
 
 Essas informações deverão orientar a análise de tarefas e as futuras decisões de interação, mas o cenário atual não define ainda telas, controles, organização visual ou qualquer solução específica para os problemas identificados.
+
+---
 
 ## Cenário C02 — Interpretação e comparação de resultados experimentais
 
@@ -170,14 +174,16 @@ Também permanecem lacunas que ainda precisam ser investigadas diretamente com u
 
 Essas questões deverão orientar as próximas etapas de análise e prototipação. Neste momento, o cenário identifica somente as necessidades, decisões e rupturas existentes na atividade, sem definir dashboard, gráficos específicos, organização de telas, filtros, relatórios ou qualquer outra solução de interface.
 
+---
+
 ## Checklist
 
-- [ ] Há um cenário completo por integrante.
-- [ ] Cada cenário tem título, ator, objetivo, contexto e problema.
-- [ ] O cenário possui origem rastreável na Entrega 1 ou justifica claramente a inclusão de uma nova situação.
-- [ ] O texto descreve a situação atual, sem antecipar a solução.
-- [ ] Para TCC sem interface original, o cenário descreve uma prática humana plausível relacionada à contribuição técnica, e não “a falta de uma tela”.
-- [ ] Questões de refinamento acrescentam informação nova.
-- [ ] O refinamento mostra claramente o que foi adicionado/alterado.
-- [ ] Cenários são diferentes o suficiente para cobrir objetivos/problemas relevantes.
-- [ ] Cada cenário está ligado a persona/necessidade na matriz de rastreabilidade.
+- [x] Há um cenário completo por integrante.
+- [x] Cada cenário tem título, ator, objetivo, contexto e problema.
+- [x] O cenário possui origem rastreável na Entrega 1 ou justifica claramente a inclusão de uma nova situação.
+- [x] O texto descreve a situação atual, sem antecipar a solução.
+- [x] Para TCC sem interface original, o cenário descreve uma prática humana plausível relacionada à contribuição técnica, e não “a falta de uma tela”.
+- [x] Questões de refinamento acrescentam informação nova.
+- [x] O refinamento mostra claramente o que foi adicionado/alterado.
+- [x] Cenários são diferentes o suficiente para cobrir objetivos/problemas relevantes.
+- [x] Cada cenário está ligado a persona/necessidade na matriz de rastreabilidade.
