@@ -95,7 +95,80 @@ Também permanecem questões que ainda precisam de evidência direta, principalm
 
 Essas informações deverão orientar a análise de tarefas e as futuras decisões de interação, mas o cenário atual não define ainda telas, controles, organização visual ou qualquer solução específica para os problemas identificados.
 
-> Repita para C02, C03... com autoria individual.
+## Cenário C02 — Interpretação e comparação de resultados experimentais
+
+**Autor(a):** João Pedro Lopes Santana Villas Bôas — 22.125.065-7  
+**Persona(s) relacionada(s):** P02 — Carlos Mendes  
+**Necessidade relacionada:** R06 — comparar o comportamento das estratégias sob condições equivalentes; relacionada também a R05 e R07  
+**Situação concreta da Entrega 1 relacionada:** Entrega 1 — Seções 4.3, 4.4 e 4.5, referentes à interpretação das métricas, ao risco de conclusões inadequadas e à comparação entre estratégias sob condições equivalentes  
+**Hipóteses ainda presentes:** H03
+
+### 1. Cenário inicial
+
+Carlos Mendes é gestor ou coordenador de mobilidade e precisa analisar os resultados de um estudo experimental que compara diferentes estratégias de controle semafórico. Seu objetivo é compreender como o controle de tempo fixo, o Max Pressure convencional e o método híbrido Max Pressure + actuated se comportaram nas condições avaliadas e utilizar essas informações para apoiar uma análise técnica.
+
+Os experimentos produzem diferentes informações sobre o desempenho do tráfego, como tempo médio de espera, tamanho médio das filas, throughput e número de trocas de fase. Carlos também precisa compreender em qual cenário, condição de demanda e estratégia cada resultado foi obtido para que possa interpretar corretamente os valores apresentados.
+
+A análise não depende apenas de observar uma métrica isoladamente. Carlos precisa relacionar os resultados às condições em que foram produzidos e comparar execuções que representem situações equivalentes. Quando existem várias execuções, cenários e métricas, essa atividade pode exigir que ele consulte diferentes informações e mantenha o contexto de cada resultado durante a comparação.
+
+Uma dificuldade surge quando os valores são analisados sem que esteja claro a qual cenário, estratégia ou configuração eles pertencem. Também pode ocorrer de diferentes métricas apontarem aspectos distintos do comportamento do tráfego, exigindo que Carlos interprete o conjunto dos resultados antes de chegar a uma conclusão.
+
+Caso resultados produzidos em condições diferentes sejam comparados como se fossem equivalentes, ou uma métrica seja interpretada sem considerar seu contexto experimental, Carlos pode chegar a uma conclusão inadequada sobre o desempenho das estratégias. Como o estudo atual ocorre em ambiente de simulação, essa consequência não altera diretamente uma interseção real, mas pode comprometer a análise técnica e a comunicação dos resultados do experimento.
+
+### 2. Questões de refinamento
+
+| # | Questão | Por que precisa ser respondida | Fonte/forma de obter resposta |
+|---|---|---|---|
+| Q1 | **Exploratória — Por que?** Por que Carlos precisa conhecer as condições experimentais associadas aos resultados antes de comparar duas execuções? | Esclarecer a relação entre contexto experimental e validade da comparação, evitando interpretar diferenças causadas por configurações distintas como efeito da estratégia. | TCC1 — estratégia de validação; Entrega 1 — Seções 4.4 e 4.5. |
+| Q2 | **Exploratória — O que é?** Quais informações Carlos precisa considerar para compreender o resultado de uma execução? | Identificar quais dados fazem parte da atividade de interpretação e quais informações são necessárias além dos valores das métricas. | TCC1 — metodologia e métricas de avaliação; Entrega 1 — Seção 4.3. |
+| Q3 | **Exploratória — Como?** Como Carlos associa atualmente cada conjunto de métricas ao cenário, à estratégia e às condições que produziram aquele resultado? | O cenário inicial estabelece a necessidade de contexto, mas ainda não explica como essa relação é preservada ou recuperada durante a análise. | Observação do processo experimental da equipe, saídas das simulações e registros produzidos pelo controlador. |
+| Q4 | **Exploratória — Como?** Como Carlos realiza a comparação quando diferentes métricas apresentam comportamentos distintos entre as estratégias? | Compreender como o usuário constrói uma avaliação a partir de vários indicadores e quais critérios utiliza quando os resultados não apontam todos na mesma direção. | Discussão com a equipe, orientador e futuramente com usuários ou especialistas do perfil representado por P02. |
+| Q5 | **Exploratória — O que é?** Quais resultados ou métricas são considerados mais importantes para uma primeira interpretação e quais exigem análise mais detalhada? | Investigar se existe uma hierarquia de informações relevante para o usuário e evitar assumir que todas as métricas possuem a mesma importância em qualquer análise. | TCC1 — métricas de avaliação; consulta a pesquisadores, analistas ou gestores de mobilidade. |
+| Q6 | **Exploratória — Como?** Como Carlos identifica se um resultado está incompleto, apresenta alguma condição inesperada ou não deve ser utilizado na comparação? | Aprofundar a etapa de avaliação dos resultados antes que eles sejam utilizados para formar uma conclusão. | Registros das execuções, metodologia experimental e consulta à equipe técnica. |
+| Q7 | **Exploratória — Por que?** Quais são as consequências de interpretar incorretamente uma diferença entre duas estratégias? | Tornar explícito o impacto da ruptura sobre a conclusão do estudo e sobre a comunicação dos resultados. | Entrega 1 — Seção 4.4; TCC1 — objetivos e estratégia de validação. |
+| Q8 | **Verificação** Carlos consegue produzir uma comparação tecnicamente confiável quando conhece os valores das métricas, mas não consegue confirmar em quais condições cada resultado foi obtido? | Verificar se a associação entre resultado e condição experimental é uma necessidade essencial para a atividade de comparação. | Discussão com a equipe, orientador e posteriormente com usuários ou especialistas do perfil representado por P02. |
+
+### 3. Cenário refinado
+
+Carlos Mendes é gestor ou coordenador de mobilidade e precisa analisar um estudo experimental que compara o controle de tempo fixo, o Max Pressure convencional e o método híbrido Max Pressure + actuated. Seu objetivo é compreender como as estratégias se comportaram nas condições avaliadas e utilizar os resultados para apoiar uma análise técnica.
+
+Os experimentos produzem métricas como tempo médio de espera, tamanho médio das filas, throughput e número de trocas de fase. **[NOVO: Entretanto, os valores dessas métricas somente podem ser interpretados adequadamente quando Carlos também consegue identificar o cenário, a condição de demanda, a estratégia utilizada e as demais condições relevantes associadas à execução.]**
+
+Carlos consulta os resultados de cada experimento e procura identificar diferenças entre as estratégias. **[NOVO: Para que uma comparação seja significativa, ele precisa confirmar se as execuções utilizadas representam condições suficientemente equivalentes e distinguir alterações deliberadas do experimento de diferenças que poderiam comprometer a comparação.]**
+
+A interpretação também exige considerar mais de uma medida de desempenho. **[NOVO: Como as métricas representam aspectos diferentes do comportamento do tráfego, uma estratégia pode apresentar uma diferença relevante em determinada medida sem que isso necessariamente produza a mesma tendência nas demais. Carlos, portanto, precisa interpretar o conjunto das informações antes de formar uma conclusão.]**
+
+Quando existem diversas execuções, cenários e estratégias, aumenta a quantidade de informações que precisa ser relacionada. Carlos precisa reconhecer qual resultado pertence a qual experimento e manter essa relação durante a análise. **[NOVO: Caso essa associação não esteja suficientemente clara, ele pode precisar retornar aos registros das execuções para reconstruir as condições utilizadas antes de continuar a comparação.]**
+
+Outra dificuldade ocorre quando existe dúvida sobre a qualidade de uma execução. **[NOVO: Antes de utilizar determinado resultado, Carlos precisa conseguir avaliar se a execução foi concluída de maneira adequada e se existe alguma condição que impeça sua utilização na comparação.]**
+
+Se resultados obtidos em condições diferentes forem comparados como se fossem equivalentes, Carlos poderá atribuir à estratégia de controle uma diferença causada por outro fator experimental. Da mesma forma, interpretar apenas uma métrica sem considerar as demais pode produzir uma visão incompleta do comportamento observado.
+
+**[NOVO: Uma conclusão incorreta pode comprometer a interpretação técnica do estudo e a forma como seus resultados são comunicados a outras pessoas, mesmo que, no contexto atual do TCC, esses resultados não sejam utilizados para controlar diretamente uma interseção real.]**
+
+Por isso, a atividade de Carlos envolve mais do que consultar valores finais. Ele precisa compreender a origem dos resultados, verificar se eles podem ser comparados, interpretar diferentes indicadores em conjunto e construir uma síntese coerente com as condições em que os experimentos foram realizados.
+
+### 4. Elementos extraídos
+
+| Elemento | Evidência no cenário |
+|---|---|
+| Ator(es) | P02 — Carlos Mendes, gestor/coordenador de mobilidade interessado principalmente na interpretação, comparação e síntese dos resultados experimentais. Pesquisadores ou equipe técnica podem fornecer informações adicionais quando existe dúvida sobre uma execução. |
+| Objetivo(s) | Compreender o desempenho das estratégias de controle, comparar resultados obtidos sob condições equivalentes e construir uma interpretação tecnicamente coerente dos experimentos. |
+| Contexto | Análise dos resultados de estudos realizados em ambiente de simulação, envolvendo diferentes cenários, condições de demanda e estratégias de controle semafórico. |
+| Recursos/informações | Cenário, demanda, estratégia executada, parâmetros relevantes, identificação da execução, tempo médio de espera, tamanho médio das filas, throughput, número de trocas de fase e demais registros necessários para contextualizar os resultados. |
+| Ações | Consultar resultados; identificar o contexto de cada execução; verificar se os experimentos podem ser comparados; interpretar métricas; relacionar diferentes indicadores; investigar resultados duvidosos; comparar estratégias; elaborar uma síntese da análise. |
+| Problemas/rupturas | Resultado sem contexto suficiente; dificuldade de relacionar métricas à execução correspondente; comparação de execuções realizadas sob condições distintas; excesso de informações; interpretação isolada de uma métrica; dúvida sobre a validade de uma execução. |
+| Consequências | Comparações inadequadas, necessidade de revisar registros e repetir a análise, aumento do esforço para interpretar os experimentos e possibilidade de chegar a conclusões incorretas ou comunicar de forma inadequada o comportamento das estratégias. |
+
+### 5. Implicações para as próximas entregas
+
+O cenário indica que as atividades de consulta, interpretação, comparação e síntese dos resultados devem ser aprofundadas nas próximas análises de tarefas. Em especial, devem ser consideradas T06 — consultar as métricas obtidas, T07 — comparar resultados e T08 — consultar ou gerar uma síntese dos resultados.
+
+A análise de tarefas deverá investigar quais informações Carlos precisa consultar antes de iniciar uma comparação, como verifica se duas execuções são comparáveis, como interpreta várias métricas simultaneamente, como lida com resultados que parecem contraditórios ou incompletos e como transforma a análise realizada em uma conclusão compreensível.
+
+Também permanecem lacunas que ainda precisam ser investigadas diretamente com usuários ou especialistas: quais métricas são priorizadas em diferentes tipos de análise; qual nível de detalhe é necessário para compreender um resultado; quais informações experimentais devem acompanhar obrigatoriamente cada métrica; como usuários experientes lidam com divergências entre indicadores; e quais informações precisam estar presentes para justificar ou comunicar uma conclusão.
+
+Essas questões deverão orientar as próximas etapas de análise e prototipação. Neste momento, o cenário identifica somente as necessidades, decisões e rupturas existentes na atividade, sem definir dashboard, gráficos específicos, organização de telas, filtros, relatórios ou qualquer outra solução de interface.
 
 ## Checklist
 
