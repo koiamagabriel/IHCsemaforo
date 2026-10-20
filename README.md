@@ -17,7 +17,7 @@ Leia obrigatoriamente o [Guia para definir o escopo de IHC a partir do tema do T
 
 ## Identificação
 
-**Título do projeto de IHC:** Interface para Configuração, Execução e Análise de Simulações de Controle Semafórico Inteligente
+**Título do projeto de IHC:** Interface para Configuração, Execução e Análise de Simulações de Controle Semafórico Inteligente  
 **TCC/projeto de origem:** Algoritmo Híbrido de Controle Semafórico Baseado em Max Pressure e Lógica Actuated em Ambiente de Simulação  
 **Orientador(a):** Ricardo de Carvalho Destro  
 **Disciplina:** Interação Humano-Computador  
@@ -37,20 +37,32 @@ Leia obrigatoriamente o [Guia para definir o escopo de IHC a partir do tema do T
 |---|---|
 | Tema central do TCC | Desenvolvimento de um algoritmo híbrido de controle semafórico inteligente baseado em Max Pressure e lógica actuated. |
 | Resultado técnico esperado do TCC | Sistema de controle semafórico inteligente implementado em Python e integrado ao SUMO por meio do TraCI, acompanhado de uma interface que permita configurar, executar, acompanhar e analisar as simulações e comparar diferentes estratégias de controle. |
-| O TCC já previa interface? | Sim — prevista pela equipe, mas ainda não formalmente detalhada no documento do TCC1. |
+| O TCC já previa interface? | Sim — a interface já era prevista pela equipe e atualmente existe como protótipo digital funcional do TCC. Nas etapas iniciais do TCC ela ainda não estava formalmente detalhada no documento do TCC1. |
 | Capacidade técnica que pode gerar valor para pessoas | Permitir a configuração de cenários e parâmetros de simulação, a execução e o acompanhamento visual dos experimentos e a análise dos resultados produzidos pelas diferentes estratégias de controle semafórico. |
 | Usuário principal adotado em IHC | Pesquisador ou analista de mobilidade urbana. |
 | Objetivo principal desse usuário | Configurar uma simulação de tráfego, executá-la e acompanhar seu funcionamento, além de analisar e comparar os resultados obtidos pelas diferentes estratégias de controle semafórico. |
-| Interface/recorte explorado na disciplina | Interface para configuração do experimento, execução e acompanhamento visual da simulação e análise e comparação dos resultados obtidos. |
-| Relação com o escopo formal do TCC | A interface faz parte do escopo previsto do TCC e será utilizada para permitir a interação do usuário com o ambiente de simulação. |
+| Interface/recorte explorado na disciplina | Interface para seleção do cenário, configuração do experimento, execução e acompanhamento da simulação e análise e comparação dos resultados obtidos. |
+| Relação com o escopo formal do TCC | A interface faz parte do escopo previsto do TCC. Na Entrega 6, o protótipo digital existente foi adotado como V0 e analisado como hipótese de design, sem assumir que seu funcionamento técnico representa validação de usabilidade. |
 
 > **Importante:** a tabela acima explica a relação entre os dois trabalhos. Ela não altera o compromisso formal do TCC.
 
 ## Resumo do projeto pela perspectiva do usuário
 
-Um **pesquisador ou analista de mobilidade urbana** precisa configurar, executar, acompanhar e analisar simulações de controle semafórico. Para isso, é necessário definir o cenário de simulação, configurar seus parâmetros, escolher o método de controle, acompanhar visualmente a execução do experimento e interpretar os resultados obtidos. O TCC investiga um algoritmo híbrido baseado em Max Pressure e lógica actuated.
+Um **pesquisador ou analista de mobilidade urbana** precisa configurar, executar, acompanhar e analisar simulações de controle semafórico. Para isso, é necessário definir o cenário de simulação, configurar seus parâmetros, escolher o método de controle, acompanhar a execução do experimento e interpretar os resultados obtidos.
 
-Para a disciplina de IHC, será explorado um conjunto de interfaces que permita ao usuário **realizar o setup da simulação, acompanhar sua execução e, posteriormente, visualizar, analisar e comparar os resultados gerados**.
+O TCC investiga um algoritmo híbrido baseado em Max Pressure e lógica actuated.
+
+Para a disciplina de IHC, é explorada a interface que permite ao usuário:
+
+**selecionar o cenário → configurar a simulação e a estratégia → executar e acompanhar o experimento → visualizar, analisar e comparar os resultados gerados**.
+
+Na Entrega 6, a interface funcional já existente no contexto do TCC passou a ser formalizada como **protótipo digital V0**, organizado em três fluxos:
+
+- **PF01 — Preparar experimento**;
+- **PF02 — Executar e acompanhar simulação**;
+- **PF03 — Analisar e comparar resultados**.
+
+O protótipo será utilizado como artefato formativo e deverá ser confrontado com observações de usuários ao longo das etapas de avaliação.
 
 Se alguma afirmação ainda não estiver sustentada por evidência, registre-a como hipótese na [Entrega 1](docs/01_conhecendo_o_problema.md).
 
@@ -72,19 +84,25 @@ Algoritmos, modelos, APIs, análises de datasets e componentes de infraestrutura
 
 Essas atividades fornecem um campo legítimo para exercitar IHC.
 
-Possibilidades de interface incluem **dashboards, telas administrativas, configuração, relatórios, histórico com filtros, comparação de resultados, visualização de dados, acompanhamento de processamento, gestão de perfis e permissões, CRUDs justificados pelo domínio, alertas, auditoria e ajuda contextual**. Nenhuma dessas telas é obrigatória por si só: deve existir uma tarefa e um objetivo de usuário que a justifique.
+Possibilidades de interface incluem **dashboards, telas administrativas, configuração, relatórios, histórico com filtros, comparação de resultados, visualização de dados, acompanhamento de processamento, gestão de perfis e permissões, CRUDs justificados pelo domínio, alertas, auditoria e ajuda contextual**.
+
+Nenhuma dessas telas é obrigatória por si só: deve existir uma tarefa e um objetivo de usuário que a justifique.
 
 ## Relação com apresentação e potencial de aplicação
 
-A reflexão sobre usuários ajuda a equipe a explicar o projeto para públicos externos, inclusive em eventos como a **INOVA**. Em vez de comunicar apenas a técnica implementada, a equipe pode apresentar:
+A reflexão sobre usuários ajuda a equipe a explicar o projeto para públicos externos, inclusive em eventos como a **INOVA**.
+
+Em vez de comunicar apenas a técnica implementada, a equipe pode apresentar:
 
 **problema humano → contribuição computacional → forma de uso → impacto potencial**.
 
-No projeto, a interface permitirá ao usuário interagir com o ambiente de simulação desenvolvido no TCC:
+No projeto, a interface permite ao usuário interagir com o ambiente de simulação desenvolvido no TCC:
 
-**configuração do cenário e da simulação → execução e acompanhamento visual → análise e comparação dos resultados**.
+**configuração do cenário e da simulação → execução e acompanhamento → análise e comparação dos resultados**.
 
-A interface faz parte da solução prevista no TCC, permitindo que o usuário realize o setup do experimento, acompanhe a simulação em execução e posteriormente interprete os resultados produzidos. As atividades da disciplina de IHC serão utilizadas para investigar e refinar essa interação de forma centrada no usuário.
+A interface faz parte da solução prevista no TCC e atualmente existe como protótipo digital funcional. As atividades da disciplina de IHC são utilizadas para investigar e refinar essa interação de forma centrada no usuário.
+
+O fato de o protótipo já funcionar tecnicamente não significa que sua interação esteja validada. As entregas da disciplina deverão fornecer evidências progressivas sobre necessidades, tarefas, organização da interação e usabilidade.
 
 ## Como usar este repositório
 
@@ -107,7 +125,7 @@ A interface faz parte da solução prevista no TCC, permitindo que o usuário re
 | 3 | [Personas, empatia, contexto e jornada](docs/03_personas_contexto_jornada.md) | 1 persona por integrante; demais artefatos consolidados | 🟩 |
 | 4 | [Cenários de análise/problema](docs/04_cenarios_problema.md) | 1 solução completa por integrante | 🟩 |
 | 5 | [Análise de tarefas: HTA, GOMS e CTT](docs/05_analise_tarefas.md) | cada integrante: pelo menos 1 HTA + 1 GOMS + 1 CTT | 🟩 |
-| 6 | [Prototipação em papel](docs/06_prototipacao_papel.md) | 1 protótipo integrado por equipe | ⬜ |
+| 6 | [Prototipação em papel](docs/06_prototipacao_papel.md) | 1 protótipo integrado por equipe | 🟨 |
 | 7 | [Coleta de dados e aspectos éticos](docs/07_coleta_dados.md) | soluções individuais + técnicas distintas; questionário entre as técnicas | ⬜ |
 | 8 | [Ciclo de vida e engenharia de usabilidade](docs/08_engenharia_usabilidade.md) | 1 solução consolidada por equipe | ⬜ |
 | 9 | [Modelo conceitual e design centrado na comunicação](docs/09_modelo_conceitual.md) | soluções individuais + consolidação de objetivos/signos | ⬜ |
@@ -123,13 +141,17 @@ A interface faz parte da solução prevista no TCC, permitindo que o usuário re
 
 O projeto deve formar uma cadeia de evidências:
 
-**tema/contribuição do TCC → possível aplicação → usuários/stakeholders → objetivos → problema/contexto → alternativas → necessidades → personas → cenários → tarefas → modelo conceitual → MoLIC → protótipo → planejamento → inspeção → teste com usuários → melhorias**.
+**tema/contribuição do TCC → possível aplicação → usuários/stakeholders → objetivos → problema/contexto → alternativas → necessidades → personas → cenários → tarefas → protótipo formativo → modelo conceitual → MoLIC → protótipo de alta fidelidade → planejamento → inspeção → teste com usuários → melhorias**.
 
-No nosso projeto, o fluxo principal será:
+No nosso projeto, o fluxo principal é:
 
-**definição da malha viária → configuração da simulação e da estratégia de controle → execução e acompanhamento visual → análise e comparação dos resultados**.
+**definição da malha viária → configuração da simulação e da estratégia de controle → execução e acompanhamento → análise e comparação dos resultados**.
 
-Uma entrega não deve “reiniciar” o projeto. As personas, tarefas, MoLIC, protótipo e avaliação devem permanecer coerentes com esse fluxo, salvo quando novas evidências justificarem a revisão.
+A Entrega 6 materializa esse fluxo no protótipo digital V0 por meio de:
+
+**PF01 → PF02 → PF03**.
+
+Uma entrega não deve “reiniciar” o projeto. As personas, tarefas, protótipos, modelo conceitual, MoLIC e avaliações devem permanecer coerentes com esse fluxo, salvo quando novas evidências justificarem revisão.
 
 ## Documentos de apoio
 
