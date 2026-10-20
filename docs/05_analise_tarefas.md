@@ -1,7 +1,7 @@
 # Entrega 5 — Análise de tarefas: HTA, GOMS e CTT
 
 **Data:** 20/10/2026  
-**Status:** 🟨 em andamento  
+**Status:** 🟩 concluída  
 **Responsabilidade:** cada integrante modela pelo menos 1 HTA, 1 GOMS e 1 CTT. As três técnicas podem abordar a mesma funcionalidade ou funcionalidades distintas, conforme a orientação da disciplina.
 
 ## Objetivo da atividade
@@ -29,83 +29,241 @@ Um CRUD pode gerar tarefas relevantes, mas “cadastrar usuário” só merece m
 
 | ID | Tarefa | Persona/cenário de origem | Frequência/criticidade | Autor responsável |
 |---|---|---|---|---|
-| {{a definir}} | {{tarefa selecionada para o HTA}} | P01 / C01 | {{a definir}} | Gabriel Koiama de Rocha Lira — 22.125.067-3 |
-| {{a definir}} | {{tarefa selecionada para o GOMS}} | P01 / C01 | {{a definir}} | Gabriel Koiama de Rocha Lira — 22.125.067-3 |
-| {{a definir}} | {{tarefa selecionada para o CTT}} | P01 / C01 | {{a definir}} | Gabriel Koiama de Rocha Lira — 22.125.067-3 |
+| T02 | Configurar os parâmetros do experimento | P01 / C01 | Alta frequência e criticidade: uma configuração inconsistente pode comprometer a execução e a comparabilidade dos experimentos. | Gabriel Koiama de Rocha Lira — 22.125.067-3 |
+| T03 | Selecionar a estratégia de controle correspondente à execução | P01 / C01 | Alta criticidade: selecionar uma estratégia diferente daquela prevista compromete a identificação e a comparação do experimento. | Gabriel Koiama de Rocha Lira — 22.125.067-3 |
+| T04/T05 | Iniciar e acompanhar a execução da simulação | P01 / C01 | Alta frequência e criticidade: o usuário precisa iniciar o experimento configurado e compreender seu estado até a conclusão. | Gabriel Koiama de Rocha Lira — 22.125.067-3 |
 | T06 | Consultar e interpretar as métricas obtidas em uma execução | P02 / C02 | Alta frequência e criticidade: as métricas fundamentam a interpretação dos resultados dos experimentos. | João Pedro Lopes Santana Villas Bôas — 22.125.065-7 |
 | T07 | Comparar resultados experimentais das diferentes estratégias de controle | P02 / C02 | Alta criticidade: uma comparação inadequada pode produzir conclusões incorretas sobre o comportamento das estratégias. | João Pedro Lopes Santana Villas Bôas — 22.125.065-7 |
 | T08 | Elaborar uma síntese dos resultados analisados | P02 / C02 | Alta criticidade: a síntese deve representar corretamente o conjunto das métricas e as condições experimentais consideradas. | João Pedro Lopes Santana Villas Bôas — 22.125.065-7 |
 
 > Priorize tarefas necessárias para que o usuário alcance objetivos centrais. Não desperdice a modelagem em ações triviais isoladas, como “clicar em login”, se o objetivo relevante é maior. Da mesma forma, não modele o funcionamento interno do algoritmo como se fosse uma tarefa humana.
 
-> Na modelagem de João, o HTA aprofunda T07, o GOMS aprofunda T06 e o CTT integra T07 e T08 para representar as relações temporais existentes entre comparação, interpretação e síntese dos resultados.
+> Na modelagem de Gabriel, o HTA aprofunda T02, o GOMS aprofunda T03 e o CTT integra T04 e T05. Na modelagem de João, o HTA aprofunda T07, o GOMS aprofunda T06 e o CTT integra T07 e T08.
 
 ---
 
 # Parte de Gabriel Koiama de Rocha Lira
 
-> Esta seção será preenchida posteriormente com pelo menos um HTA, um GOMS e um CTT relacionados a P01 e C01.
+## HTA — T02 Configurar os parâmetros do experimento
 
-## HTA — {{tarefa a definir}}
-
-**Autor(a):** Gabriel Koiama de Rocha Lira — 22.125.067-3
+**Autor(a):** Gabriel Koiama de Rocha Lira — 22.125.067-3  
+**Persona/cenário de origem:** P01 — Marina Ribeiro / C01 — Preparação e execução de experimentos sob condições comparáveis  
+**Necessidade relacionada:** R02 — definir corretamente as condições da simulação antes da execução
 
 ### Descrição da tarefa
 
-{{a preencher}}
+O objetivo da tarefa é configurar corretamente os parâmetros necessários para uma execução experimental, preservando as condições que devem permanecer equivalentes entre diferentes estratégias de controle.
+
+A tarefa começa depois que o cenário de interesse foi definido e antes da seleção definitiva da estratégia e do início da simulação. Marina precisa identificar quais condições serão utilizadas, definir ou ajustar seus valores e verificar se a configuração representa corretamente o experimento planejado.
+
+A configuração envolve informações relacionadas ao cenário, demanda e parâmetros experimentais relevantes. Antes de prosseguir, Marina precisa verificar se todos os valores necessários foram definidos e se não existe alguma inconsistência capaz de comprometer a execução ou sua comparação posterior com outros experimentos.
+
+A tarefa termina quando a configuração é considerada completa e coerente com a condição experimental planejada.
+
+**Entrada:** cenário definido, condição de demanda, objetivos do experimento e valores de referência necessários.  
+**Resultado esperado:** conjunto de parâmetros completo, consistente e identificável para a execução planejada.
 
 ### Diagrama
 
-{{a preencher}}
+![HTA T02](../assets/05_tarefas/hta_t02.svg)
+
+*Figura 1 — HTA da tarefa T02 — Configurar os parâmetros do experimento. Fonte: elaboração da equipe.*
 
 ### Decomposição e planos
 
 | ID | Objetivo/operação | Plano/ordem | Problema ou decisão de design observada |
 |---|---|---|---|
-| 0 | {{objetivo principal}} | {{plano}} | {{...}} |
+| 0 | **Configurar os parâmetros do experimento.** | **Plano 0:** realizar 1 > 2 > 3 > 4. Se a etapa 3 identificar uma inconsistência, retornar à etapa 2. | Uma configuração incorreta pode comprometer a execução e invalidar uma comparação posterior. |
+| 1 | **Identificar as condições experimentais que deverão ser configuradas.** | **Plano 1:** realizar 1.1 > 1.2. | O usuário precisa compreender quais condições pertencem ao experimento atual antes de alterar valores. |
+| 1.1 | Revisar cenário e condição de demanda. | Operação. | Cenário e demanda precisam permanecer identificáveis durante a configuração. |
+| 1.2 | Identificar os parâmetros relevantes para a execução. | Operação. | Excesso de parâmetros sem organização pode aumentar a possibilidade de erro. |
+| 2 | **Definir os valores da configuração.** | **Plano 2:** realizar 2.1, 2.2 e 2.3 conforme os parâmetros exigidos pelo experimento. | As condições que devem permanecer equivalentes entre execuções não podem ser alteradas inadvertidamente. |
+| 2.1 | Definir parâmetros gerais da simulação. | Operação. | Parâmetros gerais precisam ser apresentados de forma compreensível e associados ao experimento. |
+| 2.2 | Definir as condições relacionadas à demanda. | Operação. | Uma mudança não planejada na demanda pode tornar as execuções incomparáveis. |
+| 2.3 | Definir demais parâmetros experimentais comuns. | Operação. | O usuário precisa distinguir parâmetros comuns de elementos que serão modificados deliberadamente na comparação. |
+| 3 | **Verificar a consistência da configuração.** | **Plano 3:** realizar 3.1 > 3.2 > 3.3. Se houver problema, retornar a 2. | Identificar erros antes da simulação reduz retrabalho e risco de resultados inválidos. |
+| 3.1 | Verificar se todos os parâmetros obrigatórios foram definidos. | Operação. | Configurações incompletas não devem avançar silenciosamente para execução. |
+| 3.2 | Verificar se os valores utilizados são válidos para o experimento. | Operação. | Valores incompatíveis ou inesperados precisam ser percebidos antes da execução. |
+| 3.3 | Conferir se as condições comuns permanecem equivalentes às execuções de referência. | Operação. | Essa verificação é necessária para preservar a comparabilidade entre estratégias. |
+| 4 | **Confirmar a configuração do experimento.** | **Plano 4:** realizar 4.1 > 4.2. | Antes de prosseguir, o usuário deve reconhecer claramente qual configuração será utilizada. |
+| 4.1 | Revisar a configuração consolidada. | Operação. | Uma visão consolidada reduz a dependência de memória e conferências dispersas. |
+| 4.2 | Manter a configuração associada à execução que será realizada. | Operação. | A rastreabilidade entre configuração, execução e resultado precisa ser preservada. |
+
+### Interpretação do HTA
+
+O HTA mostra que configurar um experimento não consiste apenas em preencher valores. Marina precisa primeiro compreender quais condições pertencem ao experimento, depois definir os valores e, principalmente, verificar sua consistência antes da execução.
+
+A etapa 3 é especialmente importante porque representa uma oportunidade de prevenção de erros. Caso uma inconsistência seja identificada, o usuário retorna à definição dos valores antes de iniciar a simulação.
+
+A decomposição também reforça a necessidade de distinguir as condições que devem permanecer equivalentes daquelas que são alteradas propositalmente para avaliar uma estratégia.
+
+Para o projeto de interação, isso indica que os parâmetros precisam ser organizados de maneira compreensível, possuir validações adequadas e permanecer associados à execução que produzirá os resultados.
 
 **Verificação do HTA:**
 
-- O objetivo 0 representa uma meta do usuário?
-- As subtarefas são necessárias e suficientes?
-- Os **planos** indicam ordem, alternativa, repetição ou condição?
-- A decomposição parou em nível útil para projeto de interação?
+- O objetivo 0 representa uma meta do usuário? **Sim.**
+- As subtarefas são necessárias e suficientes? **Sim, dentro do escopo de T02.**
+- Os planos indicam ordem, alternativa, repetição ou condição? **Sim.**
+- A decomposição parou em nível útil para projeto de interação? **Sim.**
 
 ---
 
-## GOMS — {{tarefa a definir}}
+## GOMS — T03 Selecionar a estratégia de controle
 
-**Autor(a):** Gabriel Koiama de Rocha Lira — 22.125.067-3
+**Autor(a):** Gabriel Koiama de Rocha Lira — 22.125.067-3  
+**Persona/cenário de origem:** P01 — Marina Ribeiro / C01 — Preparação e execução de experimentos sob condições comparáveis  
+**Necessidade relacionada:** R03 — selecionar claramente qual estratégia será utilizada em cada experimento
 
 ### Goal
 
-`G0: {{meta do usuário}}`
+`G0: selecionar a estratégia de controle correspondente à execução experimental planejada`
+
+### Nível adotado
+
+O modelo utiliza operadores em nível semântico de interação e cognição, como consultar, identificar, examinar, selecionar, comparar, verificar e confirmar.
+
+Não foi aplicado GOMS-KLM porque a interface ainda não possui detalhamento suficiente para estimar de forma responsável tempos de apontamento, digitação, movimentação entre teclado e mouse ou resposta do sistema.
 
 ### Métodos, operadores e regras de seleção
 
-{{a preencher}}
+**Method M1 — selecionar a estratégia a partir de um plano experimental explícito**
 
-> Não chame qualquer passo de “método”. Em GOMS, métodos são sequências alternativas capazes de atingir uma meta; regras de seleção explicam quando escolher entre eles.
+- **OP M1.1:** consultar qual execução está sendo preparada;
+- **OP M1.2:** identificar qual estratégia foi definida para essa execução;
+- **OP M1.3:** examinar as estratégias disponíveis;
+- **OP M1.4:** selecionar a estratégia correspondente;
+- **OP M1.5:** verificar se a estratégia selecionada corresponde ao plano experimental;
+- **OP M1.6:** confirmar a seleção.
+
+**Method M2 — selecionar a estratégia pela continuidade de uma bateria comparativa**
+
+- **OP M2.1:** examinar quais estratégias já foram executadas na condição experimental atual;
+- **OP M2.2:** identificar qual estratégia ainda precisa ser executada;
+- **OP M2.3:** examinar as estratégias disponíveis;
+- **OP M2.4:** selecionar a estratégia identificada;
+- **OP M2.5:** verificar se as demais condições experimentais permanecem inalteradas;
+- **OP M2.6:** confirmar a seleção.
+
+**Selection Rule SR1:** utilizar M1 quando a estratégia da execução atual já estiver explicitamente definida no plano experimental; utilizar M2 quando Marina estiver dando continuidade a uma sequência de execuções comparativas e precisar identificar a estratégia seguinte com base no que já foi realizado.
+
+### Interpretação do GOMS
+
+O modelo evidencia que o objetivo do usuário não é simplesmente escolher uma opção de uma lista, mas garantir que a estratégia escolhida corresponda ao experimento que pretende realizar.
+
+Os métodos M1 e M2 representam dois caminhos plausíveis para atingir a mesma meta. Em uma execução planejada individualmente, Marina parte diretamente da definição experimental. Em uma bateria comparativa, ela também pode precisar considerar quais estratégias já foram executadas naquela condição.
+
+Nos dois métodos, a verificação final é necessária para impedir que uma estratégia seja executada por engano ou que a alteração da estratégia venha acompanhada de mudanças não planejadas em outras condições.
+
+Para a futura interação, isso reforça que a estratégia escolhida deve permanecer claramente identificável e relacionada ao restante da configuração experimental.
+
+> Em GOMS, métodos representam sequências alternativas capazes de atingir uma meta. A regra de seleção determina em qual condição cada método é utilizado.
 
 ---
 
-## CTT — {{tarefa a definir}}
+## CTT — T04/T05 Iniciar e acompanhar uma simulação
 
-**Autor(a):** Gabriel Koiama de Rocha Lira — 22.125.067-3
+**Autor(a):** Gabriel Koiama de Rocha Lira — 22.125.067-3  
+**Persona/cenário de origem:** P01 — Marina Ribeiro / C01 — Preparação e execução de experimentos sob condições comparáveis  
+**Necessidade relacionada:** R04 — realizar o experimento configurado e compreender seu estado de execução
 
 ### Descrição
 
-{{a preencher}}
+O CTT representa as relações temporais envolvidas na preparação imediata, início, acompanhamento e conclusão de uma execução experimental.
+
+A tarefa abstrata principal é **executar e acompanhar a simulação**. Antes do início, Marina revisa as condições configuradas e solicita a execução. O sistema verifica a configuração e, caso ela esteja adequada, inicializa o processamento.
+
+Se uma inconsistência for identificada, o fluxo de execução não deve prosseguir normalmente. O usuário precisa reconhecer o problema e retornar à configuração correspondente antes de realizar uma nova tentativa.
+
+Durante a simulação, o processamento do sistema e a consulta de estado podem ocorrer de forma concorrente e comunicante: enquanto a execução continua, informações sobre seu estado podem ser consultadas por Marina.
+
+Depois que o processamento termina, o sistema consolida o estado final e informa a conclusão para que Marina verifique se a execução terminou adequadamente.
 
 ### Diagrama
 
-{{a preencher}}
+![CTT T04/T05](../assets/05_tarefas/ctt_t04_t05.svg)
+
+*Figura 2 — CTT das tarefas T04/T05 — Iniciar e acompanhar uma simulação. Fonte: elaboração da equipe.*
+
+### Tipos de tarefa utilizados
+
+- **[A] Tarefa abstrata:** representa uma composição de tarefas utilizada para organizar a decomposição.
+- **[U] Tarefa do usuário:** atividade realizada pelo usuário fora do processamento automático do sistema, incluindo revisão, interpretação e decisão.
+- **[S] Tarefa do sistema:** processamento realizado automaticamente pelo sistema.
+- **[I] Tarefa interativa:** atividade em que ocorre diálogo entre usuário e sistema.
+
+### Estrutura do modelo
+
+```text
+[A] A0 — Executar e acompanhar simulação
+    |
+    +-- [A] A1 — Preparar início
+    |      |
+    |      +-- [U] U1 — Revisar condições configuradas
+    |      |        >>
+    |      +-- [I] I1 — Solicitar início da execução
+    |      |        []>>
+    |      +-- [S] S1 — Validar configuração
+    |               |
+    |               +-- [S] S2 — Inicializar simulação
+    |               +-- [I] I2 — Informar inconsistência
+    |                    (S2 [] I2)
+    |                         |
+    |                         +-- [U] U2 — Revisar/corrigir configuração
+    |                                  e retornar a T02
+    |
+    +-- [A] A2 — Acompanhar execução
+    |      |
+    |      +-- [S] S3 — Processar simulação
+    |      |        |[]|
+    |      +-- [I] I3 — Consultar estado da execução
+    |               >>
+    |               [U] U3 — Interpretar estado
+    |
+    +-- [A] A3 — Concluir execução
+           |
+           +-- [S] S4 — Finalizar processamento
+           |        []>>
+           +-- [I] I4 — Informar estado final
+                    >>
+                    [U] U4 — Confirmar término da execução
+```
+
+### Relações temporais principais
+
+`A1 []>> A2 []>> A3`
+
+As informações definidas e validadas durante a preparação são utilizadas pela execução, e o resultado da execução é utilizado na etapa de conclusão.
+
+Durante A1:
+
+`S2 [] I2`
+
+Depois da validação, ocorre uma escolha: a configuração válida permite inicializar a simulação; uma inconsistência leva à comunicação do problema e à necessidade de revisão da configuração.
+
+Durante A2:
+
+`S3 |[]| I3`
+
+O processamento da simulação e a consulta de estado podem ocorrer de forma concorrente e comunicante.
 
 ### Legenda e relações temporais usadas
 
 | Operador/relação | Significado no diagrama | Exemplo no modelo |
 |---|---|---|
-| {{...}} | {{...}} | {{...}} |
+| `>>` | Ativação: a segunda tarefa só pode começar após a primeira terminar. | `U1 >> I1` e `I3 >> U3`. |
+| `[]>>` | Ativação com passagem de informação: a segunda tarefa ocorre após a primeira e utiliza informação produzida por ela. | `I1 []>> S1` e `S4 []>> I4`. |
+| `[]` | Escolha: apenas uma das tarefas alternativas é realizada naquela condição. | Após a validação, `S2 [] I2`. |
+| `|[]|` | Concorrência com comunicação: as tarefas podem ocorrer simultaneamente ou em ordens intercaladas, trocando informações. | `S3 |[]| I3`. |
+
+### Interpretação do CTT
+
+O CTT evidencia que iniciar uma simulação depende de uma configuração previamente preparada e validada. O processamento não deve ser tratado como uma ação isolada do restante do experimento.
+
+A escolha após a validação representa uma ruptura importante: se a configuração estiver inconsistente, a execução não segue o fluxo normal e o usuário precisa retornar à tarefa de configuração.
+
+Durante a execução, processamento e acompanhamento possuem relação de concorrência e comunicação. A simulação continua sendo executada pelo sistema enquanto Marina consulta informações sobre seu estado.
+
+Por fim, a conclusão da tarefa depende de feedback sobre o estado final. O usuário precisa distinguir uma execução concluída adequadamente de uma execução interrompida ou inadequada antes de utilizar seus resultados.
 
 ---
 
@@ -134,7 +292,7 @@ A tarefa termina quando Carlos consegue relacionar as diferenças observadas às
 
 ![HTA T07](../assets/05_tarefas/hta_t07.svg)
 
-*Figura 1 — HTA da tarefa T07 — Comparar resultados experimentais. Fonte: elaboração da equipe.*
+*Figura 3 — HTA da tarefa T07 — Comparar resultados experimentais. Fonte: elaboração da equipe.*
 
 ### Decomposição e planos
 
@@ -283,7 +441,7 @@ O modelo diferencia tarefas realizadas pelo usuário, processamentos do sistema,
 
 ![CTT T07/T08](../assets/05_tarefas/ctt_t07_t08.svg)
 
-*Figura 2 — CTT das tarefas T07/T08 — Comparar e sintetizar resultados. Fonte: elaboração da equipe.*
+*Figura 4 — CTT das tarefas T07/T08 — Comparar e sintetizar resultados. Fonte: elaboração da equipe.*
 
 ### Tipos de tarefa utilizados
 
@@ -321,3 +479,87 @@ O modelo diferencia tarefas realizadas pelo usuário, processamentos do sistema,
            +-- [U] U3 — Formular conclusão
            |        >>
            +-- [I] I6 — Consultar ou registrar síntese
+```
+
+### Relações temporais principais
+
+`A1 []>> A2 []>> A3`
+
+As informações produzidas durante a preparação da comparação são utilizadas na análise e, posteriormente, na síntese.
+
+Dentro de A2.1:
+
+`I2 ||| I3 ||| I4 ||| I5`
+
+As quatro métricas não possuem uma ordem rígida de consulta entre si.
+
+### Legenda e relações temporais usadas
+
+| Operador/relação | Significado no diagrama | Exemplo no modelo |
+|---|---|---|
+| `>>` | Ativação: a segunda tarefa só pode começar após o término da primeira. | `S1 >> U1` e `U3 >> I6`. |
+| `[]>>` | Ativação com passagem de informação: além da sequência, a informação produzida pela primeira tarefa é utilizada pela segunda. | `I1 []>> S1` e `A1 []>> A2`. |
+| `|||` | Concorrência: as tarefas podem ocorrer sem uma ordem rígida entre si, podendo ser realizadas em qualquer ordem ou simultaneamente quando aplicável. | `I2 ||| I3 ||| I4 ||| I5`. |
+
+### Interpretação do CTT
+
+O CTT evidencia que a interpretação dos resultados possui dependências temporais importantes.
+
+A análise das métricas ocorre depois que as execuções foram identificadas e seu contexto foi recuperado. Isso mantém a comparação associada às condições experimentais correspondentes.
+
+Por outro lado, não existe uma sequência obrigatória para consultar tempo médio de espera, tamanho médio das filas, throughput e número de trocas de fase. Esses indicadores representam aspectos diferentes da execução e podem ser examinados conforme a necessidade da análise.
+
+A síntese aparece somente depois da interpretação do conjunto dos resultados. Dessa forma, a conclusão não é representada como simples reprodução automática das métricas, mas como resultado de uma atividade de interpretação realizada pelo usuário.
+
+A modelagem também distingue claramente ações do usuário, processamento do sistema, interações entre ambos e tarefas abstratas utilizadas para organizar o trabalho.
+
+---
+
+## Síntese da equipe
+
+As modelagens de HTA, GOMS e CTT reforçam que a interação principal do projeto não deve ser tratada como uma sequência simples de telas. O usuário precisa manter uma relação clara entre cenário, configuração, estratégia executada e resultados produzidos durante todo o fluxo experimental.
+
+Na etapa de preparação, o HTA de T02 mostrou que configurar parâmetros exige identificar as condições relevantes, definir valores, verificar consistência e somente então confirmar a configuração. Isso reforça a necessidade de prevenção de erros antes da execução.
+
+O GOMS de T03 demonstrou que a escolha da estratégia possui mais de um caminho plausível e precisa estar vinculada ao objetivo do experimento. A estratégia selecionada deve permanecer claramente identificável para evitar execuções incorretas.
+
+O CTT de T04/T05 evidenciou que iniciar e acompanhar a simulação envolve atividades do usuário, interação e processamento do sistema. Também revelou uma ruptura importante: configurações inválidas precisam interromper o fluxo normal antes da execução. Durante o processamento, o usuário precisa conseguir compreender o estado da simulação.
+
+Na etapa de análise, o GOMS de T06 mostrou que consultar métricas depende primeiro de localizar corretamente a execução e compreender seu contexto. O HTA de T07 revelou que uma comparação válida exige verificar previamente se as execuções são equivalentes. O CTT de T07/T08 mostrou que diferentes indicadores podem ser consultados sem uma ordem rígida, mas a síntese deve ocorrer somente depois de sua interpretação.
+
+Como consequência, as próximas etapas de prototipação deverão considerar como requisitos de interação:
+
+- preservar a identificação de cenário, demanda, parâmetros e estratégia;
+- validar condições importantes antes da execução;
+- apresentar feedback claro sobre início, processamento, erro e conclusão;
+- manter resultados associados à execução e à configuração que os produziram;
+- permitir análise das métricas sem perder o contexto experimental;
+- impedir ou alertar sobre comparações entre execuções incompatíveis;
+- permitir comparação entre estratégias sob condições equivalentes;
+- apresentar síntese somente após preservar os dados necessários para justificar a conclusão.
+
+As tarefas T02, T03, T04/T05, T06, T07 e T08 devem ser priorizadas na prototipação e posteriormente consideradas na elaboração de tarefas para avaliação de usabilidade. T01 permanece como tarefa necessária do fluxo geral e pré-requisito da configuração, embora não tenha recebido uma modelagem específica nesta entrega.
+
+---
+
+## Checklist
+
+- [x] Cada integrante produziu ao menos 1 HTA, 1 GOMS e 1 CTT.
+- [x] Cada artefato identifica autor e tarefa.
+- [x] Diagramas são legíveis e possuem fonte editável quando possível.
+- [x] HTA contém planos, não apenas árvore de tópicos.
+- [x] GOMS distingue Goals, Operators, Methods e Selection Rules.
+- [x] CTT usa operadores temporais e tipos de tarefa coerentes.
+- [x] Há texto explicando cada diagrama.
+- [x] Tarefas estão ligadas a cenários/personas na rastreabilidade.
+- [x] Em TCC técnico, as tarefas descrevem o que a pessoa faz com a contribuição/resultados, não passos internos do código.
+- [x] CRUDs, relatórios, filtros e atividades administrativas foram escolhidos por relevância ao objetivo do usuário.
+
+---
+
+## Referências
+
+- BARBOSA, Simone D. J.; SILVA, Bruno S. **Interação Humano-Computador**. Elsevier/Campus, 2010.
+- CARD, Stuart K.; MORAN, Thomas P.; NEWELL, Allen. **The Psychology of Human-Computer Interaction**. Lawrence Erlbaum, 1983.
+- PATERNÒ, Fabio. **Model-Based Design and Evaluation of Interactive Applications**. Springer, 1999.
+- CENTRO UNIVERSITÁRIO FEI. **CC8122 — Interação Humano-Computador: materiais de aula sobre HTA, GOMS e CTT**. 2026/2.
