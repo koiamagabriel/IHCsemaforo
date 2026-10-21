@@ -1,7 +1,7 @@
 # Entrega 7 — Coleta de dados, necessidades e aspectos éticos
 
 **Data:** 20/10/2026  
-**Status:** 🟨 em andamento  
+**Status:** 🟩 concluída  
 **Responsabilidade:** soluções individuais + técnicas distintas; questionário entre as técnicas
 
 ## Objetivo da atividade
@@ -30,11 +30,11 @@ O projeto já possui hipóteses sobre o usuário prioritário, a organização d
 
 ---
 
-## A01 — Gabriel Koiama de Rocha Lira
+# A01 — Gabriel Koiama de Rocha Lira
 
 **Autor(a):** Gabriel Koiama de Rocha Lira — 22.125.067-3
 
-### Objetivo da investigação individual
+## Objetivo da investigação individual
 
 A investigação de Gabriel procura reduzir principalmente as incertezas associadas a H01, H02 e H03.
 
@@ -53,9 +53,9 @@ Essas informações poderão sustentar ou provocar revisão das proto-personas, 
 
 ---
 
-### Que dados coletar?
+## Que dados coletar?
 
-A coleta foi estruturada a partir das cinco categorias trabalhadas na disciplina: informações sobre o próprio usuário, relação com tecnologia, conhecimento do domínio, tarefas e motivações/valores.
+A coleta foi estruturada a partir das categorias trabalhadas na disciplina: informações sobre o próprio usuário, relação com tecnologia, conhecimento do domínio, tarefas e motivações/valores.
 
 | Categoria | Dado/informação | Hipótese/lacuna relacionada | Por que é necessário | Qual decisão de design pode afetar |
 |---|---|---|---|---|
@@ -77,7 +77,9 @@ A coleta foi estruturada a partir das cinco categorias trabalhadas na disciplina
 | Motivações/valores | Prioridade entre rapidez, rastreabilidade, controle detalhado e facilidade de interpretação. | H02, H03 | Usuários diferentes podem valorizar controle técnico ou síntese de maneira distinta. | Equilíbrio entre detalhamento e simplicidade. |
 | Motivações/valores | Principal dificuldade percebida ao trabalhar com experimentos ou análises semelhantes. | H01, H02, H03 | Pergunta exploratória pode revelar necessidades não antecipadas pela equipe. | Possível revisão de tarefas, fluxos, signos e protótipo. |
 
-### Minimização dos dados
+---
+
+## Minimização dos dados
 
 Embora dados demográficos possam ser utilizados em pesquisas de usuários, nesta investigação não existe justificativa para coletar informações como:
 
@@ -94,7 +96,7 @@ A coleta prioriza características diretamente relacionadas à interação, como
 
 ---
 
-### De quem coletar?
+## De quem coletar?
 
 | Perfil/stakeholder | Critério de inclusão | Relação com persona/público |
 |---|---|---|
@@ -103,7 +105,9 @@ A coleta prioriza características diretamente relacionadas à interação, como
 | Gestor/coordenador que consulte resultados técnicos | Utilizar resultados consolidados de análises ou estudos para apoiar decisões. | Aproxima-se de P02 — Carlos Mendes e pode contribuir principalmente para H03. |
 | Participante proxy com experiência acadêmica em computação, engenharia, simulação ou análise de dados | Possuir familiaridade com experimentação ou ferramentas técnicas, mesmo sem atuação profissional em mobilidade. | Alternativa metodológica quando o acesso ao público especializado for inviável. Deve ser identificada explicitamente como proxy e não tratada como equivalente ao usuário final. |
 
-### Limitação de recrutamento
+---
+
+## Limitação de recrutamento
 
 O público prioritário definido pelo projeto possui caráter especializado. A equipe não possui, neste momento, acesso direto garantido a pesquisadores ou profissionais de mobilidade urbana.
 
@@ -201,9 +205,184 @@ Mesmo assim, o participante não deverá ser pressionado a revelar:
 
 ---
 
+# A02 — João Pedro Lopes Santana Villas Bôas
+
+**Autor(a):** João Pedro Lopes Santana Villas Bôas — 22.125.065-7
+
+## Objetivo da investigação individual
+
+A investigação de João complementa a abordagem estruturada do questionário de Gabriel utilizando uma técnica qualitativa capaz de aprofundar **como as atividades realmente seriam realizadas, quais decisões acontecem durante o processo e por que determinadas informações são consideradas importantes**.
+
+O foco principal está em H02 e H03, sem deixar de produzir evidências relacionadas a H01.
+
+A investigação pretende compreender principalmente:
+
+- como o participante organiza uma atividade técnica do início ao fim;
+- que decisões precisa tomar antes e durante uma execução;
+- quais informações utiliza para detectar erros;
+- como interpreta resultados;
+- como decide se resultados são comparáveis;
+- qual nível de detalhamento considera necessário;
+- qual vocabulário utiliza;
+- como comunica uma conclusão técnica para outra pessoa;
+- quais dificuldades não foram antecipadas pela equipe.
+
+A entrevista não será utilizada para apresentar o protótipo V0 e perguntar se o participante “gosta” das telas. Seu objetivo é investigar o trabalho, o raciocínio e as necessidades do participante antes de avaliar uma solução específica.
+
+---
+
+## Que dados coletar?
+
+| Categoria | Dado/informação | Hipótese/lacuna relacionada | Por que é necessário | Qual decisão de design pode afetar |
+|---|---|---|---|---|
+| Usuário | Papel do participante em atividades técnicas, acadêmicas ou de análise. | H01 | Permite compreender em que contexto suas respostas devem ser interpretadas. | Refinamento das personas e definição dos papéis prioritários. |
+| Usuário | Grau de autonomia para configurar, executar e interpretar análises. | H01 | Pessoas responsáveis apenas por consultar resultados podem possuir necessidades diferentes de quem realiza todo o processo. | Separação entre necessidades de P01 e P02. |
+| Tecnologia | Ferramentas utilizadas e motivo de sua escolha. | H01, H02 | O motivo de uso revela necessidades que não aparecem apenas em uma lista de softwares. | Padrões de interação, compatibilidade com expectativas e terminologia. |
+| Domínio | Conceitos e termos utilizados espontaneamente pelo participante. | H01 | Permite identificar a linguagem natural utilizada no domínio ou em atividades técnicas próximas. | Signos, rótulos e mensagens das Entregas 9–11. |
+| Tarefas | Descrição passo a passo de uma atividade real ou semelhante de configuração e análise. | H02 | Permite comparar o fluxo real com PF01, PF02 e PF03. | Estrutura geral da navegação e ordem das interações. |
+| Tarefas | Decisões tomadas antes de iniciar uma execução. | H02 | Ajuda a identificar quais informações precisam estar disponíveis antes da confirmação. | PP02, validação e resumo da configuração. |
+| Tarefas | Forma de perceber se uma execução está correta ou apresentou problema. | H02 | Ajuda a entender quais feedbacks possuem significado para o usuário. | PP03 e PP04. |
+| Tarefas | Ações tomadas diante de erro ou resultado inesperado. | H02 | Permite modelar recuperação, retorno e reexecução. | Estados de erro, mensagens e caminhos de recuperação. |
+| Tarefas | Processo utilizado para interpretar uma execução concluída. | H03 | Permite identificar sequência de leitura e importância relativa das informações. | PP06 e hierarquia das métricas. |
+| Tarefas | Critérios utilizados para comparar duas alternativas. | H03 | Ajuda a distinguir métricas importantes de condições necessárias para comparação. | PP07 e validação de comparabilidade. |
+| Tarefas | Forma de recuperar resultados anteriores. | H03 | Permite avaliar a necessidade real de histórico, busca, filtros ou organização por pastas. | Histórico e recuperação de execuções. |
+| Comunicação | Forma de explicar um resultado a outra pessoa. | H03 | Um pesquisador e um gestor podem necessitar de níveis distintos de síntese. | Relatórios, visualizações e sínteses. |
+| Motivações/valores | Situações em que o participante prefere controle detalhado ou simplicidade. | H02, H03 | Ajuda a evitar tanto simplificação excessiva quanto exposição desnecessária de detalhes. | Hierarquia de informação e recursos avançados. |
+| Dificuldades | Exemplo concreto de dificuldade, erro ou retrabalho em ferramenta técnica. | H02, H03 | Experiências reais podem revelar problemas não previstos pela equipe. | Revisão dos requisitos e fluxos. |
+| Necessidades abertas | Recurso ou informação que faria diferença no processo do participante. | H01, H02, H03 | Mantém espaço para necessidades não previstas nas hipóteses iniciais. | Revisão de qualquer artefato afetado. |
+
+---
+
+## De quem coletar?
+
+| Perfil/stakeholder | Critério de inclusão | Relação com persona/público |
+|---|---|---|
+| Pesquisador ou profissional que configure e analise experimentos, simulações ou estudos técnicos | Possuir experiência concreta em preparação, execução e interpretação de processos experimentais. | Perfil mais próximo de P01. |
+| Analista ou engenheiro que utilize indicadores para interpretar resultados | Ter experiência com resultados quantitativos, comparação ou análise técnica. | Contribui para H02 e H03. |
+| Professor, pesquisador ou estudante de pós-graduação relacionado a simulação ou análise experimental | Participar de atividades que envolvam configuração, processamento e análise de resultados. | Aproximação acadêmica do contexto de P01. |
+| Gestor/coordenador técnico | Utilizar resultados produzidos por outras pessoas para apoiar avaliações ou decisões. | Perfil próximo de P02. |
+| Participante proxy de Computação ou Engenharia | Possuir experiência com softwares técnicos, experimentos ou análise de dados. | Alternativa quando o público especializado não puder ser recrutado, com limitação explícita. |
+
+---
+
+## Estratégia de amostragem planejada
+
+A entrevista busca **profundidade**, e não representação estatística.
+
+Caso fosse aplicada, seria priorizado inicialmente um pequeno número de participantes com experiência relevante para as perguntas da pesquisa.
+
+A quantidade exata dependeria:
+
+- da disponibilidade do público;
+- da diversidade dos perfis encontrados;
+- do tempo disponível;
+- do objetivo específico da aplicação.
+
+Uma entrevista isolada não seria utilizada para afirmar que uma necessidade é universal.
+
+Da mesma forma, entrevistas com participantes proxy seriam interpretadas apenas dentro das limitações de seu perfil.
+
+---
+
+## Aspectos éticos — A02
+
+A entrevista envolve maior interação com o participante do que o questionário e, caso exista gravação, exige cuidados adicionais.
+
+### Voluntariedade
+
+A participação deve ser inteiramente voluntária.
+
+O entrevistado poderá:
+
+- recusar o convite;
+- não responder a uma pergunta;
+- solicitar interrupção temporária;
+- encerrar a entrevista a qualquer momento;
+- pedir que determinada resposta não seja utilizada.
+
+### Consentimento
+
+Antes da entrevista, o participante deverá receber informações sobre:
+
+- objetivo acadêmico;
+- duração aproximada;
+- assuntos abordados;
+- responsáveis pela atividade;
+- forma de registro;
+- anonimização;
+- armazenamento;
+- direito de desistência.
+
+O início da entrevista deverá ocorrer somente após o consentimento.
+
+### Gravação
+
+A gravação de áudio **não é obrigatória**.
+
+Caso seja utilizada, deverá existir consentimento específico.
+
+O participante deverá poder aceitar:
+
+- participar e permitir gravação;
+- participar sem gravação;
+- recusar a participação.
+
+Se não houver gravação, o entrevistador poderá trabalhar apenas com anotações estruturadas.
+
+Não há necessidade prevista de gravação de vídeo.
+
+### Anonimização
+
+Participantes deverão ser identificados por códigos:
+
+`E01`, `E02`, `E03`...
+
+No documento público poderão ser registrados apenas dados gerais relevantes, por exemplo:
+
+> E01 — estudante de pós-graduação com experiência em simulação.
+
+Não deverão ser publicados nome, instituição ou informações capazes de identificar a pessoa sem necessidade e autorização.
+
+### Confidencialidade profissional
+
+O roteiro deverá deixar claro que o participante não precisa fornecer:
+
+- informações confidenciais;
+- nomes de clientes;
+- dados internos de empresas;
+- códigos proprietários;
+- resultados sigilosos;
+- qualquer informação protegida.
+
+Caso uma resposta contenha acidentalmente informação confidencial, essa parte deverá ser excluída da documentação pública.
+
+### Armazenamento
+
+Notas ou gravações deverão permanecer em área privada da equipe.
+
+O GitHub público deverá receber apenas:
+
+- sínteses;
+- dados anonimizados;
+- categorias de análise;
+- trechos anonimizados quando realmente necessários.
+
+### Descarte
+
+Gravações e dados identificáveis deverão ser descartados após sua finalidade acadêmica, salvo exigência institucional diferente.
+
+---
+
 # Parte B — ferramentas de coleta
 
-> Cada integrante deve preparar uma técnica/instrumento completo. As técnicas devem ser diferentes entre si e **questionário deve estar entre as técnicas escolhidas**.
+> Cada integrante deve preparar uma técnica/instrumento completo. As técnicas devem ser diferentes entre si e **questionário deve estar entre as técnicas escolhidas**, conforme o enunciado da disciplina.
+
+A equipe definiu duas técnicas complementares:
+
+| ID | Integrante | Técnica | Principal contribuição |
+|---|---|---|---|
+| I01 | Gabriel Koiama de Rocha Lira | Questionário | Coleta estruturada e comparável sobre perfil, atividades, ferramentas, execução e resultados. |
+| I02 | João Pedro Lopes Santana Villas Bôas | Entrevista semiestruturada | Aprofundamento qualitativo do processo de trabalho, decisões, dificuldades, linguagem e critérios de análise. |
 
 ---
 
@@ -650,13 +829,13 @@ As respostas, caso coletadas, serão utilizadas somente para fins acadêmicos e 
 
 ---
 
-# Como os dados do I01 seriam analisados
+## Como os dados do I01 seriam analisados
 
 A análise deverá combinar resultados quantitativos simples das perguntas fechadas com categorização qualitativa das respostas abertas.
 
 Não há necessidade de inferência estatística complexa, especialmente se a amostra for pequena ou composta por participantes proxy.
 
-## Perguntas fechadas
+### Perguntas fechadas
 
 Serão calculadas:
 
@@ -665,7 +844,7 @@ Serão calculadas:
 - alternativas predominantes;
 - padrões de coocorrência quando forem relevantes.
 
-Exemplo:
+Exemplo hipotético:
 
 ```text
 Q08 — informações durante execução
@@ -678,9 +857,7 @@ Q08 — informações durante execução
 
 Esse tipo de resultado poderá orientar a hierarquia das informações apresentadas.
 
----
-
-## Perguntas abertas
+### Perguntas abertas
 
 As respostas de Q04, Q15, Q16 e Q17 serão analisadas por **codificação temática simples**.
 
@@ -707,7 +884,7 @@ Essas categorias somente deverão ser registradas como achados se aparecerem efe
 
 ---
 
-## Relação pergunta → hipótese → decisão
+## Relação pergunta → hipótese → decisão — I01
 
 | Perguntas | Hipótese principal | Possível interpretação futura | Artefatos que podem ser revisados |
 |---|---|---|---|
@@ -720,101 +897,695 @@ Essas categorias somente deverão ser registradas como achados se aparecerem efe
 
 ---
 
-## Critérios para atualização das hipóteses
+# Instrumento I02 — Entrevista semiestruturada sobre processos técnicos e interpretação de resultados
 
-Após eventual aplicação, as hipóteses não deverão ser classificadas apenas como “verdadeiras” ou “falsas”.
+**Autor(a):** João Pedro Lopes Santana Villas Bôas — 22.125.065-7  
+**Técnica:** Entrevista semiestruturada  
+**Hipóteses relacionadas:** H01, H02 e H03  
+**Situação atual:** instrumento planejado para eventual aplicação; ainda não aplicado.
 
-Poderão assumir:
+## Objetivo
 
-### Sustentada
+Compreender em profundidade como pessoas envolvidas em atividades técnicas, experimentais ou analíticas organizam seus processos de trabalho, tomam decisões, percebem erros, interpretam resultados e comunicam conclusões.
 
-Quando as respostas obtidas forem coerentes com a hipótese e não apresentarem evidência relevante em sentido contrário dentro da amostra analisada.
+A entrevista deverá complementar o questionário I01, priorizando:
 
-### Refinada
+- exemplos concretos;
+- justificativas;
+- conhecimento tácito;
+- vocabulário espontâneo;
+- sequência real de atividades;
+- recuperação diante de erros;
+- critérios de comparação;
+- comunicação de resultados;
+- necessidades não antecipadas.
 
-Quando a hipótese geral permanecer plausível, mas os dados indicarem mudanças importantes.
+---
+
+## Público
+
+O público ideal da entrevista inclui:
+
+- pesquisadores de mobilidade ou tráfego;
+- engenheiros ou analistas;
+- professores ou pesquisadores;
+- estudantes de pós-graduação;
+- profissionais de análise de dados ou simulação;
+- gestores que interpretem resultados técnicos.
+
+Quando o acesso a esses perfis não for possível, poderão ser utilizados participantes proxy com experiência em Computação, Engenharia, experimentação ou análise técnica.
+
+---
+
+## Duração planejada
+
+**Aproximadamente 20 a 30 minutos.**
+
+Essa duração permite aprofundamento sem transformar a entrevista em uma sessão excessivamente longa.
+
+---
+
+## Modalidade prevista
+
+A entrevista poderá ocorrer:
+
+- presencialmente;
+- por Google Meet;
+- Microsoft Teams;
+- ou ferramenta equivalente.
+
+A modalidade utilizada deverá ser registrada caso a aplicação realmente aconteça.
+
+---
+
+## Tipo de entrevista
+
+A técnica escolhida é **semiestruturada**.
+
+Existe um roteiro comum para todos os participantes, mas o entrevistador pode utilizar perguntas de aprofundamento quando uma resposta revelar informação relevante.
+
+Exemplos de aprofundamento permitidos:
+
+- “Você consegue dar um exemplo?”
+- “Por que isso é importante?”
+- “O que você fez depois?”
+- “Como percebeu que existia um problema?”
+- “O que teria facilitado essa situação?”
+
+O entrevistador não deve sugerir a resposta desejada.
+
+---
+
+## Procedimento padronizado de aplicação
+
+### 1. Preparação
+
+Antes da sessão:
+
+1. revisar o roteiro;
+2. preparar documento para anotações;
+3. testar áudio e conexão, caso seja remota;
+4. decidir se haverá solicitação de gravação;
+5. preparar termo ou registro de consentimento;
+6. definir identificador anônimo do participante.
+
+### 2. Abertura
+
+O entrevistador deverá explicar:
+
+- finalidade acadêmica;
+- objetivo da entrevista;
+- duração;
+- que não existe resposta certa ou errada;
+- que está sendo investigado o processo de trabalho, e não avaliada a capacidade do participante;
+- que o participante pode interromper a entrevista.
+
+### 3. Consentimento
+
+Obter concordância para participação.
+
+Caso exista gravação, solicitar autorização específica.
+
+Sem autorização para gravação, a entrevista poderá continuar apenas com anotações.
+
+### 4. Aquecimento
+
+Iniciar com perguntas gerais sobre experiência e atividades para contextualizar as respostas posteriores.
+
+### 5. Entrevista principal
+
+Seguir os blocos temáticos do roteiro.
+
+A ordem poderá ser ajustada quando necessário para manter a conversa natural, desde que todos os tópicos principais sejam abordados.
+
+### 6. Encerramento
+
+Ao final:
+
+- perguntar se existe algo importante que não foi abordado;
+- agradecer a participação;
+- reforçar a forma de utilização dos dados;
+- explicar que os resultados serão anonimizados.
+
+### 7. Organização dos dados
+
+Após a sessão:
+
+1. identificar registros somente pelo código `E##`;
+2. revisar anotações enquanto a sessão ainda está recente;
+3. transcrever apenas trechos necessários, caso exista áudio;
+4. remover dados identificáveis;
+5. armazenar material bruto de forma privada.
+
+---
+
+# Roteiro completo da entrevista
+
+## Bloco 0 — Abertura
+
+### Texto sugerido ao participante
+
+> Esta entrevista faz parte de uma atividade acadêmica da disciplina de Interação Humano-Computador da FEI.
+>
+> Nosso objetivo é compreender como pessoas que trabalham ou estudam áreas técnicas realizam atividades envolvendo configuração, execução, análise e comparação de resultados.
+>
+> Não estamos avaliando seu conhecimento e não existem respostas certas ou erradas.
+>
+> A participação é voluntária e você pode deixar de responder qualquer pergunta ou encerrar a entrevista a qualquer momento.
+>
+> As informações serão utilizadas de forma anonimizada.
+
+---
+
+# Bloco 1 — Perfil e contexto
+
+### E01. Você pode descrever brevemente sua área de estudo ou atuação e as principais atividades que realiza?
+
+**Objetivo:** contextualizar o participante.  
+**Hipótese:** H01.
+
+**Possíveis aprofundamentos:**
+
+- Há quanto tempo realiza essas atividades?
+- Elas são acadêmicas, profissionais ou ambas?
+- Você trabalha mais com configuração, execução, análise ou tomada de decisão?
+
+---
+
+### E02. Você utiliza ou já utilizou softwares técnicos, ferramentas de análise, simuladores ou sistemas que executam algum tipo de processamento?
+
+**Objetivo:** identificar experiência tecnológica.  
+**Hipóteses:** H01 e H02.
+
+**Aprofundamentos:**
+
+- Quais ferramentas?
+- Para quais atividades?
+- O que costuma funcionar bem nelas?
+- O que mais incomoda?
+
+---
+
+# Bloco 2 — Preparação de uma atividade
+
+### E03. Pense em uma atividade técnica, análise ou experimento que você já realizou. Como normalmente começa esse processo?
+
+**Objetivo:** descobrir organização espontânea da atividade.  
+**Hipótese:** H02.
+
+**Aprofundamentos:**
+
+- O que você precisa definir primeiro?
+- Existe alguma preparação anterior?
+- Você utiliza algum roteiro, arquivo, documentação ou checklist?
+
+---
+
+### E04. Antes de iniciar uma execução ou processamento, o que você costuma conferir?
+
+**Objetivo:** identificar informações críticas de preparação.  
+**Hipótese:** H02.
+
+**Aprofundamentos:**
+
+- Quais erros seriam mais graves?
+- Existe algo que você sempre verifica?
+- Alguma ferramenta já impediu você de executar algo incorreto?
+
+---
+
+### E05. Quando existem muitos parâmetros ou opções técnicas, como você prefere lidar com eles?
+
+**Objetivo:** investigar equilíbrio entre controle e complexidade.  
+**Hipótese:** H02.
+
+**Aprofundamentos:**
+
+- Prefere ver tudo de uma vez?
+- Usa valores padrão?
+- Existem parâmetros que você raramente altera?
+- Em que situação gostaria de acessar configurações avançadas?
+
+> As perguntas de aprofundamento só devem ser utilizadas quando pertinentes e sem induzir preferência específica.
+
+---
+
+# Bloco 3 — Execução e feedback
+
+### E06. Durante um processamento que leva algum tempo, como você costuma saber se tudo está acontecendo corretamente?
+
+**Objetivo:** compreender necessidade de feedback.  
+**Hipótese:** H02.
+
+**Aprofundamentos:**
+
+- Você olha progresso?
+- Tempo?
+- Logs?
+- Estado?
+- Existe alguma informação sem a qual você ficaria inseguro?
+
+---
+
+### E07. Conte sobre alguma situação em que uma ferramenta apresentou erro ou um processamento não terminou como esperado.
+
+**Objetivo:** obter exemplo concreto de ruptura.  
+**Hipótese:** H02.
+
+**Aprofundamentos:**
+
+- Como você percebeu o erro?
+- A mensagem ajudou?
+- Você sabia o que fazer?
+- Precisou repetir o processo?
+- O que poderia ter facilitado a recuperação?
+
+---
+
+### E08. Em uma execução longa, em que situação você consideraria importante ter a possibilidade de cancelar?
+
+**Objetivo:** investigar controle e liberdade do usuário.  
+**Hipótese:** H02.
+
+**Aprofundamentos:**
+
+- Cancelaria diante de configuração incorreta?
+- Resultado inesperado?
+- Tempo excessivo?
+- Falha percebida?
+
+---
+
+# Bloco 4 — Resultados
+
+### E09. Quando uma execução termina, qual costuma ser sua primeira pergunta sobre o resultado?
+
+**Objetivo:** identificar prioridade informacional sem apresentar uma lista pronta.  
+**Hipótese:** H03.
+
+**Aprofundamentos:**
+
+- Qual informação você procura primeiro?
+- Depois disso, o que consulta?
+- Há informações que só procura quando algo parece estranho?
+
+---
+
+### E10. Como você decide se um resultado é confiável o suficiente para ser interpretado?
+
+**Objetivo:** compreender contexto necessário ao resultado.  
+**Hipóteses:** H02 e H03.
+
+**Aprofundamentos:**
+
+- Precisa saber quais parâmetros foram utilizados?
+- Precisa verificar erros?
+- Precisa reproduzir a execução?
+- Precisa comparar com uma referência?
+
+---
+
+# Bloco 5 — Comparação
+
+### E11. Conte como você normalmente compara duas alternativas, execuções ou resultados.
+
+**Objetivo:** entender o processo real de comparação.  
+**Hipótese:** H03.
+
+**Aprofundamentos:**
+
+- Usa planilha?
+- Gráfico?
+- Relatório?
+- Ferramenta própria?
+- Faz isso manualmente?
+
+---
+
+### E12. Como você decide se duas execuções podem ser comparadas de forma justa?
+
+**Objetivo:** investigar critérios de compatibilidade.  
+**Hipóteses:** H02 e H03.
+
+**Aprofundamentos:**
+
+- Que condições precisam permanecer iguais?
+- O que pode variar?
+- Como você verifica isso hoje?
+- Já teve problema por comparar condições diferentes sem perceber?
+
+---
+
+### E13. Quando existem muitas métricas, como você decide quais realmente importam?
+
+**Objetivo:** investigar hierarquia dos indicadores.  
+**Hipótese:** H03.
+
+**Aprofundamentos:**
+
+- Existe uma métrica principal?
+- Algumas precisam ser analisadas juntas?
+- Você prefere uma síntese primeiro ou todos os detalhes imediatamente?
+- Isso muda de acordo com o objetivo?
+
+---
+
+# Bloco 6 — Histórico e rastreabilidade
+
+### E14. Se você precisasse recuperar hoje o resultado de uma análise realizada semanas ou meses atrás, como faria?
+
+**Objetivo:** investigar necessidade de histórico sem pressupor solução.  
+**Hipótese:** H03.
+
+**Aprofundamentos:**
+
+- Por pasta?
+- Arquivo?
+- Data?
+- Nome?
+- Planilha?
+- Histórico dentro do sistema?
+- O que costuma ser difícil nesse processo?
+
+---
+
+### E15. Quais informações deveriam permanecer associadas a uma execução para que você consiga entendê-la no futuro?
+
+**Objetivo:** identificar requisitos de rastreabilidade.  
+**Hipóteses:** H02 e H03.
+
+---
+
+# Bloco 7 — Comunicação e linguagem
+
+### E16. Quando você precisa explicar o resultado de uma análise para outra pessoa, como costuma fazer?
+
+**Objetivo:** investigar síntese e comunicação.  
+**Hipótese:** H03.
+
+**Aprofundamentos:**
+
+- A pessoa costuma ter o mesmo conhecimento técnico que você?
+- O que você simplifica?
+- O que precisa obrigatoriamente mostrar?
+- Usa gráficos, tabelas ou texto?
+
+---
+
+### E17. Existem termos utilizados por ferramentas técnicas que você considera difíceis, ambíguos ou excessivamente voltados à implementação?
+
+**Objetivo:** investigar vocabulário.  
+**Hipótese:** H01.
+
+**Aprofundamentos:**
+
+- Você consegue lembrar algum exemplo?
+- Que nome seria mais compreensível?
+
+---
+
+# Bloco 8 — Necessidades abertas
+
+### E18. Pensando em todo esse processo, qual é a etapa mais trabalhosa ou sujeita a erro?
+
+**Objetivo:** identificar principal dor sem pressupor qual seja.  
+**Hipóteses:** H02 e H03.
+
+---
+
+### E19. Se você pudesse melhorar uma única coisa em uma ferramenta usada para configurar, executar e analisar atividades técnicas, o que melhoraria?
+
+**Objetivo:** identificar necessidade prioritária espontânea.  
+**Hipóteses:** H01, H02 e H03.
+
+---
+
+### E20. Existe algo importante sobre esse tipo de atividade que eu não perguntei e que você considera relevante?
+
+**Objetivo:** permitir emergência de informação não antecipada.  
+**Hipóteses:** H01, H02 e H03.
+
+---
+
+# Encerramento da entrevista
+
+Texto sugerido:
+
+> Obrigado pela participação. Suas respostas serão consideradas somente dentro dos objetivos acadêmicos apresentados e serão tratadas de forma anonimizada.
+>
+> Caso tenhamos registrado áudio, ele será utilizado apenas para auxiliar a análise e não será publicado sem autorização específica.
+
+---
+
+## Como os dados do I02 seriam analisados
+
+A entrevista será analisada principalmente por **análise temática qualitativa**.
+
+### Etapa 1 — organização
+
+Para cada participante:
+
+```text
+E01
+E02
+E03...
+```
+
+Serão reunidas:
+
+- anotações;
+- trechos relevantes;
+- exemplos concretos;
+- dificuldades;
+- justificativas;
+- termos utilizados.
+
+### Etapa 2 — codificação inicial
+
+Trechos poderão receber códigos como:
+
+```text
+preparação
+configuração
+validação
+erro
+feedback
+progresso
+cancelamento
+métrica
+comparabilidade
+histórico
+rastreabilidade
+linguagem
+síntese
+```
+
+Os códigos não precisam ser definidos de forma rígida antes da coleta. Novas categorias poderão surgir dos dados.
+
+### Etapa 3 — agrupamento em temas
+
+Os códigos semelhantes serão consolidados em temas, por exemplo:
+
+```text
+TEMA A — preparação e prevenção de erros
+TEMA B — acompanhamento e feedback
+TEMA C — interpretação das métricas
+TEMA D — comparação e rastreabilidade
+TEMA E — linguagem e complexidade técnica
+```
+
+Esses temas são exemplos metodológicos e não resultados antecipados.
+
+### Etapa 4 — relação com hipóteses
+
+Cada tema será relacionado a H01, H02 ou H03.
+
+Exemplo hipotético:
+
+```text
+Participantes descrevem uma etapa explícita de conferência
+antes da execução
+        ↓
+evidência relacionada a H02
+        ↓
+pode sustentar necessidade de resumo/validação pré-execução
+```
+
+### Etapa 5 — implicações de design
+
+Somente após identificar evidências serão registradas decisões como:
+
+- manter;
+- revisar;
+- simplificar;
+- reorganizar;
+- renomear;
+- adicionar feedback;
+- remover informação desnecessária.
+
+A entrevista não deverá ser utilizada para justificar retrospectivamente decisões que os participantes não sustentaram.
+
+---
+
+## Relação pergunta → hipótese → decisão — I02
+
+| Perguntas | Hipótese principal | Informação investigada | Artefatos potencialmente afetados |
+|---|---|---|---|
+| E01–E02 | H01 | Perfil, experiência e ferramentas. | P01/P02, contexto de uso e linguagem. |
+| E03–E05 | H02 | Organização da preparação e configuração. | PF01, PP01–PP03, T01–T03. |
+| E06–E08 | H02 | Feedback, erro, recuperação e controle durante processamento. | PF02, PP03–PP05, T04/T05. |
+| E09–E10 | H03 | Processo de leitura e confiança nos resultados. | PP06, T06. |
+| E11–E13 | H03 | Critérios e processo de comparação. | PP07, T07/T08. |
+| E14–E15 | H02/H03 | Histórico e rastreabilidade. | Histórico e vínculo configuração–resultado. |
+| E16–E17 | H01/H03 | Comunicação e vocabulário. | Signos, resultados e síntese. |
+| E18–E20 | H01/H02/H03 | Problemas e necessidades não previstos. | Possível revisão de qualquer artefato. |
+
+---
+
+# Complementaridade entre I01 e I02
+
+Questionário e entrevista foram selecionados porque fornecem tipos diferentes de evidência.
+
+| Aspecto | I01 — Questionário | I02 — Entrevista |
+|---|---|---|
+| Estrutura | Mais padronizada | Flexível dentro de um roteiro |
+| Profundidade | Menor | Maior |
+| Comparação entre participantes | Facilitada | Mais qualitativa |
+| Perguntas abertas | Algumas | Predominantes |
+| Exemplos concretos | Limitados | Fortemente incentivados |
+| Aprofundamento | Reduzido | Possível durante a conversa |
+| Principal contribuição | Identificar padrões | Compreender razões e contexto |
+| Hipóteses | H01, H02 e H03 | Principalmente H02 e H03, também H01 |
+
+As duas técnicas não devem ser tratadas como substitutas.
+
+Um possível resultado do questionário pode indicar **o que é frequente**, enquanto uma entrevista pode ajudar a compreender **por que isso é importante e como acontece na prática**.
+
+---
+
+# Critérios para atualização das hipóteses
+
+Caso os instrumentos sejam aplicados futuramente, H01, H02 e H03 poderão ser classificadas como:
+
+## Sustentada
+
+Quando as evidências obtidas forem coerentes com a hipótese dentro da amostra analisada e não houver evidência relevante em sentido contrário.
+
+## Refinada
+
+Quando a ideia geral continuar plausível, mas os dados indicarem ajustes.
 
 Exemplo:
 
-> P01 continua plausível, mas os participantes valorizam configurações pré-definidas mais do que exposição direta de todos os parâmetros.
+> H03 permanece plausível, porém participantes diferenciam uma visão resumida para tomada de decisão de uma visão detalhada para investigação técnica.
 
-### Refutada
+## Refutada
 
-Quando as evidências obtidas forem incompatíveis com a hipótese dentro da amostra investigada.
+Quando os dados obtidos forem incompatíveis com a hipótese dentro da amostra estudada.
 
-### Inconclusiva
+## Inconclusiva
 
-Quando a quantidade ou perfil dos participantes não permitir uma conclusão responsável.
+Quando a quantidade, diversidade ou perfil dos participantes não permitir conclusão responsável.
 
-> Participantes proxy não devem ser utilizados para afirmar que necessidades específicas de profissionais especializados foram definitivamente validadas.
-
----
-
-# A02 — João Pedro Lopes Santana Villas Bôas
-
-**Autor(a):** João Pedro Lopes Santana Villas Bôas — 22.125.065-7
-
-> **PENDENTE — contribuição individual do integrante.**
-
-A Parte A de João deverá identificar seus próprios dados prioritários, público e aspectos éticos, mantendo coerência com H01, H02 e H03 sem simplesmente duplicar a análise de Gabriel.
+Participantes proxy não serão utilizados para afirmar que necessidades específicas de especialistas foram definitivamente validadas.
 
 ---
 
-# Instrumento I02 — Entrevista semiestruturada
+# Síntese
 
-**Autor(a):** João Pedro Lopes Santana Villas Bôas — 22.125.065-7  
-**Técnica prevista:** entrevista semiestruturada
+A Entrega 7 transformou as principais incertezas acumuladas nas entregas anteriores em um plano de investigação reproduzível.
 
-> **PENDENTE — instrumento de responsabilidade de João.**
+Foram priorizadas três hipóteses:
 
-A entrevista deverá complementar o questionário de Gabriel buscando maior profundidade sobre atividades, decisões, dificuldades, vocabulário e comparação de resultados.
+- **H01 — usuário prioritário:** verificar a plausibilidade de pesquisadores ou analistas como público da interface e investigar experiência, linguagem e ferramentas utilizadas;
+- **H02 — organização da interação:** investigar como atividades de preparação, configuração, execução, acompanhamento e recuperação de erros são realizadas;
+- **H03 — apresentação e comparação dos resultados:** investigar como métricas são interpretadas, comparadas, recuperadas e comunicadas.
 
-As duas técnicas não devem ser cópias uma da outra: o questionário busca maior estrutura e amplitude, enquanto a entrevista deverá explorar exemplos concretos, justificativas e experiências em maior profundidade.
+A equipe definiu duas técnicas complementares.
+
+**Gabriel** produziu o **I01 — Questionário exploratório**, adequado para obter informações estruturadas sobre perfil, experiência, configuração, execução e análise.
+
+**João** produziu o **I02 — Entrevista semiestruturada**, adequada para aprofundar processos, decisões, dificuldades, exemplos concretos, vocabulário e critérios de comparação.
+
+As técnicas foram deliberadamente projetadas sem pressupor que recursos como dashboard, filtros, histórico, relatórios ou grande exposição de parâmetros sejam obrigatórios.
+
+O objetivo é descobrir necessidades antes de transformar possibilidades de interface em requisitos definitivos.
+
+Também foi considerada a dificuldade real de acesso ao público especializado. Caso uma aplicação futura utilize participantes proxy, essa condição deverá permanecer explícita e limitar o alcance das conclusões.
+
+A elaboração desses instrumentos **não altera automaticamente o estado de H01, H02 ou H03**. Como os instrumentos não foram aplicados nesta entrega, as hipóteses permanecem abertas na matriz de rastreabilidade.
+
+A Entrega 7 fornece, portanto, instrumentos completos para uma eventual investigação de usuários sem fabricar dados ou apresentar planejamento como validação empírica.
 
 ---
 
-# Síntese parcial
+# Relação com as entregas anteriores
 
-A contribuição de Gabriel estrutura uma investigação voltada às três hipóteses prioritárias do projeto.
+## Entrega 1
 
-O questionário foi elaborado para investigar:
+Forneceu H01, H02 e H03 e explicitou lacunas sobre usuários, atividades, contexto e necessidades.
 
-- **H01:** quem são os potenciais usuários, qual sua experiência e quais ferramentas e termos utilizam;
-- **H02:** como atividades de configuração e execução são realizadas e quais informações, validações e feedbacks são considerados importantes;
-- **H03:** como resultados são consultados, comparados e recuperados.
+## Entrega 2
 
-O instrumento evita pressupor que recursos como dashboard, histórico ou filtros sejam obrigatórios. Em vez disso, procura investigar processos e necessidades existentes para que futuras decisões de design possam ser justificadas.
+Forneceu referências de interfaces profissionais e reforçou a plausibilidade de atividades envolvendo configuração, execução e análise.
 
-A elaboração do instrumento **não valida as hipóteses**. Caso seja realizada uma aplicação futura, somente os dados efetivamente obtidos poderão sustentar, refinar ou refutar H01, H02 e H03.
+## Entrega 3
 
-A síntese definitiva da Entrega 7 deverá ser consolidada após a inclusão da Parte A e do Instrumento I02 de João.
+Formalizou P01 e P02 como proto-personas ainda sujeitas a validação.
+
+## Entrega 4
+
+Aprofundou C01 e C02 e os problemas relacionados a preparação, execução, interpretação e comparação.
+
+## Entrega 5
+
+Detalhou T02–T08 por meio de HTA, GOMS e CTT.
+
+## Entrega 6
+
+Materializou as hipóteses de interação no protótipo digital V0, organizado pelos fluxos PF01–PF03 e estados PP01–PP07.
+
+## Entrega 7
+
+Produz instrumentos capazes de investigar as premissas sobre usuários e atividades que fundamentam os artefatos anteriores.
+
+---
+
+# Uso futuro dos resultados
+
+A execução dos instrumentos desta entrega não constitui pré-requisito obrigatório para as próximas atividades documentadas no repositório.
+
+Caso questionário ou entrevista sejam futuramente aplicados e analisados, as evidências obtidas deverão ser utilizadas para:
+
+1. atualizar H01, H02 e H03 na matriz de rastreabilidade;
+2. revisar personas quando necessário;
+3. revisar tarefas ou cenários caso novas atividades sejam identificadas;
+4. alterar terminologia e signos;
+5. reconsiderar fluxos do protótipo;
+6. justificar mudanças posteriores no modelo conceitual, MoLIC ou interface.
+
+Na ausência de aplicação, as hipóteses continuam explicitamente registradas como hipóteses e não serão apresentadas como fatos validados.
 
 ---
 
 # Checklist
 
-## Situação da contribuição de Gabriel
-
 - [x] Hipóteses/lacunas prioritárias da Entrega 1 foram revisitadas.
-- [x] A coleta investiga a plausibilidade do usuário, das tarefas e do contexto adotado.
-- [x] Perguntas não pressupõem que dashboard, CRUD, filtros ou relatórios sejam necessários.
-- [x] Cada dado a coletar responde uma dúvida concreta do projeto ou possui consequência de design identificável.
-- [x] A Parte A de Gabriel identifica dados e perfis de coleta de forma específica.
-- [x] Aspectos éticos foram contextualizados para o projeto.
-- [x] O questionário possui objetivo, público, procedimento e conteúdo integral.
-- [x] Perguntas evitam indução e coletam apenas dados necessários.
-- [x] Está definido como os dados seriam analisados e utilizados no design.
-- [x] O instrumento distingue público especializado e participantes proxy.
-- [x] Nenhum resultado de pesquisa foi inventado.
-- [x] A elaboração do instrumento não foi tratada como validação de H01, H02 ou H03.
-
-## Situação da entrega da equipe
-
-- [ ] Há uma técnica completa por integrante e técnicas distintas.
+- [x] A coleta investiga a plausibilidade do usuário, tarefa e contexto adotados.
+- [x] Perguntas não pressupõem que dashboard, CRUD, filtros ou relatórios sejam necessários; investigam a necessidade.
+- [x] Cada dado a coletar responde uma dúvida concreta do projeto ou justifica outra necessidade de informação.
+- [x] Parte A identifica dados e perfis de coleta de forma específica.
+- [x] Aspectos éticos são contextualizados para o projeto.
+- [x] Há uma técnica completa por integrante e as técnicas são distintas.
 - [x] Questionário está incluído entre as técnicas.
-- [ ] Parte A de João foi concluída.
-- [ ] Instrumento I02 de João foi concluído.
-- [ ] Síntese final da equipe foi consolidada.
+- [x] Cada instrumento possui objetivo, público, procedimento e conteúdo integral.
+- [x] Perguntas evitam indução e coletam apenas dados necessários.
+- [x] Está claro como os dados seriam analisados e usados no design.
+- [x] Questionário e entrevista possuem protocolos reproduzíveis.
+- [x] Participantes proxy foram tratados como alternativa metodológica com limitação explícita.
+- [x] Nenhum dado ou resultado de pesquisa foi inventado.
+- [x] As hipóteses permanecem abertas enquanto não houver evidência empírica.
+- [x] A complementaridade entre as duas técnicas foi explicitada.
 
 ---
 
@@ -824,6 +1595,7 @@ A síntese definitiva da Entrega 7 deverá ser consolidada após a inclusão da 
 - CENTRO UNIVERSITÁRIO FEI. **CC8122 — Identificação de Necessidades dos Usuários e Requisitos de IHC — Parte A**. Material de aula, 2026/2.
 - CENTRO UNIVERSITÁRIO FEI. **CC8122 — Identificação de Necessidades dos Usuários e Requisitos de IHC — Parte B**. Material de aula, 2026/2.
 - Entrega 1 — Conhecendo o projeto, o usuário e o problema.
+- Entrega 2 — Público-alvo e análise de concorrência.
 - Entrega 3 — Personas, empatia, contexto e jornada.
 - Entrega 4 — Cenários de análise/problema.
 - Entrega 5 — Análise de tarefas: HTA, GOMS e CTT.
