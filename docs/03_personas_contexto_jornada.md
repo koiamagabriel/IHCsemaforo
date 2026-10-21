@@ -1,26 +1,18 @@
 # Entrega 3 — Personas, mapa de empatia, contexto de uso e jornada
 
-**Data:** {{09/09/2026}}  
-**Status:**  🟩 Concluído  
+**Data:** 09/09/2026  
+**Status:** 🟩 Concluído  
 **Responsabilidade:** 1 persona por integrante; 1 mapa de empatia, 1 contexto de uso consolidado e 1 jornada por equipe (salvo orientação diferente do docente).
 
 ## Objetivo da atividade
 
 Representar grupos de usuários de forma útil para decisões de design. Persona não é personagem decorativo: suas características devem alterar requisitos, prioridades, linguagem, fluxos ou critérios de avaliação.
 
-## Atenção a projetos técnicos
+## Relação das personas com o TCC
 
-Em TCCs sem interface original, a persona pode representar um **profissional que se apropria da contribuição técnica**: DBA, analista, cientista de dados, administrador, pesquisador, técnico, operador, gestor ou especialista de domínio.
+A interface de configuração, execução e análise de simulações já fazia parte do escopo previsto do TCC. Nesta entrega, as personas representam perfis que poderiam utilizar essa interface para preparar experimentos ou interpretar os resultados do algoritmo híbrido de controle semafórico.
 
-Não escolha um perfil apenas porque “parece combinar” com a tecnologia. Explique **qual objetivo esse perfil teria e qual parte da contribuição do TCC produziria valor para ele**. Se ainda for hipótese, mantenha como hipótese/proto-persona a validar.
-
-Também considere papéis diferentes quando houver tarefas distintas, por exemplo:
-
-- operador que executa análises;
-- administrador que configura e gerencia permissões;
-- especialista que interpreta resultados;
-- gestor que consulta relatórios e decide;
-- auditor que revisa histórico.
+A definição dos perfis tem caráter exploratório: as personas foram elaboradas a partir da proposta técnica do TCC, das necessidades registradas na Entrega 1 e da análise documental da Entrega 2. Não há entrevistas ou observações com usuários que validem suas características. Por isso, comportamentos, objetivos e necessidades inferidos seguem identificados como hipóteses.
 
 ## Entradas da Entrega 1
 
@@ -67,10 +59,8 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 - validar parâmetros importantes antes da execução;
 - apresentar feedback claro sobre o estado da simulação;
 - manter os resultados vinculados à configuração e estratégia que os originaram;
-- permitir comparação direta entre tempo fixo, Max Pressure e Max Pressure + actuated;
+- considerar apoio à comparação direta entre tempo fixo, Max Pressure e Max Pressure + actuated como **proposta a investigar**, sem atribuir comparação automática à V0;
 - preservar acesso às métricas detalhadas sem exigir contato com detalhes internos do código.
-> Repita para P02, P03... Cada integrante deve produzir ao menos uma persona.
-
 
 ### Persona P02 — Carlos Mendes
 
@@ -101,10 +91,10 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 - permitir acesso a informações detalhadas sem obrigar o usuário a visualizar todos os parâmetros técnicos;
 - deixar explícitos o cenário, a estratégia e as condições experimentais associados a cada resultado;
 - utilizar terminologia do domínio de mobilidade sem depender de nomes internos do código;
-- favorecer comparação visual entre estratégias e cenários;
+- investigar formas de favorecer a comparação visual entre estratégias e cenários em uma evolução da interface;
 - apresentar resultados de forma que diferenças relevantes possam ser identificadas rapidamente;
 - permitir consultar uma síntese dos resultados sem eliminar a possibilidade de aprofundamento.
-- 
+
 ### Síntese das personas
 
 P01 — Marina Ribeiro é a persona prioritária do projeto, pois representa o perfil que percorre o fluxo experimental completo previsto para a interface: definição do cenário, configuração dos parâmetros, seleção da estratégia de controle, execução da simulação, acompanhamento do estado e análise e comparação dos resultados.
@@ -124,7 +114,18 @@ Como ainda não houve validação direta desses perfis com usuários reais, P01 
 
 ![Mapa de empatia](../assets/03_personas/mapa_empatia.svg)
 
-Documente também em texto: o que vê; ouve; diz/faz; pensa/sente; dores; ganhos. Diferencie **evidência** de **hipótese**.
+O mapa apresenta seis dimensões, todas construídas como **hipóteses [H]** a partir do contexto do TCC e das necessidades identificadas nas entregas anteriores. Elas não representam falas de pessoas entrevistadas nem observações empíricas:
+
+| Dimensão | Descrição da proto-persona P01 |
+|---|---|
+| **O que vê** | **[H]** Cenários e redes de tráfego que devem ser configurados, além de parâmetros técnicos, métricas, tabelas e gráficos de experimentos. |
+| **O que ouve** | **[H]** Orientações sobre quais condições devem ser avaliadas e sobre a importância de manter resultados comparáveis e reproduzíveis. |
+| **O que diz e faz** | **[H]** Define cenários e parâmetros, seleciona a estratégia de controle, executa e acompanha simulações e compara métricas para interpretar os resultados. |
+| **O que pensa e sente** | **[H]** Precisa confiar que as condições de cada execução estão corretas e compreender os resultados sem perder o contexto experimental. |
+| **Dores** | **[H]** Excesso de parâmetros técnicos, configurações inconsistentes e dificuldade para preservar a relação entre configuração e resultado. |
+| **Ganhos** | **[H]** Configuração organizada, estado de execução visível e resultados associados às condições que os produziram, apoiando análises reproduzíveis. |
+
+**Implicações para o design:** a organização da interface deve apoiar a preparação de experimentos, a prevenção de erros, a identificação do estado da execução e a rastreabilidade entre cenário, controlador, parâmetros e resultados. A necessidade de comparação interna continua como hipótese; na V0, a consulta é individual e a comparação entre execuções ocorre manualmente fora da aplicação.
 
 ## 3. Contexto de uso — consolidação
 
@@ -154,7 +155,7 @@ Documente também em texto: o que vê; ouve; diz/faz; pensa/sente; dores; ganhos
 | 4 — Verificação e início | Revisa as principais condições configuradas e inicia a simulação. | Evitar executar um experimento com condições incorretas. | **[H]** “Antes de começar, preciso saber se está tudo configurado corretamente.” | **[H]** Descobrir uma configuração inválida somente depois de realizar a simulação gera retrabalho. | Apresentar uma verificação das condições principais e mensagens de erro próximas ao elemento que precisa ser corrigido. | T04; Entrega 2 — RC04. |
 | 5 — Acompanhamento da execução | Observa a simulação e verifica seu estado enquanto o experimento está em andamento. | Saber se a execução está ocorrendo normalmente e identificar quando ela foi concluída ou apresentou problema. | **[H]** “A simulação está funcionando corretamente? Qual estratégia está sendo executada agora?” | **[H]** Falta de feedback sobre estado, estratégia ou progresso pode gerar incerteza durante a execução. | Manter estado da execução, cenário e estratégia claramente visíveis e fornecer feedback de andamento, conclusão ou falha. | T04/T05; Entrega 2 — RC02. |
 | 6 — Análise dos resultados | Consulta as métricas produzidas após a execução. | Compreender o desempenho da estratégia nas condições analisadas. | **[H]** “Quais foram os principais resultados desta execução e em quais condições eles foram obtidos?” | **[H]** Muitas métricas sem hierarquia ou contexto podem dificultar a interpretação. | Apresentar inicialmente as métricas principais de forma consolidada e permitir consultar valores mais detalhados quando necessário. | T06; H03; Entrega 2 — RC05, RC06 e RC09. |
-| 7 — Comparação e síntese | Compara os resultados das estratégias de tempo fixo, Max Pressure e Max Pressure + actuated e registra suas conclusões. | Identificar diferenças de desempenho entre os métodos sob condições equivalentes. | **[H]** “Quero entender qual estratégia apresentou melhor comportamento e em quais condições essa diferença ocorreu.” | **[H]** Comparar manualmente várias execuções e métricas pode ser trabalhoso, especialmente quando as condições experimentais não estão claramente associadas aos resultados. | Permitir comparação direta entre estratégias, mantendo visíveis as condições dos experimentos e oferecendo uma síntese dos principais resultados. | T07/T08; H03; Entrega 2 — RC05, RC06, RC07 e RC09. |
+| 7 — Comparação e síntese | Compara os resultados das estratégias de tempo fixo, Max Pressure e Max Pressure + actuated e registra suas conclusões. | Identificar diferenças de desempenho entre os métodos sob condições equivalentes. | **[H]** “Quero entender qual estratégia apresentou melhor comportamento e em quais condições essa diferença ocorreu.” | **[H]** Comparar manualmente várias execuções e métricas pode ser trabalhoso, especialmente quando as condições experimentais não estão claramente associadas aos resultados. | Investigar apoio à comparação entre estratégias, mantendo visíveis as condições dos experimentos e oferecendo uma síntese dos principais resultados. | T07/T08; H03; Entrega 2 — RC05, RC06, RC07 e RC09. |
 
 > A jornada representa a atividade de P01 antes, durante e depois da execução do experimento. As etapas descrevem objetivos e problemas do usuário, e não uma sequência obrigatória de telas da futura interface.
 
@@ -173,7 +174,7 @@ Nos próximos cenários e análises de tarefas, devem obrigatoriamente aparecer 
 - compreender o estado atual da simulação e receber feedback sobre conclusão ou falha;
 - consultar as principais métricas produzidas pelo experimento;
 - manter cada resultado relacionado às condições que o produziram;
-- comparar diretamente tempo fixo, Max Pressure e Max Pressure + actuated sob condições equivalentes;
+- investigar a necessidade de comparação direta entre tempo fixo, Max Pressure e Max Pressure + actuated sob condições equivalentes;
 - oferecer uma síntese dos resultados sem impedir o acesso a informações detalhadas;
 - evitar criar funcionalidades como administração de usuários, permissões ou histórico avançado enquanto não houver evidência que justifique sua necessidade.
 
@@ -189,7 +190,7 @@ P01 permanece como persona prioritária porque percorre todas as etapas do fluxo
 - [x] A persona não “validou por ficção” uma hipótese da Entrega 1; afirmações continuam marcadas como hipótese quando não há evidência.
 - [x] Objetivos e dores têm consequência para o design.
 - [x] Contexto de uso está coerente com a Entrega 1.
-- [x] Em TCC sem interface original, a persona possui relação explícita com a contribuição técnica. *(O projeto já previa parcialmente uma interface; ainda assim, as personas foram explicitamente relacionadas às atividades e à contribuição técnica do TCC.)*
+- [x] As personas estão relacionadas à contribuição técnica do TCC e à interface já prevista em seu escopo.
 - [x] Papéis administrativos, técnicos e decisórios só foram criados quando possuem objetivos/tarefas diferentes.
 - [x] Jornada possui etapas, dores e oportunidades e não é apenas wireflow.
 - [x] IDs das personas foram adicionados à rastreabilidade.
