@@ -8,7 +8,7 @@
 
 Identificar quais informações sobre usuários, tarefas, tecnologias e contexto ainda precisam ser investigadas e produzir instrumentos de coleta adequados às hipóteses do projeto. A Entrega 7 foi desenvolvida como **planejamento de investigação**, com instrumentos prontos para eventual aplicação, e não como relatório de pesquisa empírica já realizada.
 
-A equipe não aplicou o questionário nem a entrevista nesta etapa. Por isso, não são apresentados participantes, respostas ou resultados observados, e H01–H03 permanecem hipóteses abertas. As referências à V0 dizem respeito às evidências e ao walkthrough formativo da Entrega 6, não a um teste com usuários externos.
+Os instrumentos não foram aplicados nesta etapa. Por isso, não são apresentados participantes, respostas ou resultados observados, e H01–H03 permanecem hipóteses abertas. As referências à V0 dizem respeito às evidências e ao walkthrough formativo da Entrega 6, não a um teste com usuários externos.
 
 ## Hipóteses e lacunas prioritárias herdadas da Entrega 1
 
@@ -37,29 +37,38 @@ Caracterizar potenciais usuários de ferramentas técnicas e descobrir como prep
 
 ### Que dados coletar?
 
-| Categoria | Informação necessária | Hipótese | Consequência possível para IHC |
-|---|---|---|---|
-| Usuário | Área de formação/atuação, papel em estudos e análises. | H01 | Refino de P01/P02 e do perfil prioritário. |
-| Relação com tecnologia | Experiência com softwares técnicos, planilhas, simuladores e scripts. | H01/H02 | Ajuda contextual, vocabulário e densidade dos controles. |
-| Conhecimento do domínio | Familiaridade com simulação, tráfego e métricas. | H01 | Distinção entre conceitos do domínio e detalhes internos da implementação. |
-| Preparação | Parâmetros e verificações antes da execução. | H02 | Organização de PP02, validação e confirmação em PP03. |
-| Execução | Informações necessárias para acompanhar processamento. | H02 | Estado principal, progresso e logs de PP04. |
-| Erros | Ocorrências críticas e informações de recuperação. | H02 | Mensagens e caminhos para corrigir uma configuração. |
-| Resultados | Métricas consultadas primeiro e condições para comparar. | H03 | Hierarquia dos resultados, contexto experimental e PF03. |
-| Histórico | Forma de localizar análises antigas. | H03 | Avaliar necessidades reais de busca ou filtragem, sem impor solução. |
-| Linguagem | Termos utilizados espontaneamente para execução visual e sem interface gráfica. | H01/H02 | Rótulos, signos e ajuda das E9–E11. |
-| Motivações/valores | Prioridade entre controle, rapidez, rastreabilidade e facilidade de interpretação. | H02/H03 | Equilíbrio entre simplicidade e detalhamento. |
+Os dados foram selecionados a partir das cinco categorias apresentadas na aula *Identificação de Necessidades — Parte A*. Cada categoria tem uma justificativa ligada a uma hipótese e a uma decisão de IHC; nenhuma exige identificar nominalmente o respondente.
+
+| Categoria | Dado/informação a coletar | Hipótese/lacuna | Por que é necessário | Decisão de IHC que pode influenciar |
+|---|---|---|---|---|
+| Usuário | Área de formação/atuação e papel em pesquisa, simulação ou análise. | H01 | Verificar a proximidade entre as atividades do respondente e os perfis adotados como prioritários. | Refinamento de P01/P02, vocabulário e prioridades de uso. |
+| Relação com tecnologia | Experiência com softwares técnicos, planilhas, simuladores e scripts. | H01/H02 | Distinguir familiaridade com ferramentas técnicas de conhecimento específico do TCC. | Ajuda contextual, padrões conhecidos e densidade dos controles. |
+| Conhecimento do domínio | Familiaridade com simulação, tráfego e métricas. | H01 | Identificar conceitos técnicos que podem exigir explicação para o público investigado. | Linguagem dos signos e separação entre informações do domínio e detalhes de implementação. |
+| Tarefas — preparação | Informações e verificações necessárias antes de iniciar uma execução. | H02 | Compreender como são evitadas condições incorretas e retrabalho. | Organização de PP02, validação e confirmação em PP03. |
+| Tarefas — processamento | Informações necessárias durante execução demorada. | H02 | Identificar quais estados e sinais de funcionamento dão segurança ao usuário. | Feedback de PP04, distinção entre estado principal e logs. |
+| Tarefas — erros | Situações críticas e informações necessárias para identificar e corrigir problemas. | H02 | Priorizar prevenção e recuperação de erros em vez de apenas expor mensagens técnicas. | Conteúdo das validações e caminhos de recuperação. |
+| Tarefas — resultados | Métricas consultadas primeiro e condições que tornam comparações adequadas. | H02/H03 | Identificar hierarquia e contexto necessários à interpretação sem presumir comparador automático. | Resultados individuais PP07 e possíveis evoluções de PF03/T07. |
+| Tarefas — histórico | Maneiras utilizadas para recuperar análises antigas. | H03 | Investigar se a listagem existente atende ao trabalho e se busca/filtros seriam relevantes. | Organização de PP06 e possíveis recursos de recuperação. |
+| Linguagem | Termos utilizados para modos de execução, análise e experimentação. | H01/H02 | Evitar que a interface dependa exclusivamente de nomenclatura interna dos desenvolvedores. | Rótulos, ajuda e signos da E9–E11. |
+| Motivações e valores | Preferências entre controle, rapidez, rastreabilidade e facilidade de interpretação. | H02/H03 | Compreender o equilíbrio entre autonomia técnica e simplificação da interação. | Hierarquia de informação e apresentação das opções avançadas. |
 
 ### De quem coletar?
 
-O público ideal reúne pesquisadores, analistas e engenheiros de tráfego ou mobilidade e pessoas que conduzam simulações e análises experimentais. Coordenadores que interpretam relatórios podem contribuir para H03. Se esse público especializado não estiver disponível, participantes *proxy* com experiência em Computação, Engenharia ou análise de dados poderão responder; nessa situação, a limitação deve ser identificada, sem tratá-los como especialistas em mobilidade.
+| Perfil/stakeholder | Critério de inclusão planejado | Relação com persona e objetivo | Limitação |
+|---|---|---|---|
+| Pesquisador ou analista de mobilidade/tráfego | Ter experiência acadêmica ou profissional em estudos de tráfego, mobilidade, experimentação ou simulação. | Perfil mais próximo de P01; relevante para H01/H02. | Acesso ao público especializado ainda não está assegurado. |
+| Engenheiro, analista ou pesquisador de outras áreas técnicas | Realizar atividades de configuração, processamento ou interpretação de análises com parâmetros e resultados. | Pode esclarecer fluxos e feedback relacionados a H02. | Não representa automaticamente especialista em mobilidade. |
+| Gestor ou coordenador técnico | Utilizar indicadores e conclusões de estudos para interpretar resultados ou apoiar decisões. | Relacionado às necessidades de síntese de P02/H03. | Pode não executar diretamente T01–T05. |
+| Participante *proxy* de Computação/Engenharia | Possuir experiência demonstrável com softwares técnicos, análise de dados ou experimentação acadêmica. | Alternativa exploratória para perguntas sobre interação, especialmente H02/H03. | Suas respostas não validam necessidades específicas dos especialistas em tráfego. |
+
+A seleção real dependerá da disponibilidade de participantes. A amostra e seu perfil só poderão ser registrados como dados empíricos após eventual recrutamento e aplicação dos instrumentos.
 
 ### Minimização dos dados e aspectos éticos — A01
 
 - **Voluntariedade:** convite sem pressão, possibilidade de recusa, de deixar questões abertas opcionais e de interromper a participação.
-- **Consentimento:** informação prévia sobre objetivo, equipe, duração, uso acadêmico, privacidade e desistência; sem aceite, encerrar o formulário.
+- **Consentimento:** informação prévia sobre objetivo, equipe, duração, uso acadêmico, privacidade e desistência; sem aceite, encerrar a participação.
 - **Dados necessários:** formação/área e experiência pertinente. Não solicitar nome completo, CPF, endereço, renda, dados de saúde, credenciais ou informações comerciais confidenciais.
-- **Privacidade:** desabilitar coleta automática de e-mails e limitar acesso à planilha bruta à equipe.
+- **Privacidade:** não solicitar e-mails nem dados de identificação desnecessários; limitar acesso aos registros brutos à equipe.
 - **Identificadores:** registros hipotéticos de respondentes serão `UQ01`, `UQ02` etc., para não confundir participantes com as perguntas `Q01`–`Q17`.
 - **Gravação:** não é necessária para o questionário; gravações em outra atividade exigiriam consentimento específico.
 - **Armazenamento e descarte:** manter registros apenas pelo período justificado para a atividade e eliminar identificação desnecessária ao término, respeitando eventuais normas institucionais.
@@ -74,25 +83,34 @@ O público ideal reúne pesquisadores, analistas e engenheiros de tráfego ou mo
 
 ### Objetivo da investigação individual
 
-Investigar qualitativamente **como** uma pessoa organiza uma tarefa técnica, **por que** confere determinadas condições, **como** percebe falhas e **como** interpreta/comunica resultados. Complementa o questionário I01, sobretudo em H02 e H03, explorando exemplos concretos e decisões espontâneas, sem apresentar a V0 como solução que deva ser aprovada.
+Aprofundar a compreensão de como pessoas com experiência em atividades técnicas preparam, executam, acompanham, interpretam e comunicam análises. A entrevista investiga situações concretas, justificativas, dificuldades e vocabulário espontâneo, complementando as perguntas padronizadas do questionário I01. Seu foco principal é H02/H03, com contribuições também para H01.
 
 ### Que dados coletar?
 
-| Categoria | Informação desejada | Hipótese | Consequência possível para IHC |
+| Categoria | Dado/informação a coletar | Hipótese/lacuna | Por que é necessário | Decisão de IHC que pode influenciar |
+|---|---|---|---|---|
+| Usuário | Papel e autonomia: quem configura, executa, analisa ou apenas utiliza conclusões. | H01 | Diferenciar responsabilidades reais, em vez de atribuir todas as tarefas a qualquer perfil. | Refinar atividades de P01 e P02. |
+| Relação com tecnologia | Ferramentas utilizadas e razões de sua escolha. | H01/H02 | Compreender expectativas, hábitos e dificuldades com soluções existentes. | Navegação, signos e padrões familiares. |
+| Conhecimento do domínio | Termos empregados espontaneamente e nível de familiaridade com análises técnicas. | H01 | Verificar se os conceitos utilizados na interface são compreensíveis ao público considerado. | Rótulos, instruções e ajuda da V1 conceitual. |
+| Tarefas — preparação | Sequência real, critérios de verificação e parâmetros relevantes. | H02 | Investigar se a organização PF01 corresponde às atividades do participante. | Ordem das etapas, configuração PP02 e confirmação PP03. |
+| Tarefas — acompanhamento | Formas de perceber progresso, erro, interrupção e necessidade de recuperar a execução. | H02 | Entender quais sinais e ações ajudam diante de processamento demorado ou falhas. | Estado e recuperação em PF02/PP04, sem pressupor recursos atuais não documentados. |
+| Tarefas — interpretação | Como decide quais métricas examinar e quando confia no resultado. | H03 | Reconhecer a sequência de interpretação e a necessidade de manter o contexto experimental. | Hierarquia das informações em PP07. |
+| Tarefas — comparação | Como verifica condições equivalentes e compara alternativas. | H02/H03 | Distinguir a comparação manual existente de possíveis necessidades adicionais. | Apoio futuro a T07/T08; preservação de cenário, seed e controlador. |
+| Tarefas — histórico | Como encontra e reconhece análises anteriores. | H03 | Descobrir dificuldades no processo de recuperação sem supor que filtros são obrigatórios. | Organização de PP06. |
+| Comunicação, motivações e valores | Forma de explicar conclusões e equilíbrio desejado entre precisão técnica e síntese. | H01/H03 | Identificar necessidades diferentes entre quem executa e quem interpreta resultados. | Signos, níveis de detalhe e apresentações da síntese. |
+| Necessidades abertas | Exemplos de incidentes, retrabalho ou problemas não antecipados. | H01/H02/H03 | Permitir que evidências novas questionem hipóteses da equipe. | Revisões justificadas de objetivos, tarefas, fluxos e protótipos. |
+
+### De quem coletar? E estratégia de amostragem
+
+| Perfil/stakeholder | Critério de inclusão planejado | Relação com persona e objetivo | Limitação |
 |---|---|---|---|
-| Papel e autonomia | Se configura, executa, analisa ou apenas utiliza conclusões. | H01 | Diferenciar atividades de P01/P02. |
-| Experiência tecnológica | Ferramentas usadas e razões para escolhê-las. | H01/H02 | Compatibilidade com modelos mentais e expectativas. |
-| Preparação da tarefa | Sequência real, verificações e parâmetros importantes. | H02 | Revisão de PF01, PP02 e PP03. |
-| Acompanhamento | Como percebe progresso, erro e interrupção. | H02 | Feedback e recuperação em PF02. |
-| Interpretação | Como decide quais métricas examinar e se confia no resultado. | H03 | Hierarquia de PP07 e relação entre execução e configuração. |
-| Comparação | Como verifica equivalência e compara alternativas. | H02/H03 | Apoio atual e futuro à T07, sem atribuir comparador à V0. |
-| Histórico | Como recupera e identifica análises antigas. | H03 | Organização de PP06. |
-| Comunicação e valores | Como explica conclusões e que precisão precisa preservar. | H01/H03 | Nomes dos signos e estrutura de síntese. |
-| Dificuldades não previstas | Incidentes, retrabalho e oportunidades espontâneas. | H01/H02/H03 | Revisões justificadas de quaisquer artefatos afetados. |
+| Pesquisador ou profissional de mobilidade, simulação ou tráfego | Preparar ou analisar experimentos e conseguir relatar situações concretas dessas atividades. | Aproxima-se de P01; pode aprofundar H01–H03. | Recrutamento especializado não está garantido. |
+| Engenheiro, analista ou pesquisador de outra área | Ter experiência em execução de processos técnicos e interpretação de resultados quantitativos. | Investigação de H02/H03, por analogia com o fluxo experimental. | Diferenças de domínio devem ser registradas. |
+| Professor, pós-graduando ou pesquisador | Desenvolver estudos acadêmicos ou análises computacionais com parâmetros, processamento e resultados. | Contexto acadêmico próximo ao adotado no TCC. | A experiência pode ser parcial em relação à mobilidade. |
+| Gestor ou coordenador técnico | Consultar e explicar resultados produzidos por outras pessoas. | Aproxima-se de P02 e da necessidade T08. | Pode não realizar a configuração ou execução. |
+| Participante *proxy* de Computação/Engenharia | Ter experiência com ferramentas técnicas ou análise de dados, quando o público ideal estiver indisponível. | Permite explorar necessidades gerais de interação. | Não deve ser apresentado como especialista nem permitir generalizações sobre mobilidade. |
 
-### De quem coletar e estratégia de amostragem
-
-O público ideal inclui pesquisadores, engenheiros, analistas, docentes ou pós-graduandos que já preparem e interpretem simulações ou análises. Gestores técnicos podem contribuir para compreensão da síntese de resultados. Participantes *proxy* são possíveis apenas com justificativa explícita. Uma amostra pequena permite aprofundamento, mas não generalização estatística; quantidade e perfis exatos dependerão do recrutamento futuro.
+A entrevista prioriza profundidade e exemplos concretos, não representatividade estatística. A quantidade e o perfil efetivo de participantes dependerão de recrutamento futuro; entrevistas com *proxies* terão suas limitações explicitadas. Não há entrevistas aplicadas nesta entrega.
 
 ### Aspectos éticos — A02
 
@@ -127,9 +145,9 @@ Público preferencial: pessoas com experiência em simulação, mobilidade, enge
 
 ### Protocolo de aplicação de I01
 
-1. Montar formulário on-line, mantendo o enunciado e as opções documentadas a seguir.
-2. Desabilitar coleta automática de e-mail e exigência de login, se o serviço permitir.
-3. Revisar termos e testar em dispositivos usuais; fazer piloto de clareza antes de recrutar o público final.
+1. Preparar o instrumento com os enunciados, a ordem e as alternativas documentadas a seguir.
+2. Evitar identificação ou autenticação desnecessárias; manter o consentimento antes das questões.
+3. Revisar a clareza do instrumento e planejar um teste piloto antes de eventual recrutamento.
 4. Apresentar objetivo, tempo, caráter voluntário, direitos e consentimento.
 5. Encerrar imediatamente se o participante não concordar.
 6. Permitir preenchimento autônomo sem orientar a resposta.
@@ -145,13 +163,16 @@ Esta pesquisa integra a disciplina de Interação Humano-Computador da FEI. Quer
 
 ### Questionário completo
 
-*Indicação:* questões de escolha múltipla permitem marcar mais de uma opção; “outro” exige campo de texto; as questões abertas são opcionais. As opções de desconhecimento evitam presumir especialização no domínio.
+*Indicação:* questões de múltipla escolha permitem marcar mais de uma opção, exceto as alternativas explicitamente identificadas como **exclusivas**. “Outro” prevê um campo de texto, e as questões abertas são opcionais. As opções de desconhecimento são mantidas para não presumir experiência ou especialização no domínio.
+
+**Regra de exclusividade das respostas:** em questões de múltipla escolha, alternativas como “Nenhuma das anteriores”, “Nunca utilizei”, “Não tenho experiência suficiente para responder”, “Não conheço suficientemente essas métricas” e “Não costumo comparar” não podem ser selecionadas junto a outras alternativas da mesma pergunta, incluindo “Outro”. Se uma delas for marcada, as outras escolhas devem ser desmarcadas; selecionar outra opção deve desmarcar a exclusiva. Quando houver duas opções exclusivas na mesma pergunta, elas também devem excluir uma à outra. A instrução deve acompanhar o instrumento em qualquer modalidade de aplicação e orientar a verificação de combinações contraditórias antes da análise.
 
 #### Seção 1 — Perfil e experiência
 
 ##### Q01. Qual opção melhor descreve sua área de formação, estudo ou atuação?
 
 **Tipo:** múltipla escolha.  
+**Exclusividade:** “Nenhuma das anteriores” — alternativa exclusiva nesta pergunta, incompatível com qualquer outra marcação.  
 **Hipótese(s):** H01.
 
 - [ ] Mobilidade urbana / transportes
@@ -179,6 +200,7 @@ Esta pesquisa integra a disciplina de Interação Humano-Computador da FEI. Quer
 ##### Q03. Quais tipos de ferramentas você já utilizou em atividades técnicas ou acadêmicas?
 
 **Tipo:** múltipla escolha.  
+**Exclusividade:** “Nunca utilizei ferramentas desse tipo” — alternativa exclusiva nesta pergunta, incompatível com qualquer outra marcação.  
 **Hipótese(s):** H01/H02.
 
 - [ ] Planilhas
@@ -203,6 +225,7 @@ Esta pesquisa integra a disciplina de Interação Humano-Computador da FEI. Quer
 ##### Q05. Em uma atividade que envolve executar uma simulação, análise ou experimento, quais informações você considera importante revisar antes de iniciar?
 
 **Tipo:** múltipla escolha.  
+**Exclusividade:** “Normalmente não faço essa verificação”; “Não tenho experiência suficiente para responder” — alternativas exclusivas nesta pergunta, incompatíveis com qualquer outra marcação.  
 **Hipótese(s):** H02.
 
 - [ ] Cenário ou conjunto de dados
@@ -248,6 +271,7 @@ Esta pesquisa integra a disciplina de Interação Humano-Computador da FEI. Quer
 ##### Q08. Durante uma execução que demora algum tempo, quais informações você considera mais importantes?
 
 **Tipo:** múltipla escolha.  
+**Exclusividade:** “Não tenho experiência suficiente para responder” — alternativa exclusiva nesta pergunta, incompatível com qualquer outra marcação.  
 **Hipótese(s):** H02.
 
 - [ ] Indicação clara de execução ativa
@@ -282,6 +306,7 @@ Esta pesquisa integra a disciplina de Interação Humano-Computador da FEI. Quer
 ##### Q10. Quando uma execução termina, quais informações você normalmente procura primeiro?
 
 **Tipo:** múltipla escolha.  
+**Exclusividade:** “Não tenho experiência suficiente para responder” — alternativa exclusiva nesta pergunta, incompatível com qualquer outra marcação.  
 **Hipótese(s):** H03.
 
 - [ ] Resultado principal
@@ -298,6 +323,7 @@ Esta pesquisa integra a disciplina de Interação Humano-Computador da FEI. Quer
 ##### Q11. Em uma análise de tráfego ou simulação semelhante, quais indicadores você consideraria relevantes?
 
 **Tipo:** múltipla escolha.  
+**Exclusividade:** “Não conheço suficientemente essas métricas” — alternativa exclusiva nesta pergunta, incompatível com qualquer outra marcação.  
 **Hipótese(s):** H03.
 
 - [ ] Tempo médio de espera
@@ -314,6 +340,7 @@ Esta pesquisa integra a disciplina de Interação Humano-Computador da FEI. Quer
 ##### Q12. Quando você precisa comparar diferentes execuções ou alternativas, como costuma realizar essa comparação?
 
 **Tipo:** múltipla escolha.  
+**Exclusividade:** “Não costumo comparar” — alternativa exclusiva nesta pergunta, incompatível com qualquer outra marcação.  
 **Hipótese(s):** H03.
 
 - [ ] Comparação manual de valores
@@ -329,6 +356,7 @@ Esta pesquisa integra a disciplina de Interação Humano-Computador da FEI. Quer
 ##### Q13. Quais condições você considera que precisam permanecer identificáveis ao comparar duas execuções?
 
 **Tipo:** múltipla escolha.  
+**Exclusividade:** “Não tenho experiência suficiente para responder” — alternativa exclusiva nesta pergunta, incompatível com qualquer outra marcação.  
 **Hipótese(s):** H02/H03.
 
 - [ ] Cenário
