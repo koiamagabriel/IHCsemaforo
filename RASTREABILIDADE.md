@@ -1,14 +1,10 @@
 # Matriz de rastreabilidade de IHC
 
-A matriz deve ser atualizada ao longo do semestre. Ela ajuda a demonstrar que a interface não surgiu arbitrariamente e registra **como o conhecimento da equipe evoluiu**.
+Esta matriz registra como as decisões do projeto evoluíram desde a contribuição técnica do TCC até os artefatos de IHC. **Não apaga hipóteses antigas ao incorporar uma nova entrega**. Sempre que não houver avaliação ou evidência suficiente, a condição permanece indicada.
 
-No projeto desta equipe, a interface já fazia parte da intenção de desenvolvimento do TCC e, na Entrega 6, foi formalmente tratada como **protótipo digital V0** para fins de análise formativa de IHC.
+A interface já fazia parte do escopo previsto do TCC e existe como **protótipo desktop funcional V0**. A E6 documentou seus estados reais, realizou um walkthrough formativo e registrou propostas V0→V1. A E7 elaborou instrumentos de coleta ainda **não aplicados**. A E8 especificou capacidades/restrições, princípios e **metas futuras de usabilidade**, ainda não medidas.
 
-As evidências visuais e o walkthrough da Entrega 6 permitiram refinar a descrição da V0, identificar possíveis rupturas de interação e propor decisões de evolução para uma V1 conceitual.
-
-A análise também permitiu corrigir uma descrição anterior importante: a interface possui catálogo, configuração, validação, execução, histórico e análise individual de resultados, mas **não realiza comparação automática entre duas execuções**. Essa comparação é atualmente feita manualmente fora da aplicação a partir dos resultados consultados individualmente.
-
-Na Entrega 7, as principais hipóteses ainda abertas foram transformadas em um **plano de investigação reproduzível**, composto por questionário e entrevista semiestruturada. Como esses instrumentos não foram aplicados, as hipóteses H01, H02 e H03 permanecem abertas.
+Uma correção central permanece válida: a V0 oferece **histórico/seleção da execução (PP06)** e **análise individual (PP07)**, mas **não implementa comparação automática entre duas execuções**. T07 é concluída mediante consulta separada de A e B e análise manual externa.
 
 ---
 
@@ -16,89 +12,253 @@ Na Entrega 7, as principais hipóteses ainda abertas foram transformadas em um *
 
 | Elemento | Registro da equipe | Evidência/justificativa | Estado |
 |---|---|---|---|
-| Tema do TCC | Algoritmo híbrido de controle semafórico baseado em Max Pressure e lógica actuated em ambiente de simulação. | TCC1 — título, introdução e metodologia. | definido |
-| Resultado técnico esperado | Algoritmo híbrido de controle semafórico acompanhado de avaliação experimental em ambiente de simulação. | TCC1 — objetivos e metodologia. | definido |
-| O TCC previa interface? | sim, parcialmente definida | A equipe já considerava o desenvolvimento de uma interface antes da disciplina de IHC. Na Entrega 6, essa intenção passou a ser representada pelo protótipo digital funcional V0. | definido |
-| Capacidade/contribuição central | Selecionar dinamicamente os movimentos semafóricos prioritários e controlar a permanência ou troca do verde de acordo com o estado observado do tráfego. | TCC1 — proposta do algoritmo Max Pressure + lógica actuated. | definido |
-| Possíveis beneficiários/stakeholders | Pesquisadores de mobilidade, analistas/engenheiros de tráfego, gestores de mobilidade, órgãos responsáveis pelo trânsito e, indiretamente, usuários das vias. | Entrega 1. A Entrega 7 definiu instrumentos capazes de investigar esses perfis. | H |
-| Usuário escolhido para IHC | Pesquisador ou analista de mobilidade urbana. | H01 — perfil possui relação plausível com configuração, execução e análise de experimentos. | H |
-| Objetivo principal do usuário | Avaliar diferentes estratégias de controle semafórico por meio da configuração, execução, análise e comparação de experimentos. | Entregas 1, 3, 4 e 5; V0 e walkthrough da Entrega 6. | H |
-| Contexto de uso adotado | Ambiente computacional acadêmico, laboratorial ou profissional voltado à experimentação e análise. | Entregas 1, 3 e 6. | H |
-| Interface/recorte de IHC | Seleção de cenário, configuração, validação, execução/acompanhamento, recuperação e análise individual dos resultados, com comparação manual externa quando necessária. | Entregas 1–6 e evidências visuais da V0. | proposta materializada em V0 |
-| Relação com o TCC | parte prevista | A interface já era planejada no TCC e passou a ser analisada e refinada a partir dos métodos de IHC. | definido |
+| Tema do TCC | Algoritmo híbrido de controle semafórico baseado em Max Pressure e lógica actuated em ambiente de simulação. | TCC1 e entregas anteriores. | Definido. |
+| Resultado técnico esperado | Sistema de controle e avaliação experimental em SUMO/TraCI, com interface para configurar, executar, acompanhar e consultar simulações. | TCC e V0 documentada na E6. | Definido; implementação técnica evolui no TCC. |
+| Interface prevista no TCC? | Sim, já planejada pela equipe antes da disciplina. | Declaração da equipe e GUI funcional adotada na E6. | Definido. |
+| Capacidade central | Selecionar movimentos prioritários e regular trocas/permanência do verde mediante estado observado do tráfego. | Metodologia híbrida do TCC. | Definido. |
+| Possíveis interessados | Pesquisadores/analistas/engenheiros de tráfego, gestores e, indiretamente, usuários da malha viária. | E1–E3; ainda sem confirmação empírica do perfil principal. | H. |
+| Usuário prioritário de IHC | Pesquisador ou analista de mobilidade urbana. | H01; proto-personas P01/P02. | Hipótese aberta. |
+| Objetivo de uso | Preparar, executar, acompanhar, recuperar, interpretar e comparar experimentos em condições adequadas. | E1, E3–E6. | Hipótese de interação materializada parcialmente em V0. |
+| Contexto de uso | Computador desktop/notebook em atividade acadêmica/laboratorial e possível uso profissional. | E3, E6, E8. | F/H conforme dimensão. |
+| Recorte interativo | Seleção de cenário, configuração, validação, execução e acompanhamento, histórico e análise individual. | PF01–PF03 e PP01–PP07 na E6. | V0 documentada. |
+| Limite de comparação | Execuções são consultadas separadamente e comparadas manualmente fora do aplicativo. | Evidências PP06/PP07 e W04/O10. | Fato da V0 documentada. |
 
 ---
 
 ## 2. Registro de hipóteses e lacunas
 
-| ID | Afirmação / dúvida inicial | Tipo | Por que importa | Como/onde investigar | Evidência acumulada | Estado atual | Impacto no projeto |
-|---|---|---|---|---|---|---|---|
-| H01 | Pesquisadores ou analistas de mobilidade representam adequadamente o usuário prioritário da interface. | H | O perfil influencia tarefas, linguagem, contexto e decisões de interação. | Entregas 2, 3 e 7; avaliações posteriores | Entrega 2 analisou ferramentas profissionais. Entrega 3 estruturou P01/P02. Entrega 6 aplicou essas personas ao protótipo e identificou questões de linguagem técnica. Entrega 7 planejou I01/Q01–Q04 e I02/E01–E02. | aberta | Personas, linguagem e nível de detalhamento continuam sujeitos a refinamento. |
-| H02 | Organizar a interação em definição da malha, configuração/execução e análise dos resultados facilita a realização dos experimentos. | H | Esse fluxo constitui a estrutura inicial da interface. | Entregas 3–7; avaliações posteriores | Entregas 3–5 detalharam jornada e tarefas. Entrega 6 materializou PF01–PF03. O walkthrough mostrou compreensão geral do fluxo, mas apontou densidade técnica, necessidade de melhor recuperação de erro e maior clareza do estado de execução. Entrega 7 planejou investigar preparação, configuração, feedback, erros e recuperação. | aberta | Estrutura geral foi preservada, com propostas de refinamento V1. |
-| H03 | Uma apresentação consolidada e comparativa das métricas facilita a interpretação do desempenho dos métodos. | H | A forma de apresentar resultados influencia análise e decisão. | Entregas 2–7; Entregas 12–14 | Entrega 6 mostrou que a V0 oferece histórico, resultado individual e gráfico, mas não comparação automática. O walkthrough identificou trabalho adicional para alternar entre execuções e comparar externamente. Entrega 7 planejou investigar métricas, comparação, histórico, rastreabilidade e síntese. | aberta | Apoio à comparação permanece oportunidade de evolução, ainda não requisito definitivamente validado. |
+| ID | Hipótese | Evidências acumuladas sem validação empírica | Investigação prevista | Estado após E8 | Implicação |
+|---|---|---|---|---|---|
+| H01 | Pesquisadores/analistas de mobilidade representam o usuário prioritário. | E2 — ferramentas profissionais; E3 — P01/P02; E6 — identificação de termos técnicos. | I01 Q01–Q04/Q15; I02 E01/E02/E17; avaliações posteriores. | **Aberta.** | Revisar personas, vocabulário e ajuda se dados indicarem. |
+| H02 | Organização cenário → configuração → execução/acompanhamento → análise facilita os experimentos. | E3–E5 — jornada/tarefas; E6 — PF01–PF03, O01–O07. | I01 Q05–Q09; I02 E03–E08; MU01–MU04 na avaliação. | **Aberta.** | Manter organização como hipótese de design e verificar eficácia/eficiência. |
+| H03 | Apresentação consolidada/comparativa de métricas facilita interpretação. | E6 — histórico, análise individual e gráfico; O09/O10 expõem custo da comparação externa. | I01 Q10–Q14; I02 E09–E16; MU05–MU08 quando pertinentes. | **Aberta.** | Apoio comparativo automático segue possibilidade de V1, não requisito validado. |
 
-### Situação atual
-
-H01, H02 e H03 permanecem abertas.
-
-A Entrega 6 gerou evidências sobre **a organização e o funcionamento do protótipo V0**, além de observações de interação e decisões de revisão V0→V1.
-
-A Entrega 7 forneceu instrumentos adicionais para investigação, mas eles ainda não foram aplicados.
+Nenhuma das hipóteses foi sustentada, refutada ou validada por participantes na E7: I01/I02 **não foram aplicados**. Na E8 foram definidas metas para testes futuros, não resultados.
 
 ---
 
 ## 3. Rastreabilidade entre contribuição técnica, necessidades e artefatos
 
-| ID | Capacidade do TCC utilizada | Necessidade/problema | Persona | Cenário | Objetivo/tarefa | HTA/GOMS/CTT | Protótipo E6 | Coleta E7 | Cenário de interação / signos | MoLIC | Figma | Heurística | Teste | Decisão/melhoria |
+`PENDENTE` nas colunas E9–E14 significa que a entrega ainda não foi produzida; não corresponde a uma falha da V0.
+
+| ID | Capacidade técnica | Necessidade | Persona | Cenário | Tarefa | E5: modelo | E6: fluxo/estado | E7: investigação | E9: cenário/signos | E10 | E11 | E13 | E14 | Decisão vigente |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| R01 | Diferentes malhas/cenários. | Definir onde o experimento será realizado. | P01 | C01 | T01 | PENDENTE | PF01 / PP01 | I01 Q05; I02 E03/E04 | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | E6/O01 — manter separação entre cenário e configuração. |
-| R02 | Configuração de parâmetros. | Definir condições antes da execução. | P01 | C01 | T02 | HTA T02 | PF01 / PP02 / PP03 | I01 Q05–Q07; I02 E03–E05 | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | E6/O02–O05 — ajuda contextual, parâmetros avançados separados e melhor recuperação de erro. |
-| R03 | Estratégias de controle. | Selecionar claramente a estratégia. | P01 | C01 | T03 | GOMS T03 | PF01 / PP02 | I01 Q05/Q06; I02 E04/E05 | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | E6/O02 — explicar termos técnicos sem retirar precisão. |
-| R04 | Execução automatizada. | Iniciar e reconhecer o estado da execução. | P01 | C01 | T04/T05 | CTT T04/T05 | PF02 / PP03 / PP04 / PP05 | I01 Q08/Q09; I02 E06–E08 | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | E6/O04–O07 — preservar validação e modo Visual; destacar estado principal dos logs. |
-| R05 | Métricas experimentais. | Consultar uma execução e interpretar seus resultados. | P01, P02 | C02 | T06 | GOMS T06 | PF03 / PP06 / PP07 | I01 Q10/Q11; I02 E09/E10/E13 | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | E6/O08–O09 — preservar contexto da execução e hierarquizar resultados. |
-| R06 | Comparação entre estratégias. | Comparar execuções sob condições equivalentes. | P01, P02 | C02 | T07 | HTA T07; CTT T07/T08 | PF03 / PP06 / PP07 + comparação manual externa | I01 Q12/Q13; I02 E11–E13 | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | E6/O10 — investigar futuramente apoio à comparação lado a lado. |
-| R07 | Organização dos resultados. | Produzir uma síntese da análise. | P01, P02 | C02 | T08 | CTT T07/T08 | PF03 / PP07 + síntese externa | I01 Q10–Q17; I02 E14–E20 | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | E6/O09–O10 — melhorar hierarquia e reduzir esforço para síntese comparativa. |
+| R01 | Cenários/infraestruturas. | Definir local da simulação. | P01 | C01 | T01 | Sem modelo individual dedicado. | PF01/PP01 | I01 Q05; I02 E03/E04 | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | O01; PG01 — manter separação e contexto. |
+| R02 | Parametrização. | Definir condições corretas. | P01 | C01 | T02 | HTA T02 | PF01/PP02/PP03 | I01 Q05–Q07; I02 E03–E05 | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | O02/O03/O05; PG02–PG04. |
+| R03 | Escolha de estratégia. | Identificar controlador ativo. | P01 | C01 | T03 | GOMS T03 | PF01/PP02 | I01 Q05/Q06; I02 E04/E05 | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | O02; PG01/PG02. |
+| R04 | Execução de experimentos. | Iniciar e reconhecer processamento. | P01 | C01 | T04/T05 | CTT T04/T05 | PF02/PP03–PP05 | I01 Q08/Q09; I02 E06–E08 | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | O04–O07; PG04/PG05. |
+| R05 | Métricas e gráficos. | Consultar uma execução. | P01/P02 | C02 | T06 | GOMS T06 | PF03/PP06/PP07 | I01 Q10/Q11; I02 E09/E10/E13 | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | O08/O09; PG01/PG06. |
+| R06 | Comparação científica de controladores. | Comparar condições equivalentes. | P01/P02 | C02 | T07 | HTA T07; CTT T07/T08 | PF03/PP06/PP07 + trabalho externo | I01 Q12/Q13; I02 E11–E13 | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | O10; PG07 — comparação automática ainda não existe. |
+| R07 | Síntese de análise. | Interpretar/comunicar resultados. | P01/P02 | C02 | T08 | CTT T07/T08 | PF03/PP07 + síntese externa | I01 Q10–Q17; I02 E14–E20 | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | O09/O10; PG06/PG07. |
+
+O prefixo `C01/C02` também foi utilizado na E2 para **concorrentes** (Aimsun/Vissim), enquanto na E4 designa **cenários de problema**. Nesta matriz, `C01/C02` denotam cenários de E4; concorrentes da E2 são mencionados sempre com o nome do produto ou `E2-C01/E2-C02`, sem alterar retrospectivamente IDs consolidados.
 
 ---
 
 ## 4. Observação sobre a Entrega 5
 
-A tarefa T01 permanece sem um artefato específico de HTA, GOMS ou CTT na Entrega 5. Isso não representa ausência da tarefa no projeto: T01 continua como parte do fluxo principal e como pré-requisito para as atividades seguintes.
-
-A Entrega 5 aprofundou:
-
-- T02 por meio de HTA;
-- T03 por meio de GOMS;
-- T04/T05 por meio de CTT;
-- T06 por meio de GOMS;
-- T07 por meio de HTA e também no CTT T07/T08;
-- T08 por meio do CTT T07/T08.
+A E5 é referência consolidada e não foi modificada. Ela modela HTA T02, GOMS T03, CTT T04/T05, HTA T07, GOMS T06 e CTT T07/T08, cobrindo atividades de Gabriel e João. T01 integra o fluxo do projeto, embora não possua modelagem individual nessa entrega.
 
 ---
 
 ## 5. Observação sobre a Entrega 6
 
-A Entrega 6 foi concluída com o protótipo digital V0 organizado em três fluxos:
+A E6 adotou a GUI funcional do TCC como **protótipo digital V0**, no contexto da atividade de prototipação formativa. A substituição do papel por um artefato digital pré-existente foi registrada como orientação docente no documento da E6; a matriz conserva essa informação como registro da equipe, sem confundi-la com teste empírico de usuários.
 
-- **PF01 — Preparar experimento:** T01, T02 e T03;
-- **PF02 — Validar, executar e acompanhar:** T04 e T05;
-- **PF03 — Localizar e analisar resultados:** T06, T07 e T08.
+**Fluxos principais:**
 
-Os estados documentados são:
+- PF01 — Preparar experimento: T01/T02/T03;
+- PF02 — Validar, executar e acompanhar: T04/T05;
+- PF03 — Localizar e analisar resultados: T06/T07/T08, com comparação externa.
 
-- **PP01:** catálogo e seleção do cenário;
-- **PP02:** configuração principal, modo de execução e configuração avançada;
-- **PP03:** validação e confirmação pré-execução;
-- **PP04:** inicialização e feedback da execução;
-- **PP05:** execução Visual no SUMO-GUI;
-- **PP06:** histórico/listagem e seleção de uma execução;
-- **PP07:** análise individual dos resultados e gráfico/diagnóstico.
+**Estados documentados:**
 
-A comparação prevista em T07 **não é uma função automática da V0**.
+| Estado | Descrição real da V0 | Evidência |
+|---|---|---|
+| PP01 | Catálogo/seleção de cenário. | `assets/06_prototipos/pp01_catalogo.png` |
+| PP02 | Configuração, modo de execução e parâmetros avançados. | `pp02_configuracao.png`, `pp02_modo_execucao.png`, `pp02_configuracao_avancada.png` |
+| PP03 | Validação e confirmação pré-execução. | `pp03_validacao.png`, `pp03_confirmacao.png` |
+| PP04 | Inicialização/feedback textual de processamento. | `pp04_execucao.png` |
+| PP05 | Execução Visual no SUMO-GUI. | `pp05_sumo_visual.png` |
+| PP06 | Histórico e seleção de **uma** execução. | `pp06_historico.png` |
+| PP07 | Informações, métricas e gráfico da execução selecionada. | `pp07_resultados.png`, `pp07_grafico.png` |
 
-A interface apoia T07 ao permitir recuperar execuções individualmente e consultar suas informações. A comparação é realizada manualmente fora da aplicação.
+A captura `visao_geral_v0.png` complementa a documentação. São **12 capturas** no diretório `assets/06_prototipos/`.
 
-A Entrega 6 possui doze evidências visuais armazenadas em:
+### Walkthrough formativo — W01–W04
 
-```text
-assets/06_prototipos/
+| ID | Atividade | Resultado documental |
+|---|---|---|
+| W01 | Preparar experimento. | Fluxo reconhecido; possível necessidade de contexto para termos. |
+| W02 | Validar e iniciar. | Prevenção de configuração inválida reconhecida; recuperação pode melhorar. |
+| W03 | Acompanhar execução. | Feedback visível, porém próximo de log técnico. |
+| W04 | Consultar e comparar resultados. | Consulta individual compreendida; comparação externa/manual. |
+
+### Observações e decisões V0→V1
+
+| ID | Evidência/observação da E6 | Direção de design | Estado da decisão |
+|---|---|---|---|
+| O01 | Separação cenário/configuração é compreensível. | Preservar organização. | Preservação. |
+| O02 | Termos técnicos podem exigir experiência prévia. | Ajuda e descrições contextuais. | Proposta V1. |
+| O03 | Parâmetros avançados densos. | Manter área avançada apartada. | Preservar/refinar. |
+| O04 | Validação prévia é útil. | Preservar bloqueio de configuração inadequada. | Preservação. |
+| O05 | Erros precisam orientar correção. | Mostrar problema, causa possível e ação. | Proposta V1. |
+| O06 | Logs competem com status principal. | Tornar estado principal mais evidente. | Proposta V1. |
+| O07 | SUMO-GUI evidencia execução Visual. | Preservar modo Visual. | Preservação. |
+| O08 | Histórico permite recuperar execuções. | Preservar contexto. | Preservar/refinar. |
+| O09 | Resultados possuem informações e gráficos. | Manter vínculo e melhorar hierarquia. | Preservar/refinar. |
+| O10 | Comparação demanda alternar execuções e trabalhar externamente. | Investigar apoio lado a lado. | Hipótese futura, não implementada. |
+
+O walkthrough é uma **avaliação formativa registrada na E6**. Não deve ser reapresentado como teste de usabilidade com amostra de usuários finais.
+
+---
+
+## 6. Observação sobre a Entrega 7
+
+A E7 gerou dois instrumentos **planejados**:
+
+- **I01:** questionário de Gabriel — perguntas Q00 (consentimento) e Q01–Q17 (perfil, preparação, execução, métricas, comparação, linguagem e necessidades).
+- **I02:** entrevista semiestruturada de João — perguntas E01–E20 (perfil, trabalho, execução, resultados, comparação, histórico, linguagem e necessidades abertas).
+
+Os instrumentos possuem público, método, roteiro/protocolo, consentimento, privacidade, condições de uso de participantes proxy e plano de análise. **Não existem respostas coletadas, entrevistados registrados ou hipóteses validadas nesta etapa.**
+
+### Rastreabilidade das investigações
+
+| Fonte | Questões | Incertidão principal | Decisão eventual |
+|---|---|---|---|
+| I01 | Q01–Q04; Q15 | H01, H02 | Persona, rótulos e ajuda. |
+| I01 | Q05–Q09 | H02 | Configuração, validação, feedback e recuperação. |
+| I01 | Q10–Q14; Q16–Q17 | H03 e lacunas abertas | Métricas, histórico, síntese e comparação. |
+| I02 | E01/E02/E17 | H01 | Perfil e linguagem. |
+| I02 | E03–E08 | H02 | Estrutura de trabalho, parâmetros, estado e erro. |
+| I02 | E09–E16/E18–E20 | H02/H03 | Interpretação, critérios de comparabilidade e novas necessidades. |
+
+---
+
+## 7. Rastreabilidade de padrões de interface
+
+| Estado/fluxo | Padrão | Objetivo/tarefa | Situação |
+|---|---|---|---|
+| PF01/PP01 | Seleção de cenário | T01 | Implementado na V0. |
+| PF01/PP02 | Configuração | T02/T03 | Implementado na V0. |
+| PF02/PP03 | Validação/confirmação | T02/T04 | Implementado na V0. |
+| PF02/PP04/PP05 | Acompanhamento | T04/T05 | Implementado com feedback textual e Visual. |
+| PF03/PP06 | Histórico/seleção | T06/T07 | Implementado na V0. |
+| PF03/PP07 | Resultado individual/gráfico | T06/T08 | Implementado na V0. |
+| Externo à V0 | Comparação entre execuções | T07/T08 | Manual/externa. |
+| Não justificado | Login, perfis administrativos e CRUD genérico | Sem tarefa rastreável | Não adotado. |
+
+---
+
+## 8. Decisões de interação acumuladas até a E7
+
+São decisões de preservação ou propostas de evolução, conforme a coluna de estado de O01–O10:
+
+- vincular cenário, método, seed, parâmetros e resultados;
+- manter escolha explícita de cenário e estratégia;
+- diferenciar configurações principais e avançadas;
+- validar e confirmar antes de iniciar;
+- reconhecer execução Visual e Headless e informar estado de processamento;
+- permitir recuperação de resultados existentes;
+- dar contexto e hierarquia às métricas;
+- registrar comparação manual como externa à V0;
+- não criar funcionalidades administrativas ou analíticas arbitrárias;
+- manter H01/H02/H03 abertas até investigação apropriada.
+
+---
+
+## 9. Entrega 8 — Engenharia de usabilidade
+
+A E8 transformou o conteúdo anterior em especificação de plataforma, princípios de design e **metas de uso**. Valores de MU são **alvos planejados**, não resultados de participantes.
+
+### Capacidades e restrições de plataforma
+
+| Grupo | Fatores documentados | Relação com o projeto |
+|---|---|---|
+| Plataforma | Desktop em Python, SUMO/TraCI, teclado/mouse, Visual/SUMO-GUI, Headless. | PF01–PF03 e PP01–PP07. |
+| Capacidades | Cenários, parâmetros, estratégias, seed, validação, confirmação, processamento, histórico, métricas/gráfico. | T01–T08, com T07 apenas parcialmente apoiada pela V0. |
+| Restrições | Dependências técnicas, terminologia, muitos parâmetros, tempo variável, janela externa, histórico crescente, sem comparação automática. | O02/O03/O05/O06/O10. |
+| Contexto | P01/P02 hipotéticas, desktop/laboratório e equipe acadêmica; perfis e ambiente profissional ainda não validados. | E3 e H01. |
+
+### Princípios gerais da E8
+
+| ID | Princípio | Principal rastreabilidade | Estado |
+|---|---|---|---|
+| PG01 | Identidade e contexto da execução visíveis. | T01–T06, O01/O08/O09. | Preservar/refinar. |
+| PG02 | Terminologia técnica com explicação contextual. | H01, O02, I01 Q15, I02 E17. | Proposta V1. |
+| PG03 | Separação de parâmetros principais e avançados. | PP02, O03. | Preservar/refinar. |
+| PG04 | Prevenção/recuperação de erros. | PP03, O04/O05. | Preservar/refinar. |
+| PG05 | Estado principal mais claro que logs. | PP04, O06/O07. | Proposta V1. |
+| PG06 | Métricas com síntese e acesso a detalhes. | PP07, O09, H03. | Proposta V1. |
+| PG07 | Diferenciar consulta individual e comparação. | PP06/PP07, T07, O10. | Comparação automática não implementada. |
+| PG08 | Legibilidade, rótulos e sinais não dependentes somente de cor. | Qualidade de uso/princípios de IHC. | Diretriz futura. |
+
+Referências usadas em E8: ISO 9241-11, ISO 9241-210, Nielsen, Barbosa e Silva e princípios de acessibilidade WCAG 2.2 **adaptados**; não existe alegação de certificação ou conformidade integral.
+
+### Metas qualitativas e quantitativas
+
+| Objetivo/tarefa | Metas qualitativas | Metas quantitativas planejadas | Evidência futura |
+|---|---|---|---|
+| T01–T03: preparar | MQ01/MQ02 | MU01: conclusão correta por todos os participantes observados; MU03: mediana ≤ 5 min. | E12/E14, registro de sucesso, ajuda e tempo. |
+| T02/T04: validar | MQ03 | MU02: identificar e corrigir condição inválida por todos os participantes avaliados. | E12/E14, cenário controlado de erro. |
+| T05: acompanhar | MQ04 | MU04: reconhecer estado e estratégia por todos os participantes. | E12/E14, pergunta objetiva em etapa definida. |
+| T06: localizar/consultar | MQ05 | MU05: identificar contexto corretamente por todos; MU06: mediana de localização ≤ 3 min. | E12/E14, histórico padronizado. |
+| T07: comparar | MQ06 | MU08: entender o limite de comparação da versão avaliada por todos. | E12/E14; comparação manual enquanto não houver V1 implementada. |
+| PF01–PF03: experiência | MQ07 e clareza geral | MU07: mediana de facilidade pós-tarefa ≥ 4/5. | E12/E14, escala de satisfação. |
+
+**Medição futura:** E12 definirá tarefas e critérios antes da coleta, E13 inspecionará problemas heurísticos e E14 observará participantes com consentimento. Para amostra de dois participantes, 100% equivale a 2/2 e não autoriza generalização estatística. A priorização de grupos de metas na E8 (35%/20%/25%/20%) indica **peso de design**, não desempenho observado.
+
+---
+
+## 10. Registro de mudanças e refinamentos
+
+| Data | Registro | Origem | Consequência |
+|---|---|---|---|
+| 20/10/2026 | A GUI funcional foi formalizada como V0, com PF01–PF03, PP01–PP07 e walkthrough formativo. | E6. | Base para decisões V0→V1. |
+| 20–21/10/2026 | Corrigida a representação de PP06/PP07 e da comparação manual. | Capturas e revisão da E6. | T07 deixou de ser indevidamente descrita como comparação automática. |
+| 20/10/2026 | E7 documentou I01 e I02 como **instrumentos planejados**, não resultados empíricos. | E7. | H01–H03 permanecem abertas. |
+| 21/10/2026 | E8 relacionou plataforma, princípios PG01–PG08 e metas MQ01–MQ07/MU01–MU08 aos artefatos anteriores. | Slides Processos — Partes 1 e 2; E8. | Critérios de projeto/avaliação futura para E9–E14. |
+| 21/10/2026 | Reconciliação documental das versões do repositório: final da E7 e matriz recuperados/revisados; E8 concluída. | Histórico de commits, conteúdo do repositório e materiais de aula. | Documentação consolidada, **sem afirmar testes ou alterações da GUI**. |
+
+---
+
+## 11. Continuidade para E9–E14
+
+| Entrega | O que deverá utilizar desta matriz | Estado |
+|---|---|---|
+| E9 — Modelo conceitual | H01–H03, P01/P02, C01/C02, T01–T08, PG01–PG08, MQ. | PENDENTE. |
+| E10 — MoLIC | Cenários de interação/signos resultantes da E9, rupturas de PP03/PP04 e caminhos PP06/PP07. | PENDENTE. |
+| E11 — Figma | Conversas MoLIC e diretrizes E8; distinguir V1 proposta de V0 existente. | PENDENTE. |
+| E12 — DECIDE | MQ/MU, critérios de sucesso, perfis, protocolo, ética e piloto. | PENDENTE. |
+| E13 — Heurística | Versão avaliada, 10 heurísticas, prints e severidade. | PENDENTE. |
+| E14 — Observação de usuários | Participantes consentidos, tarefas, sucesso, tempo, erros, ajuda e satisfação. | PENDENTE. |
+
+Não há decisão de incorporar comparação automática, login, CRUD ou filtros avançados como requisito obrigatório. Qualquer nova funcionalidade deverá ser justificada por evidência, objetivos e avaliação.
+
+---
+
+## Como usar
+
+- Manter os IDs existentes estáveis; novos artefatos recebem prefixos próprios.
+- Usar `PENDENTE` quando o trabalho ainda não existe, e não preencher lacunas inventando achados.
+- Diferenciar **implementado na V0**, **proposto para V1**, **instrumento planejado** e **resultado observado**.
+- Registrar correções em vez de apagar silenciosamente decisões anteriores.
+- Atualizar a matriz quando novas evidências reais alterarem H01–H03 ou decisões de interação.
+
+## Convenção de identificadores adotada
+
+| Prefixo | Artefato |
+|---|---|
+| H | Hipótese ou lacuna de investigação |
+| P | Persona/proto-persona |
+| C | Cenário de problema (E4); concorrentes da E2 sempre identificados pelo nome ou qualificação E2 |
+| T | Tarefa do usuário |
+| PF / PP | Fluxo / estado da V0 documentado na E6 |
+| W / O | Tarefa / observação do walkthrough formativo da E6 |
+| I / Q / E | Instrumento / pergunta do questionário / pergunta da entrevista da E7 |
+| UQ / UE | Eventual participante anonimizado do questionário / entrevista; **nenhum existente até E8** |
+| PG | Princípio geral do projeto, E8 |
+| MQ / MU | Meta qualitativa / meta quantitativa de usabilidade, E8 |
+| M / F | Diagrama MoLIC / tela ou fluxo do Figma (futuro) |
+| UT | Tarefa de avaliação por observação (futuro) |
+| R | Linha da matriz de rastreabilidade |
