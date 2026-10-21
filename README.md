@@ -62,9 +62,16 @@ Na Entrega 6, a interface funcional já existente no contexto do TCC passou a se
 - **PF02 — Executar e acompanhar simulação**;
 - **PF03 — Analisar e comparar resultados**.
 
-O protótipo será utilizado como artefato formativo e deverá ser confrontado com observações de usuários ao longo das etapas de avaliação.
+O protótipo é tratado como artefato formativo e não como solução automaticamente validada.
 
-Se alguma afirmação ainda não estiver sustentada por evidência, registre-a como hipótese na [Entrega 1](docs/01_conhecendo_o_problema.md).
+Na Entrega 7, as principais hipóteses do projeto foram transformadas em perguntas de investigação e instrumentos reproduzíveis:
+
+- **I01 — Questionário exploratório sobre atividades de simulação e análise**, elaborado por Gabriel;
+- **I02 — Entrevista semiestruturada sobre processos técnicos e interpretação de resultados**, elaborada por João.
+
+Os instrumentos foram planejados para eventual aplicação. Como não houve coleta empírica nesta etapa, H01, H02 e H03 continuam explicitamente abertas.
+
+Se alguma afirmação ainda não estiver sustentada por evidência, registre-a como hipótese na [Entrega 1](docs/01_conhecendo_o_problema.md) e acompanhe seu estado na [Matriz de rastreabilidade](RASTREABILIDADE.md).
 
 ## Por que pensar em interface mesmo em TCCs técnicos?
 
@@ -88,6 +95,8 @@ Possibilidades de interface incluem **dashboards, telas administrativas, configu
 
 Nenhuma dessas telas é obrigatória por si só: deve existir uma tarefa e um objetivo de usuário que a justifique.
 
+No projeto atual, a Entrega 7 reforça esse princípio ao investigar necessidades sem presumir antecipadamente que dashboard, histórico, filtros, relatórios ou outras possibilidades devam necessariamente compor a solução definitiva.
+
 ## Relação com apresentação e potencial de aplicação
 
 A reflexão sobre usuários ajuda a equipe a explicar o projeto para públicos externos, inclusive em eventos como a **INOVA**.
@@ -102,7 +111,17 @@ No projeto, a interface permite ao usuário interagir com o ambiente de simulaç
 
 A interface faz parte da solução prevista no TCC e atualmente existe como protótipo digital funcional. As atividades da disciplina de IHC são utilizadas para investigar e refinar essa interação de forma centrada no usuário.
 
-O fato de o protótipo já funcionar tecnicamente não significa que sua interação esteja validada. As entregas da disciplina deverão fornecer evidências progressivas sobre necessidades, tarefas, organização da interação e usabilidade.
+O fato de o protótipo já funcionar tecnicamente não significa que sua interação esteja validada. Da mesma forma, a existência de questionários, entrevistas, personas ou modelos não transforma hipóteses sobre usuários em fatos.
+
+As entregas da disciplina deverão fornecer evidências progressivas sobre necessidades, tarefas, organização da interação e usabilidade.
+
+## Situação das principais hipóteses
+
+| ID | Hipótese | Situação atual |
+|---|---|---|
+| H01 | Pesquisadores ou analistas de mobilidade representam adequadamente o usuário prioritário. | Aberta. A Entrega 7 criou instrumentos para investigá-la, mas não houve aplicação. |
+| H02 | A organização cenário → configuração → execução/acompanhamento → análise facilita a realização dos experimentos. | Aberta. O fluxo foi materializado na V0 e possui investigação planejada na Entrega 7. |
+| H03 | Uma apresentação consolidada e comparativa das métricas facilita sua interpretação. | Aberta. PP06/PP07 representam uma solução possível e a Entrega 7 planejou investigar métricas, comparação e síntese. |
 
 ## Como usar este repositório
 
@@ -115,6 +134,7 @@ O fato de o protótipo já funcionar tecnicamente não significa que sua intera�
 7. Na Entrega 1, diferencie **[F] fatos**, **[H] hipóteses** e **[?] lacunas de conhecimento**.
 8. Antes de cada entrega, revise o checklist do arquivo e o [Checklist final](CHECKLIST_FINAL.md).
 9. Sempre que uma evidência posterior contrariar uma hipótese inicial, **revise o projeto**. IHC é um processo iterativo.
+10. Diferencie instrumentos de pesquisa planejados de dados efetivamente coletados; somente evidências reais podem sustentar, refutar ou refinar hipóteses.
 
 ## Entregas
 
@@ -126,7 +146,7 @@ O fato de o protótipo já funcionar tecnicamente não significa que sua intera�
 | 4 | [Cenários de análise/problema](docs/04_cenarios_problema.md) | 1 solução completa por integrante | 🟩 |
 | 5 | [Análise de tarefas: HTA, GOMS e CTT](docs/05_analise_tarefas.md) | cada integrante: pelo menos 1 HTA + 1 GOMS + 1 CTT | 🟩 |
 | 6 | [Prototipação em papel](docs/06_prototipacao_papel.md) | 1 protótipo integrado por equipe | 🟨 |
-| 7 | [Coleta de dados e aspectos éticos](docs/07_coleta_dados.md) | soluções individuais + técnicas distintas; questionário entre as técnicas | ⬜ |
+| 7 | [Coleta de dados e aspectos éticos](docs/07_coleta_dados.md) | soluções individuais + técnicas distintas; questionário entre as técnicas | 🟩 |
 | 8 | [Ciclo de vida e engenharia de usabilidade](docs/08_engenharia_usabilidade.md) | 1 solução consolidada por equipe | ⬜ |
 | 9 | [Modelo conceitual e design centrado na comunicação](docs/09_modelo_conceitual.md) | soluções individuais + consolidação de objetivos/signos | ⬜ |
 | 10 | [MoLIC](docs/10_molic.md) | 1 diagrama completo por integrante | ⬜ |
@@ -141,9 +161,9 @@ O fato de o protótipo já funcionar tecnicamente não significa que sua intera�
 
 O projeto deve formar uma cadeia de evidências:
 
-**tema/contribuição do TCC → possível aplicação → usuários/stakeholders → objetivos → problema/contexto → alternativas → necessidades → personas → cenários → tarefas → protótipo formativo → modelo conceitual → MoLIC → protótipo de alta fidelidade → planejamento → inspeção → teste com usuários → melhorias**.
+**tema/contribuição do TCC → possível aplicação → usuários/stakeholders → objetivos → problema/contexto → alternativas → necessidades → personas → cenários → tarefas → protótipo formativo → planejamento de investigação → modelo conceitual → MoLIC → protótipo de alta fidelidade → planejamento de avaliação → inspeção → teste com usuários → melhorias**.
 
-No nosso projeto, o fluxo principal é:
+No nosso projeto, o fluxo principal permanece:
 
 **definição da malha viária → configuração da simulação e da estratégia de controle → execução e acompanhamento → análise e comparação dos resultados**.
 
@@ -151,7 +171,13 @@ A Entrega 6 materializa esse fluxo no protótipo digital V0 por meio de:
 
 **PF01 → PF02 → PF03**.
 
-Uma entrega não deve “reiniciar” o projeto. As personas, tarefas, protótipos, modelo conceitual, MoLIC e avaliações devem permanecer coerentes com esse fluxo, salvo quando novas evidências justificarem revisão.
+A Entrega 7 acrescenta uma camada de investigação metodológica:
+
+**H01/H02/H03 → dados necessários → público → I01/I02 → análise planejada → possível revisão futura**.
+
+Como I01 e I02 não foram aplicados nesta etapa, a Entrega 7 não modifica silenciosamente personas, tarefas ou requisitos. Ela registra como esses elementos poderiam ser confrontados com dados caso os instrumentos sejam utilizados futuramente.
+
+Uma entrega não deve “reiniciar” o projeto. Personas, tarefas, protótipos, instrumentos, modelo conceitual, MoLIC e avaliações devem permanecer coerentes com esse fluxo, salvo quando novas evidências justificarem revisão.
 
 ## Documentos de apoio
 
