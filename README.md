@@ -4,20 +4,20 @@
 
 A disciplina utiliza **preferencialmente o tema do TCC em andamento** como domínio para exercitar os métodos de Interação Humano-Computador.
 
-Isso vale também quando o TCC é predominantemente técnico e **não previa o desenvolvimento de uma interface**.
+- Se o TCC **já prevê interface**, ela pode ser objeto principal das atividades de IHC.
+- Se o TCC **não prevê interface**, a equipe precisa delimitar um uso humano plausível e investigar quem se beneficiaria, o que precisaria fazer e em qual contexto.
+- Uma interface concebida na disciplina não se torna automaticamente obrigação de outro TCC; sua incorporação depende do escopo e das decisões da equipe/orientador.
 
-- Se o TCC **já prevê interface**, ela pode ser o objeto principal das atividades de IHC.
-- Se o TCC **não prevê interface**, a equipe deverá derivar um **escopo de IHC** a partir da contribuição técnica: quem poderia utilizar ou se beneficiar do resultado, o que essa pessoa precisaria fazer, em qual contexto e que interação seria necessária.
-- A interface criada na disciplina **não se torna automaticamente uma obrigação do TCC**. Ela pode ser um protótipo de aprendizagem, uma extensão conceitual ou uma demonstração de aplicação potencial. Sua incorporação ao TCC depende de decisão da equipe e do orientador.
+Leia também o [Guia para definir o escopo de IHC a partir do tema do TCC](GUIA_ESCOPO_IHC.md).
 
-Leia obrigatoriamente o [Guia para definir o escopo de IHC a partir do tema do TCC](GUIA_ESCOPO_IHC.md).
+**Neste projeto, aplica-se o primeiro caso:** a interface desktop **já fazia parte do escopo previsto do TCC**, existe funcionalmente e foi utilizada como protótipo digital V0 na Entrega 6. A disciplina serve para compreender, modelar e aperfeiçoar sua interação; não se trata de uma extensão fictícia sem relação com a plataforma experimental.
 
 ## Identificação
 
 **Título do projeto de IHC:** Interface para Configuração, Execução e Análise de Simulações de Controle Semafórico Inteligente  
 **TCC/projeto de origem:** Algoritmo Híbrido de Controle Semafórico Baseado em Max Pressure e Lógica Actuated em Ambiente de Simulação  
 **Orientador(a):** Ricardo de Carvalho Destro  
-**Disciplina:** Interação Humano-Computador  
+**Disciplina:** Interação Humano-Computador — CC8122  
 **Instituição:** Centro Universitário FEI  
 **Semestre:** 2026/2
 
@@ -25,196 +25,159 @@ Leia obrigatoriamente o [Guia para definir o escopo de IHC a partir do tema do T
 
 | Nome completo | Matrícula | GitHub | Responsabilidade principal |
 |---|---:|---|---|
-| Gabriel Koiama de Rocha Lira | 22.125.067-3 | @koiamagabriel | Desenvolvimento do projeto de IHC |
-| João Pedro Lopes Santana Villas Bôas | 22.125.065-7 | @JPLopes05 | Desenvolvimento do projeto de IHC |
+| Gabriel Koiama de Rocha Lira | 22.125.067-3 | @koiamagabriel | Desenvolvimento do projeto de IHC; I01 na E7 e contribuições à E8. |
+| João Pedro Lopes Santana Villas Bôas | 22.125.065-7 | @JPLopes05 | Desenvolvimento do projeto de IHC; I02 na E7 e contribuições à E8. |
+
+A E8 constitui uma **entrega consolidada por equipe**. A divisão de commits entre integrantes não corresponde a documentos acadêmicos separados.
 
 ## Relação entre TCC e projeto de IHC
 
 | Item | Descrição |
 |---|---|
-| Tema central do TCC | Desenvolvimento de um algoritmo híbrido de controle semafórico inteligente baseado em Max Pressure e lógica actuated. |
-| Resultado técnico esperado do TCC | Sistema de controle semafórico inteligente implementado em Python e integrado ao SUMO por meio do TraCI, acompanhado de uma interface que permita configurar, executar, acompanhar e analisar as simulações. Os resultados das diferentes estratégias podem ser consultados individualmente e comparados manualmente pela equipe. |
-| O TCC já previa interface? | Sim — a interface já era prevista pela equipe e atualmente existe como protótipo digital funcional do TCC. Nas etapas iniciais do TCC ela ainda não estava formalmente detalhada no documento do TCC1. |
-| Capacidade técnica que pode gerar valor para pessoas | Permitir a configuração de cenários e parâmetros de simulação, a execução e o acompanhamento visual dos experimentos e a análise dos resultados produzidos pelas diferentes estratégias de controle semafórico. |
-| Usuário principal adotado em IHC | Pesquisador ou analista de mobilidade urbana. |
-| Objetivo principal desse usuário | Configurar uma simulação de tráfego, executá-la e acompanhar seu funcionamento, além de analisar os resultados e comparar diferentes estratégias sob condições adequadas. |
-| Interface/recorte explorado na disciplina | Interface para seleção do cenário, configuração do experimento, validação, execução e acompanhamento da simulação, recuperação de execuções anteriores e análise individual dos resultados obtidos. |
-| Relação com o escopo formal do TCC | A interface faz parte do escopo previsto do TCC. Na Entrega 6, o protótipo digital existente foi adotado como V0, documentado por evidências visuais e submetido a walkthrough formativo, gerando observações e decisões de evolução para uma V1 conceitual. |
+| Tema central do TCC | Algoritmo híbrido de controle semafórico inteligente baseado em Max Pressure e lógica actuated. |
+| Resultado técnico esperado | Controlador implementado em Python e integrado ao SUMO via TraCI, com avaliação experimental e interface para configuração, execução, acompanhamento e análise de simulações. |
+| O TCC já previa interface? | **Sim.** A interface já era considerada antes da disciplina e existe como GUI desktop funcional. Nas etapas iniciais do TCC1 ela ainda não estava formalmente detalhada. |
+| Contribuição técnica | Seleção dinâmica de prioridades semafóricas e controle do tempo de verde a partir do estado da rede, comparado a estratégias de referência. |
+| Capacidade útil a pessoas | Definir cenários e condições, executar experimentos, acompanhar a simulação, recuperar registros e interpretar resultados experimentais. |
+| Usuário prioritário adotado em IHC | Pesquisador ou analista de mobilidade urbana — **hipótese H01, ainda não validada**. |
+| Objetivo principal do usuário | Preparar, executar e analisar experimentos com diferentes estratégias de controle sob condições adequadas. |
+| Interface/recorte da disciplina | Seleção, configuração, validação, execução/acompanhamento, histórico e análise individual dos resultados. |
+| Relação com TCC | A interface integra o escopo previsto do TCC. E6 a formalizou como V0, observou seu uso em walkthrough e registrou propostas de V1. |
 
-> **Importante:** a tabela acima explica a relação entre os dois trabalhos. Ela não altera o compromisso formal do TCC.
+> O funcionamento técnico documentado não equivale a validação definitiva de usabilidade. O mérito técnico do algoritmo e a qualidade de uso da interface são avaliados por critérios diferentes.
 
 ## Resumo do projeto pela perspectiva do usuário
 
-Um **pesquisador ou analista de mobilidade urbana** precisa configurar, executar, acompanhar e analisar simulações de controle semafórico. Para isso, é necessário definir o cenário de simulação, configurar seus parâmetros, escolher o método de controle, acompanhar a execução do experimento e interpretar os resultados obtidos.
+Um **pesquisador ou analista de mobilidade urbana** precisa investigar estratégias de controle semafórico por meio de experimentos comparáveis. Para isso, deve selecionar a malha, preparar parâmetros, escolher estratégia e seed, validar condições, executar e acompanhar o processamento, localizar resultados e interpretá-los.
 
-O TCC investiga um algoritmo híbrido baseado em Max Pressure e lógica actuated.
+O TCC emprega **Python, SUMO, TraCI, detectores E1, Max Pressure, lógica actuated e controlador híbrido Max Pressure + actuated**, além de estratégias de referência como Fixed-Time e Max Pressure. Diferentes cenários e seeds sustentam sua metodologia experimental.
 
-Para a disciplina de IHC, é explorada a interface que permite ao usuário:
+Na interface V0, o fluxo principal efetivamente documentado é:
 
-**selecionar o cenário → configurar a simulação e a estratégia → validar e confirmar as condições → executar e acompanhar o experimento → localizar uma execução → analisar seus resultados → comparar manualmente diferentes execuções quando necessário**.
+**selecionar cenário → configurar parâmetros/controlador/seed/modo → validar/confirmar → executar e acompanhar → localizar execução no histórico → consultar resultados individuais → comparar manualmente, fora da aplicação, quando necessário**.
 
-Na Entrega 6, a interface funcional já existente no contexto do TCC passou a ser formalizada como **protótipo digital V0**, organizado em três fluxos:
+### Entrega 6 — Protótipo digital V0
+
+A E6 adotou a GUI funcional pré-existente no contexto da atividade de prototipação formativa e a organizou em três fluxos:
 
 - **PF01 — Preparar experimento**;
 - **PF02 — Validar, executar e acompanhar**;
 - **PF03 — Localizar e analisar resultados**.
 
-Os estados documentados da V0 são:
+Os estados documentados são:
 
 - **PP01 — Catálogo e seleção do cenário**;
-- **PP02 — Configuração da simulação**;
+- **PP02 — Configuração da simulação**, incluindo modo e parâmetros avançados;
 - **PP03 — Validação e confirmação pré-execução**;
-- **PP04 — Inicialização e feedback da execução**;
-- **PP05 — Execução no modo Visual**;
-- **PP06 — Histórico e seleção de execução**;
-- **PP07 — Análise individual dos resultados**.
+- **PP04 — Inicialização e feedback**;
+- **PP05 — Execução no modo Visual/SUMO-GUI**;
+- **PP06 — Histórico e seleção de uma execução**;
+- **PP07 — Análise individual dos resultados e gráficos**.
 
-A Entrega 6 possui **12 evidências visuais** da interface, armazenadas em `assets/06_prototipos/`.
+São **12 capturas reais** em [`assets/06_prototipos/`](assets/06_prototipos/). O walkthrough formativo W01–W04 gerou O01–O10 e propostas V0→V1, entre elas:
 
-O walkthrough formativo percorreu as tarefas W01–W04 e produziu as observações O01–O10. A análise permitiu identificar aspectos positivos, possíveis dificuldades e decisões de evolução para uma **V1 conceitual**.
+- preservar separação cenário/configuração e área avançada;
+- oferecer ajuda contextual para termos especializados;
+- manter validação e melhorar mensagens de recuperação de erros;
+- destacar estado principal, mantendo logs como detalhe;
+- preservar vínculo cenário–controlador–seed–execução–resultado;
+- melhorar hierarquia da apresentação das métricas;
+- investigar, futuramente, apoio direto à comparação de execuções.
 
-Entre as principais decisões estão:
+**A V0 não possui comparação automática entre duas execuções.** PP06 lista/seleciona execuções; PP07 exibe a execução selecionada. T07 é apoiada parcialmente e a comparação entre A/B é manual/externa. Uma futura visualização lado a lado não deve ser descrita como implementada.
 
-- preservar a separação entre cenário e configuração;
-- manter configurações avançadas separadas do fluxo principal;
-- preservar os mecanismos de validação e confirmação;
-- melhorar mensagens de recuperação de erro;
-- destacar o estado principal da execução em relação aos logs técnicos;
-- preservar o vínculo entre execução e resultados;
-- melhorar a hierarquia das informações apresentadas;
-- reconhecer que a comparação entre execuções é atualmente manual e externa à interface;
-- investigar futuramente apoio mais direto à comparação.
+### Entrega 7 — Identificação de necessidades, instrumentos e ética
 
-A comparação prevista em T07 não é uma função automática da V0. Atualmente, o usuário consulta cada execução individualmente e realiza a comparação manualmente fora da aplicação.
+Foram definidos dois instrumentos completos e complementares:
 
-Na Entrega 7, as principais hipóteses do projeto foram transformadas em perguntas de investigação e instrumentos reproduzíveis:
+- **I01 — Questionário exploratório** sobre atividades de simulação e análise, desenvolvido por Gabriel. Inclui consentimento Q00, perguntas Q01–Q17, protocolo e plano de tabulação/análise.
+- **I02 — Entrevista semiestruturada** sobre processos técnicos e interpretação de resultados, desenvolvida por João. Inclui E01–E20, aprofundamentos, protocolo e análise temática planejada.
 
-- **I01 — Questionário exploratório sobre atividades de simulação e análise**, elaborado por Gabriel;
-- **I02 — Entrevista semiestruturada sobre processos técnicos e interpretação de resultados**, elaborada por João.
+Ambos consideram recrutamento de público especializado, eventual uso de participantes *proxy*, voluntariedade, consentimento, privacidade, armazenamento e anonimização.
 
-Os instrumentos foram planejados para eventual aplicação. Como não houve aplicação nesta etapa, H01, H02 e H03 continuam explicitamente abertas.
+**Os instrumentos foram elaborados, mas não aplicados na Entrega 7.** Não existem respostas empíricas, entrevistas conduzidas, métricas de participantes ou validação de H01–H03 decorrentes deles.
 
-Se alguma afirmação ainda não estiver sustentada por evidência suficiente, registre-a como hipótese na [Entrega 1](docs/01_conhecendo_o_problema.md) e acompanhe seu estado na [Matriz de rastreabilidade](RASTREABILIDADE.md).
+### Entrega 8 — Ciclo de vida e engenharia de usabilidade
+
+A E8 foi concluída documentalmente como **solução consolidada pela equipe**, retomando o contexto, as tarefas e os problemas observados:
+
+- descreveu software, hardware, capacidades e restrições da plataforma e suas consequências para a interação;
+- relacionou princípios gerais do projeto ao contexto de uso e a referências como ISO 9241-11, ISO 9241-210, Nielsen e materiais da disciplina;
+- definiu diretrizes **PG01–PG08**, relacionadas a contexto experimental, linguagem, parâmetros avançados, erros, estado, resultados, comparação e legibilidade;
+- definiu metas qualitativas **MQ01–MQ07** e quantitativas **MU01–MU08** para avaliações futuras;
+- registrou o ciclo de aperfeiçoamento de E9 a E14, incluindo planejamento, inspeção e observação.
+
+As metas de E8 são **alvos planejados, não resultados medidos**. Em particular, não se confundem tempo de tarefa humana e tempo de processamento do simulador; não significam que recursos de V1 já tenham sido implementados e não validam H01–H03.
 
 ## Por que pensar em interface mesmo em TCCs técnicos?
 
-Algoritmos, modelos, APIs, análises de datasets e componentes de infraestrutura podem não exigir interface como resultado acadêmico do TCC. Porém, quando essas contribuições são transferidas para uma situação real, normalmente existem pessoas que:
+Algoritmos, simulações, APIs e análises podem possuir valor técnico independentemente da interface. Porém, sua utilização e interpretação envolvem pessoas que selecionam dados, configuram parâmetros, acompanham processamento, examinam falhas e interpretam resultados. IHC investiga essas tarefas e a relação das pessoas com uma solução interativa.
 
-- configuram parâmetros;
-- fornecem ou selecionam dados;
-- iniciam ou acompanham processamento;
-- interpretam resultados;
-- comparam alternativas;
-- tomam decisões;
-- administram usuários e permissões;
-- consultam histórico;
-- geram relatórios;
-- investigam erros;
-- auditam mudanças.
+Entre padrões possíveis estão configuração, visualização, histórico, relatórios, comparação, filtros, alertas e ajuda contextual. **Nenhum desses recursos é obrigatório por si só.** Cada um deve ser sustentado por um objetivo de usuário e por evidência apropriada.
 
-Essas atividades fornecem um campo legítimo para exercitar IHC.
-
-Possibilidades de interface incluem **dashboards, telas administrativas, configuração, relatórios, histórico com filtros, comparação de resultados, visualização de dados, acompanhamento de processamento, gestão de perfis e permissões, CRUDs justificados pelo domínio, alertas, auditoria e ajuda contextual**.
-
-Nenhuma dessas telas é obrigatória por si só: deve existir uma tarefa e um objetivo de usuário que a justifique.
-
-No projeto atual, a Entrega 6 mostrou quais dessas atividades já são apoiadas pela V0 e também identificou limitações e oportunidades de evolução.
-
-A Entrega 7 reforça esse princípio ao investigar necessidades sem presumir antecipadamente que dashboard, filtros, relatórios, comparação automática ou outras possibilidades devam necessariamente compor a solução definitiva.
+Neste TCC a GUI já era planejada e foi construída. A E6 documentou o que realmente existe; a E7 preparou a investigação das necessidades e a E8 registrou princípios/metas para orientar sua evolução. Isso **não autoriza inventar** login, CRUD, comparador automático ou outros recursos não justificados.
 
 ## Relação com apresentação e potencial de aplicação
 
-A reflexão sobre usuários ajuda a equipe a explicar o projeto para públicos externos, inclusive em eventos como a **INOVA**.
+A disciplina ajuda a comunicar o projeto em termos de **problema humano → contribuição computacional → forma de uso → benefício potencial** — inclusive em apresentações como a INOVA.
 
-Em vez de comunicar apenas a técnica implementada, a equipe pode apresentar:
+No caso concreto:
 
-**problema humano → contribuição computacional → forma de uso → impacto potencial**.
+**problema de controle semafórico → algoritmo híbrido no SUMO → GUI de simulação e análise → apoio à experimentação e interpretação de resultados**.
 
-No projeto, a interface permite ao usuário interagir com o ambiente de simulação desenvolvido no TCC:
-
-**configuração do cenário e da simulação → validação → execução e acompanhamento → recuperação e análise dos resultados → comparação manual quando necessária**.
-
-A interface faz parte da solução prevista no TCC e atualmente existe como protótipo digital funcional.
-
-Na Entrega 6, seu funcionamento foi formalizado em PF01–PF03 e PP01–PP07. O walkthrough formativo gerou as observações O01–O10 e decisões de evolução V0→V1.
-
-Na Entrega 7, foram produzidos instrumentos para investigar de forma estruturada as premissas relacionadas aos usuários, às atividades, à linguagem, à execução e à interpretação dos resultados.
-
-O fato de o protótipo funcionar tecnicamente não significa, por si só, que todas as decisões de interação estejam definitivamente validadas. Da mesma forma, a existência de questionários, entrevistas, personas ou modelos não transforma automaticamente hipóteses sobre usuários em fatos.
-
-As entregas da disciplina fornecem evidências progressivas sobre necessidades, tarefas, organização da interação e usabilidade.
+É importante distinguir resultados reais do algoritmo, funcionalidades existentes na V0, hipóteses de usuário e propostas de V1. O protótipo funcionar tecnicamente não prova que todos os fluxos sejam fáceis ou satisfatórios, assim como questionários planejados não constituem dados coletados.
 
 ## Situação das principais hipóteses
 
-| ID | Hipótese | Situação atual |
+| ID | Hipótese | Situação após E8 |
 |---|---|---|
-| H01 | Pesquisadores ou analistas de mobilidade representam adequadamente o usuário prioritário. | Aberta. A Entrega 6 identificou questões relacionadas à linguagem e ao nível técnico da interface, e a Entrega 7 criou instrumentos para investigar o perfil de usuário. |
-| H02 | A organização cenário → configuração → execução/acompanhamento → análise facilita a realização dos experimentos. | Aberta. O fluxo foi materializado e analisado na V0. O walkthrough preservou a estrutura geral, mas gerou propostas de refinamento. A Entrega 7 possui investigação planejada sobre preparação, configuração, erros e feedback. |
-| H03 | Uma apresentação consolidada e comparativa das métricas facilita sua interpretação. | Aberta. A V0 apresenta histórico, análise individual e gráfico, enquanto a comparação permanece manual e externa. A Entrega 7 investiga métricas, comparação, histórico e síntese. |
+| H01 | Pesquisadores/analistas de mobilidade representam o usuário prioritário. | **Aberta.** P01/P02 são proto-personas, E6 apontou questões de linguagem e E7 produziu instrumentos não aplicados. |
+| H02 | O fluxo cenário → configuração → execução/acompanhamento → análise facilita os experimentos. | **Aberta.** A V0 e o walkthrough deram base a melhorias; E8 definiu PG/MQ/MU para avaliações futuras. |
+| H03 | Uma apresentação consolidada/comparativa das métricas facilita interpretação. | **Aberta.** A V0 exibe resultados individuais; a comparação permanece manual. Necessidades e alternativas deverão ser investigadas/avaliadas. |
 
 ## Como usar este repositório
 
 1. Leia o [Guia de uso e apresentação](GUIA_DE_USO.md).
-2. Leia o [Guia de definição de escopo de IHC](GUIA_ESCOPO_IHC.md), especialmente se o TCC não previa interface.
-3. Preencha as entregas na ordem em que forem trabalhadas na disciplina.
-4. Em toda entrega individual, **identifique o autor**.
-5. Salve imagens, diagramas e evidências em [`assets/`](assets/README.md).
+2. Leia o [Guia de definição de escopo](GUIA_ESCOPO_IHC.md), especialmente se o TCC não previa interface; **não é o caso desta equipe**.
+3. Desenvolva as entregas em sequência, reaproveitando decisões anteriores, sem reiniciar o projeto.
+4. Identifique autoria individual nas entregas que exigem soluções por integrante.
+5. Registre imagens, diagramas e evidências nos diretórios de [`assets/`](assets/README.md).
 6. Mantenha a [Matriz de rastreabilidade](RASTREABILIDADE.md) atualizada.
-7. Na Entrega 1, diferencie **[F] fatos**, **[H] hipóteses** e **[?] lacunas de conhecimento**.
-8. Antes de cada entrega, revise o checklist do arquivo e o [Checklist final](CHECKLIST_FINAL.md).
-9. Sempre que uma evidência posterior contrariar uma hipótese ou descrição anterior, **revise o projeto**. IHC é um processo iterativo.
-10. Diferencie funcionalidades existentes de propostas futuras e instrumentos de pesquisa planejados de dados efetivamente coletados.
+7. Diferencie **[F] fato, [H] hipótese e [?] lacuna** sempre que necessário.
+8. Antes de concluir, confira o [Checklist final](CHECKLIST_FINAL.md) e o checklist próprio da entrega.
+9. Registre refinamentos, sem apagar o histórico de decisões.
+10. Não confunda funcionalidades existentes, propostas de design, metas futuras e resultados empíricos.
 
 ## Entregas
 
 | # | Entrega | Quantidade mínima / responsabilidade | Status |
 |---:|---|---|---|
 | 1 | [Conhecendo o projeto, o usuário e o problema](docs/01_conhecendo_o_problema.md) | 1 solução consolidada por equipe | 🟩 |
-| 2 | [Público-alvo e análise de concorrência](docs/02_analise_concorrencia.md) | no mínimo 1 concorrente/interface representativa por integrante + síntese | 🟩 |
-| 3 | [Personas, empatia, contexto e jornada](docs/03_personas_contexto_jornada.md) | 1 persona por integrante; demais artefatos consolidados | 🟩 |
-| 4 | [Cenários de análise/problema](docs/04_cenarios_problema.md) | 1 solução completa por integrante | 🟩 |
-| 5 | [Análise de tarefas: HTA, GOMS e CTT](docs/05_analise_tarefas.md) | cada integrante: pelo menos 1 HTA + 1 GOMS + 1 CTT | 🟩 |
-| 6 | [Prototipação em papel](docs/06_prototipacao_papel.md) | 1 protótipo integrado por equipe | 🟩 |
-| 7 | [Coleta de dados e aspectos éticos](docs/07_coleta_dados.md) | soluções individuais + técnicas distintas; questionário entre as técnicas | 🟩 |
-| 8 | [Ciclo de vida e engenharia de usabilidade](docs/08_engenharia_usabilidade.md) | 1 solução consolidada por equipe | ⬜ |
-| 9 | [Modelo conceitual e design centrado na comunicação](docs/09_modelo_conceitual.md) | soluções individuais + consolidação de objetivos/signos | ⬜ |
+| 2 | [Público-alvo e análise de concorrência](docs/02_analise_concorrencia.md) | 1 concorrente/interface por integrante + síntese | 🟩 |
+| 3 | [Personas, empatia, contexto e jornada](docs/03_personas_contexto_jornada.md) | 1 persona por integrante + consolidação | 🟩 |
+| 4 | [Cenários de análise/problema](docs/04_cenarios_problema.md) | 1 cenário completo por integrante | 🟩 |
+| 5 | [Análise de tarefas: HTA, GOMS e CTT](docs/05_analise_tarefas.md) | 1 HTA + 1 GOMS + 1 CTT por integrante | 🟩 |
+| 6 | [Prototipação em papel / protótipo digital V0](docs/06_prototipacao_papel.md) | 1 protótipo integrado por equipe e walkthrough formativo | 🟩 |
+| 7 | [Coleta de dados e aspectos éticos](docs/07_coleta_dados.md) | Instrumentos individuais distintos; questionário incluído | 🟩 |
+| 8 | [Ciclo de vida e engenharia de usabilidade](docs/08_engenharia_usabilidade.md) | 1 solução consolidada por equipe | 🟩 |
+| 9 | [Modelo conceitual e design centrado na comunicação](docs/09_modelo_conceitual.md) | Soluções individuais + consolidação de objetivos/signos | ⬜ |
 | 10 | [MoLIC](docs/10_molic.md) | 1 diagrama completo por integrante | ⬜ |
-| 11 | [Protótipo no Figma](docs/11_figma.md) | 1 protótipo integrado por equipe, cobrindo fluxos modelados | ⬜ |
+| 11 | [Protótipo no Figma](docs/11_figma.md) | 1 protótipo integrado cobrindo fluxos modelados | ⬜ |
 | 12 | [Planejamento da avaliação — DECIDE](docs/12_planejamento_avaliacao.md) | 1 plano consolidado por equipe | ⬜ |
-| 13 | [Avaliação heurística](docs/13_avaliacao_heuristica.md) | 1 avaliação completa por integrante, todas as telas/estados e 10 heurísticas | ⬜ |
-| 14 | [Avaliação por observação de usuários](docs/14_observacao_usuario.md) | avaliação consolidada; nº de participantes finais = nº de integrantes | ⬜ |
+| 13 | [Avaliação heurística](docs/13_avaliacao_heuristica.md) | 1 avaliação completa por integrante, 10 heurísticas | ⬜ |
+| 14 | [Avaliação por observação de usuários](docs/14_observacao_usuario.md) | Avaliação consolidada; nº de participantes conforme enunciado | ⬜ |
 
-> Se o docente definir quantidade diferente para a turma/semestre, a orientação da disciplina prevalece.
+> As orientações específicas e eventuais alterações posteriores do docente para a turma prevalecem sobre a descrição resumida do repositório.
 
 ## Visão de continuidade
 
-O projeto deve formar uma cadeia de evidências:
+A cadeia de evidências do projeto é:
 
-**tema/contribuição do TCC → possível aplicação → usuários/stakeholders → objetivos → problema/contexto → alternativas → necessidades → personas → cenários → tarefas → protótipo formativo → avaliação formativa → planejamento de investigação → modelo conceitual → MoLIC → protótipo de alta fidelidade → planejamento de avaliação → inspeção → teste com usuários → melhorias**.
+**TCC → usuários/stakeholders → hipóteses H01–H03 → personas P01/P02 → cenários C01/C02 → tarefas T01–T08 → V0/PF01–PF03/PP01–PP07 → walkthrough W01–W04 → observações O01–O10 → decisões V0→V1 → investigação I01/I02 → engenharia de usabilidade PG/MQ/MU → modelo conceitual → MoLIC → Figma → DECIDE → inspeção → observação de usuários → revisões**.
 
-No nosso projeto, o fluxo principal atualmente documentado é:
+A E6 documentou a sequência real da V0 e corrigiu a interpretação da comparação como **manual e externa**. A E7 transformou lacunas em instrumentos reproduzíveis; sem aplicação, não alterou H01–H03. A E8 definiu capacidades e restrições, princípios e metas de usabilidade a verificar.
 
-**definição da malha viária → configuração da simulação e da estratégia de controle → validação e confirmação → execução e acompanhamento → recuperação da execução → análise individual dos resultados → comparação manual quando necessária**.
-
-A Entrega 6 materializa esse fluxo no protótipo digital V0 por meio de:
-
-**PF01 → PF02 → PF03**.
-
-Os estados correspondentes são:
-
-**PP01 → PP02 → PP03 → PP04/PP05 → PP06 → PP07**.
-
-O walkthrough da Entrega 6 acrescentou uma camada de avaliação formativa:
-
-**W01–W04 → O01–O10 → decisões V0→V1**.
-
-A Entrega 7 acrescenta uma camada de investigação metodológica:
-
-**H01/H02/H03 → dados necessários → público → I01/I02 → análise planejada → possível revisão futura**.
-
-Como I01 e I02 não foram aplicados nesta etapa, a Entrega 7 não modifica automaticamente personas, tarefas ou hipóteses. Ela registra como esses elementos poderão ser confrontados com dados caso os instrumentos sejam utilizados futuramente.
-
-Uma entrega não deve “reiniciar” o projeto. Personas, tarefas, protótipos, observações, instrumentos, modelo conceitual, MoLIC e avaliações devem permanecer coerentes com esse fluxo, salvo quando novas evidências justificarem revisão.
+A **próxima etapa é E9**, com cenários de interação, design centrado na comunicação, mapa de objetivos e esquema conceitual de signos fundamentados em E1–E8. A E9 não deve inventar funções, nem copiar integralmente decisões futuras para dentro da V0 existente. As escolhas devem permanecer documentadas na rastreabilidade.
 
 ## Documentos de apoio
 
