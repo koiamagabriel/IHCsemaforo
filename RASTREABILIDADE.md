@@ -29,25 +29,25 @@ Na Entrega 7, as principais hipóteses ainda abertas foram transformadas em um *
 
 ---
 
-# 2. Registro de hipóteses e lacunas
+## 2. Registro de hipóteses e lacunas
 
 | ID | Afirmação / dúvida inicial | Tipo | Por que importa | Como/onde investigar | Evidência acumulada | Estado atual | Impacto no projeto |
 |---|---|---|---|---|---|---|---|
 | H01 | Pesquisadores ou analistas de mobilidade representam adequadamente o usuário prioritário da interface. | H | O perfil influencia tarefas, linguagem, contexto e decisões de interação. | Entregas 2, 3 e 7; avaliações posteriores | Entrega 2 analisou ferramentas profissionais. Entrega 3 estruturou P01/P02. Entrega 6 aplicou essas personas ao protótipo e identificou questões de linguagem técnica. Entrega 7 planejou I01/Q01–Q04 e I02/E01–E02. | aberta | Personas, linguagem e nível de detalhamento continuam sujeitos a refinamento. |
-| H02 | Organizar a interação em definição da malha, configuração/execução e análise dos resultados facilita a realização dos experimentos. | H | Esse fluxo constitui a estrutura inicial da interface. | Entregas 3–7; avaliações posteriores | Entregas 3–5 detalharam jornada e tarefas. Entrega 6 materializou PF01–PF03. O walkthrough mostrou compreensão geral do fluxo, mas apontou densidade técnica, necessidade de melhor recuperação de erro e maior clareza do estado de execução. | aberta | Estrutura geral foi preservada, com propostas de refinamento V1. |
-| H03 | Uma apresentação consolidada e comparativa das métricas facilita a interpretação do desempenho dos métodos. | H | A forma de apresentar resultados influencia análise e decisão. | Entregas 2–7; Entregas 12–14 | Entrega 6 mostrou que a V0 oferece histórico, resultado individual e gráfico, mas não comparação automática. O walkthrough identificou trabalho adicional para alternar entre execuções e comparar externamente. Entrega 7 planejou investigar métricas, comparação, histórico e síntese. | aberta | Apoio à comparação permanece oportunidade de evolução, ainda não requisito definitivamente validado. |
+| H02 | Organizar a interação em definição da malha, configuração/execução e análise dos resultados facilita a realização dos experimentos. | H | Esse fluxo constitui a estrutura inicial da interface. | Entregas 3–7; avaliações posteriores | Entregas 3–5 detalharam jornada e tarefas. Entrega 6 materializou PF01–PF03. O walkthrough mostrou compreensão geral do fluxo, mas apontou densidade técnica, necessidade de melhor recuperação de erro e maior clareza do estado de execução. Entrega 7 planejou investigar preparação, configuração, feedback, erros e recuperação. | aberta | Estrutura geral foi preservada, com propostas de refinamento V1. |
+| H03 | Uma apresentação consolidada e comparativa das métricas facilita a interpretação do desempenho dos métodos. | H | A forma de apresentar resultados influencia análise e decisão. | Entregas 2–7; Entregas 12–14 | Entrega 6 mostrou que a V0 oferece histórico, resultado individual e gráfico, mas não comparação automática. O walkthrough identificou trabalho adicional para alternar entre execuções e comparar externamente. Entrega 7 planejou investigar métricas, comparação, histórico, rastreabilidade e síntese. | aberta | Apoio à comparação permanece oportunidade de evolução, ainda não requisito definitivamente validado. |
 
 ### Situação atual
 
 H01, H02 e H03 permanecem abertas.
 
-A Entrega 6 gerou evidências sobre **a organização e o funcionamento do protótipo V0** e decisões de revisão.
+A Entrega 6 gerou evidências sobre **a organização e o funcionamento do protótipo V0**, além de observações de interação e decisões de revisão V0→V1.
 
 A Entrega 7 forneceu instrumentos adicionais para investigação, mas eles ainda não foram aplicados.
 
 ---
 
-# 3. Rastreabilidade entre contribuição técnica, necessidades e artefatos
+## 3. Rastreabilidade entre contribuição técnica, necessidades e artefatos
 
 | ID | Capacidade do TCC utilizada | Necessidade/problema | Persona | Cenário | Objetivo/tarefa | HTA/GOMS/CTT | Protótipo E6 | Coleta E7 | Cenário de interação / signos | MoLIC | Figma | Heurística | Teste | Decisão/melhoria |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
@@ -61,22 +61,22 @@ A Entrega 7 forneceu instrumentos adicionais para investigação, mas eles ainda
 
 ---
 
-# 4. Observação sobre a Entrega 5
+## 4. Observação sobre a Entrega 5
 
-A tarefa T01 permanece sem um artefato específico de HTA, GOMS ou CTT na Entrega 5.
+A tarefa T01 permanece sem um artefato específico de HTA, GOMS ou CTT na Entrega 5. Isso não representa ausência da tarefa no projeto: T01 continua como parte do fluxo principal e como pré-requisito para as atividades seguintes.
 
 A Entrega 5 aprofundou:
 
-- T02 por HTA;
-- T03 por GOMS;
-- T04/T05 por CTT;
-- T06 por GOMS;
-- T07 por HTA e pelo CTT T07/T08;
-- T08 pelo CTT T07/T08.
+- T02 por meio de HTA;
+- T03 por meio de GOMS;
+- T04/T05 por meio de CTT;
+- T06 por meio de GOMS;
+- T07 por meio de HTA e também no CTT T07/T08;
+- T08 por meio do CTT T07/T08.
 
 ---
 
-# 5. Observação sobre a Entrega 6
+## 5. Observação sobre a Entrega 6
 
 A Entrega 6 foi concluída com o protótipo digital V0 organizado em três fluxos:
 
