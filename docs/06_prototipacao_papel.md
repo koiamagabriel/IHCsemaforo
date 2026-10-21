@@ -1,28 +1,37 @@
 # Entrega 6 — Prototipação em papel
 
 **Data:** 20/10/2026  
-**Status:** 🟨 em andamento  
+**Status:** 🟩 concluída  
 **Responsabilidade:** 1 solução integrada por equipe
 
 ## Objetivo da atividade
 
-Externalizar e avaliar rapidamente ideias de interação antes de consolidar decisões de interface. O valor da atividade está no ciclo **construir → simular → observar → revisar**, e não somente no acabamento visual do protótipo.
+Externalizar, organizar e avaliar ideias de interação antes de consolidar decisões de interface. O valor da atividade está no ciclo **construir → simular → observar → revisar**, e não somente no acabamento visual do protótipo.
 
 Embora a atividade tenha como referência a prototipação em papel e de baixa fidelidade, o projeto já possuía, antes desta entrega, um **protótipo digital funcional** desenvolvido no contexto do TCC.
 
 Conforme orientação docente, esse artefato foi utilizado como versão inicial da solução em substituição à criação artificial de uma segunda interface em papel.
 
-O protótipo existente não é considerado uma solução definitiva. Nesta entrega, ele é tratado como uma **hipótese de design**, confrontada com as personas, cenários, necessidades e tarefas identificadas nas Entregas 1–5.
+O protótipo existente não é considerado uma solução definitiva. Nesta entrega, ele é tratado como uma **hipótese de design**, confrontada com as personas, cenários, necessidades e tarefas identificados nas Entregas 1–5.
+
+A atividade foi concluída por meio de:
+
+- documentação dos estados reais da interface;
+- simulação do fluxo principal;
+- walkthrough formativo;
+- identificação de possíveis rupturas de interação;
+- análise dos achados;
+- definição de decisões de revisão para uma versão posterior.
 
 ---
 
-## 1. Escopo do protótipo
+# 1. Escopo do protótipo
 
 **Personas:** P01 — Marina Ribeiro; P02 — Carlos Mendes  
 **Cenários cobertos:** C01 — Preparação e execução de experimentos sob condições comparáveis; C02 — Interpretação e comparação de resultados experimentais  
 **Tarefas cobertas:** T01 a T08
 
-### Objetivos principais
+## Objetivos principais
 
 - selecionar a infraestrutura ou cenário no qual o experimento será realizado;
 - compreender as informações principais do cenário selecionado;
@@ -30,15 +39,18 @@ O protótipo existente não é considerado uma solução definitiva. Nesta entre
 - selecionar a estratégia de controle semafórico;
 - definir seed e demais condições experimentais;
 - escolher entre execução Visual e Headless;
+- validar a configuração antes de iniciar;
 - iniciar e acompanhar a execução;
-- reconhecer estados de processamento, conclusão e erro;
-- consultar as métricas produzidas;
+- reconhecer estados de processamento e erro;
+- localizar execuções anteriores;
+- consultar os resultados de uma execução;
 - preservar a relação entre configuração, execução e resultado;
-- recuperar execuções anteriores quando necessário;
-- comparar execuções realizadas sob condições equivalentes;
+- utilizar as informações da interface como apoio para comparação manual entre execuções;
 - interpretar e sintetizar os resultados obtidos.
 
-### 1.1 Protótipo digital pré-existente — V0
+---
+
+## 1.1 Protótipo digital pré-existente — V0
 
 A equipe já possuía uma interface desktop funcional desenvolvida no contexto do TCC **Controle Semafórico Inteligente com Max Pressure + Actuated**.
 
@@ -46,25 +58,33 @@ A aplicação é executada por meio do launcher `launch_gui.py` e integra a inte
 
 A versão utilizada nesta atividade é denominada **V0 — protótipo digital pré-existente**.
 
-A V0 já possui recursos relacionados às tarefas identificadas na disciplina, entre eles:
+![Visão geral da interface V0](../assets/06_prototipos/visao_geral_v0.png)
+
+*Figura 1 — Visão geral do protótipo digital V0, com área de configuração à esquerda, visualização da infraestrutura e informações de apoio.*
+
+A V0 possui recursos relacionados às tarefas identificadas na disciplina, entre eles:
 
 - catálogo de infraestruturas e cenários;
 - informações sobre o cenário selecionado;
 - configuração dos parâmetros experimentais;
 - seleção entre Fixed-Time, Max-Pressure e Hybrid Max-Pressure + Actuated;
 - configuração de seeds;
-- execução em modo Visual ou Headless;
-- configuração do delay da visualização;
+- seleção entre execução Visual/SUMO-GUI e Headless;
+- configuração avançada em situações compatíveis;
+- validação da configuração;
+- confirmação das condições antes do início;
 - início da simulação;
-- feedback de execução e progresso;
-- cancelamento da execução;
-- apresentação das métricas produzidas;
-- acesso à pasta de resultados;
-- consulta de resultados anteriores;
-- comparação entre execuções compatíveis;
-- validações e estados desabilitados para condições incompatíveis.
+- feedback textual de inicialização e execução;
+- execução visual por meio do SUMO-GUI;
+- listagem de resultados anteriores;
+- consulta individual das informações de uma execução;
+- apresentação de métricas e gráficos da execução selecionada.
 
-A utilização do protótipo funcional nesta entrega permite avaliar a estrutura de interação já existente sem confundir o fato de o sistema funcionar tecnicamente com a conclusão de que sua interface já esteja adequada aos usuários.
+A V0 **não possui uma tela que compare automaticamente duas execuções**.
+
+A comparação experimental prevista em T07 é realizada manualmente pela equipe, fora da interface, utilizando os resultados de cada execução consultados individualmente.
+
+Essa característica é documentada explicitamente para não atribuir à interface uma funcionalidade inexistente.
 
 ---
 
@@ -73,46 +93,45 @@ A utilização do protótipo funcional nesta entrega permite avaliar a estrutura
 | Tarefa | Necessidade identificada | Como aparece na V0 |
 |---|---|---|
 | T01 — definir ou selecionar a malha viária | Definir onde o experimento será realizado. | Catálogo e seleção de cenário/infraestrutura. |
-| T02 — configurar parâmetros do experimento | Definir corretamente as condições da simulação. | Área de configuração e parametrização. |
+| T02 — configurar parâmetros do experimento | Definir corretamente as condições da simulação. | Configuração principal e configuração avançada quando aplicável. |
 | T03 — selecionar estratégia de controle | Determinar claramente qual controlador será utilizado. | Seleção entre Fixed-Time, Max-Pressure e Hybrid. |
-| T04 — iniciar uma simulação | Executar o experimento configurado. | Controle de início da execução. |
-| T05 — verificar o estado da execução | Saber se o experimento está aguardando, executando, concluído ou com problema. | Estado/progresso da execução, feedback e cancelamento. |
-| T06 — consultar métricas | Compreender o desempenho obtido. | Painel de resultados e métricas com unidades. |
-| T07 — comparar resultados | Comparar estratégias sob condições equivalentes. | Seleção e comparação de execuções compatíveis. |
-| T08 — consultar ou gerar uma síntese | Interpretar e comunicar os resultados. | Resultados consolidados, gráficos e informações da execução. |
+| T04 — iniciar uma simulação | Executar o experimento configurado. | Validação, confirmação das condições e comando de início. |
+| T05 — verificar o estado da execução | Saber se o experimento iniciou e reconhecer seu processamento. | Feedback textual da inicialização/execução e SUMO-GUI no modo Visual. |
+| T06 — consultar métricas | Compreender o desempenho obtido. | Histórico/listagem e análise da execução selecionada. |
+| T07 — comparar resultados | Comparar estratégias sob condições equivalentes. | A V0 permite consultar execuções individualmente; a comparação propriamente dita é manual e externa. |
+| T08 — consultar ou gerar uma síntese | Interpretar e comunicar resultados. | Informações detalhadas e gráfico da execução, utilizados como base para análise e síntese. |
 
 ---
 
-## 1.3 Possíveis famílias de interface
-
-Foram consideradas somente famílias justificadas pelas tarefas já identificadas.
+## 1.3 Famílias de interface identificadas
 
 | Família de interface | Utilização | Justificativa |
 |---|---|---|
-| Entrada/seleção de dados | Sim | Necessária para T01 e para a definição da condição experimental. |
+| Entrada/seleção de dados | Sim | Necessária para T01. |
 | Configuração/parametrização | Sim | Necessária para T02 e T03. |
+| Validação/confirmação | Sim | Apoia T02 e T04 antes do processamento. |
 | Acompanhamento de execução | Sim | Necessário para T04 e T05. |
-| Relatório/resultados | Sim | Necessário para T06 e T08. |
-| Comparação | Sim | Necessária para T07. |
-| Histórico | Parcial | Apoia a recuperação de execuções já existentes para análise e comparação. |
-| Dashboard | Parcial | A V0 já organiza métricas e visualizações, mas não foi criado um novo dashboard apenas para a atividade. |
-| Auditoria/logs | Secundário | Existe suporte técnico, porém não constitui o objetivo principal das personas priorizadas. |
-| Administração | Não | Não existe tarefa identificada nas Entregas 1–5 que justifique administração de usuários ou permissões. |
-| CRUD genérico | Não | Não contribui diretamente para os objetivos centrais dos usuários definidos. |
-
-> O objetivo desta entrega não é adicionar funcionalidades para que o sistema pareça mais completo, mas verificar se a interação necessária para as tarefas centrais está adequadamente representada.
+| Histórico/listagem | Sim | Permite recuperar execuções já produzidas. |
+| Resultados | Sim | Necessário para T06 e T08. |
+| Visualização gráfica | Sim | Apoia interpretação individual da execução. |
+| Comparação | Parcial / externa | Os dados são fornecidos pela V0, mas a comparação entre execuções é feita manualmente fora dela. |
+| Auditoria/logs | Secundário | Existem informações técnicas de execução, mas não são o objetivo principal das personas. |
+| Administração | Não | Não existe tarefa que justifique administração de usuários/permissões. |
+| CRUD genérico | Não | Não existe necessidade identificada que justifique esse padrão. |
 
 ---
 
-## 2. Fluxos escolhidos
+# 2. Fluxos escolhidos
 
-| Fluxo | Tarefa/objetivo | Por que foi priorizado |
+| Fluxo | Tarefas | Objetivo |
 |---|---|---|
-| PF01 — Preparar experimento | T01, T02 e T03 | Representa a preparação necessária antes de qualquer execução e concentra decisões críticas sobre cenário, parâmetros e estratégia. |
-| PF02 — Executar e acompanhar simulação | T04 e T05 | Permite verificar se o usuário entende como iniciar o experimento e reconhecer seu estado durante o processamento. |
-| PF03 — Analisar e comparar resultados | T06, T07 e T08 | Representa a finalidade analítica da plataforma: compreender resultados e comparar diferentes estratégias sob condições adequadas. |
+| PF01 — Preparar experimento | T01, T02 e T03 | Escolher cenário e definir condições experimentais. |
+| PF02 — Validar, executar e acompanhar | T04 e T05 | Conferir as condições, iniciar a simulação e reconhecer seu processamento. |
+| PF03 — Localizar e analisar resultados | T06, T07 e T08 | Recuperar execuções, analisar resultados e fornecer base para comparação manual. |
 
-### 2.1 PF01 — Preparar experimento
+---
+
+## 2.1 PF01 — Preparar experimento
 
 ```text
 Selecionar cenário
@@ -133,16 +152,15 @@ Definir seed
 Selecionar modo Visual ou Headless
         |
         v
+Acessar configuração avançada, se necessário
+        |
+        v
 Revisar configuração
 ```
 
-Esse fluxo corresponde principalmente ao cenário C01.
-
-A preparação é crítica porque uma configuração incorreta pode produzir uma execução tecnicamente válida, mas inadequada para o objetivo experimental ou para uma comparação posterior.
-
 ---
 
-### 2.2 PF02 — Executar e acompanhar
+## 2.2 PF02 — Validar, executar e acompanhar
 
 ```text
 Configuração preparada
@@ -153,607 +171,677 @@ Solicitar execução
         v
 Validar configuração
         |
-        +------ inconsistência ------> revisar configuração
+        +------ inconsistente ------> informar erro
+        |                                  |
+        |                                  v
+        |                           corrigir configuração
         |
         v
-Iniciar simulação
+Apresentar resumo das condições
         |
         v
-Acompanhar estado/progresso
-        |
-        +------ cancelar, se necessário
+Confirmar execução
         |
         v
-Concluir execução
+Inicializar processamento
         |
         v
-Apresentar resultado ou erro
+Exibir feedback
+        |
+        +------ modo Visual ------> SUMO-GUI
+        |
+        v
+Execução concluída
 ```
-
-Esse fluxo deriva diretamente das tarefas T04 e T05 e do CTT produzido na Entrega 5.
-
-A interface deve permitir que o usuário reconheça que o sistema continua trabalhando durante uma execução demorada e diferencie corretamente estados de execução, conclusão, cancelamento e erro.
 
 ---
 
-### 2.3 PF03 — Analisar e comparar
+## 2.3 PF03 — Localizar, analisar e apoiar comparação
 
 ```text
 Execução concluída
         |
         v
-Consultar identificação da execução
+Abrir listagem de resultados
         |
         v
-Consultar métricas
+Selecionar execução
         |
         v
-Recuperar outra execução
+Consultar contexto e métricas
         |
         v
-Verificar compatibilidade
+Consultar gráfico/diagnóstico
         |
-        +------ incompatível ------> selecionar outra execução
+        +------ deseja comparar? ------+
+        |                              |
+        | sim                          | não
+        v                              v
+Voltar à listagem                 Formar síntese
         |
         v
-Comparar resultados
+Selecionar outra execução
         |
         v
-Interpretar diferenças
+Consultar seus resultados
+        |
+        v
+Comparar manualmente fora da interface
         |
         v
 Formar síntese
 ```
 
-Esse fluxo corresponde principalmente ao cenário C02.
+---
 
-A comparação não deve apresentar valores isolados sem preservar informações suficientes sobre cenário, controlador, seed, parâmetros e demais condições relevantes.
+# 3. Telas, estados e evidências visuais
+
+As capturas foram obtidas em diferentes momentos de utilização da V0.
+
+Elas representam **estados reais da interface**, mas não necessariamente uma única execução contínua.
 
 ---
 
-## 3. Telas e estados
-
-Para não conflitar com os identificadores `P01` e `P02` já utilizados para personas, os estados do protótipo desta entrega utilizam o prefixo `PP`.
-
----
-
-### PP01 — Catálogo e seleção do cenário
+## PP01 — Catálogo e seleção do cenário
 
 **Fluxo:** PF01  
-**Tarefa relacionada:** T01  
-**Persona principal:** P01 — Marina Ribeiro
-
-**Objetivo:** permitir que o usuário reconheça as infraestruturas disponíveis e selecione o cenário que pretende utilizar.
-
-Esse estado deve apresentar contexto suficiente para diferenciar os cenários disponíveis e evitar que a seleção dependa apenas de identificadores técnicos.
+**Tarefa:** T01  
+**Persona principal:** P01
 
 ![PP01 — Catálogo e seleção do cenário](../assets/06_prototipos/pp01_catalogo.png)
 
-*Figura 1 — Catálogo e seleção do cenário no protótipo digital V0.*
+*Figura 2 — Catálogo de infraestruturas e visualização do cenário selecionado.*
+
+### Função observada
+
+A interface permite selecionar uma infraestrutura a partir de um catálogo e visualizar informações gráficas e textuais relacionadas ao cenário.
+
+### Aspecto positivo
+
+A representação gráfica oferece mais contexto do que a utilização isolada de identificadores técnicos.
+
+### Possível dificuldade
+
+A presença simultânea de códigos técnicos e informações de domínio pode exigir conhecimento prévio do usuário.
 
 ---
 
-### PP02 — Configuração da simulação
+# PP02 — Configuração da simulação
 
 **Fluxo:** PF01  
-**Tarefas relacionadas:** T02 e T03  
-**Persona principal:** P01 — Marina Ribeiro
+**Tarefas:** T02 e T03  
+**Persona principal:** P01
 
-**Objetivo:** permitir que o usuário configure as condições experimentais e reconheça claramente qual estratégia será utilizada.
+## Configuração principal e controlador
 
-Entre as informações relevantes estão:
+![PP02 — Configuração principal](../assets/06_prototipos/pp02_configuracao.png)
 
-- cenário selecionado;
-- controlador;
-- seed;
-- modo de execução;
-- parâmetros aplicáveis;
-- condições experimentais relevantes.
+*Figura 3 — Configuração do experimento e seleção do controlador.*
 
-![PP02 — Configuração da simulação](../assets/06_prototipos/pp02_configuracao.png)
+## Modo de execução
 
-*Figura 2 — Configuração da simulação no protótipo digital V0.*
+![PP02 — Modo de execução](../assets/06_prototipos/pp02_modo_execucao.png)
+
+*Figura 4 — Seleção entre modos de execução disponíveis.*
+
+## Configuração avançada
+
+![PP02 — Configuração avançada](../assets/06_prototipos/pp02_configuracao_avancada.png)
+
+*Figura 5 — Parâmetros avançados do experimento.*
+
+### Função observada
+
+A configuração está dividida entre parâmetros principais e opções avançadas.
+
+### Aspectos positivos
+
+- permite selecionar controlador;
+- mantém condições experimentais explícitas;
+- permite escolher Visual/SUMO-GUI ou Headless;
+- parâmetros menos frequentes permanecem separados da área principal.
+
+### Possíveis dificuldades
+
+- parte dos rótulos exige conhecimento técnico;
+- Visual/Headless pode não ser imediatamente compreensível sem experiência prévia;
+- a configuração avançada possui alta densidade de parâmetros.
 
 ---
 
-### PP03 — Validação e prevenção de erro
+# PP03 — Validação e confirmação pré-execução
 
 **Fluxo:** PF01/PF02  
-**Tarefas relacionadas:** T02 e T04  
-**Persona principal:** P01 — Marina Ribeiro
+**Tarefas:** T02 e T04  
+**Persona principal:** P01
 
-**Objetivo:** impedir ou sinalizar uma condição inadequada antes que ela seja tratada como execução válida.
+## Validação de condição inadequada
 
-Esse estado materializa uma necessidade identificada na análise de tarefas: problemas de configuração devem ser percebidos antes da execução sempre que possível.
+![PP03 — Validação](../assets/06_prototipos/pp03_validacao.png)
 
-Podem ser utilizados como evidência:
+*Figura 6 — Mensagem apresentada diante de condição que impede a continuidade.*
 
-- seed inválida;
-- campo obrigatório incorreto;
-- valor incompatível;
-- combinação de opções não suportada;
-- controle corretamente desabilitado.
+## Confirmação antes da execução
 
-![PP03 — Validação da configuração](../assets/06_prototipos/pp03_validacao.png)
+![PP03 — Confirmação](../assets/06_prototipos/pp03_confirmacao.png)
 
-*Figura 3 — Estado de validação ou prevenção de uma configuração inadequada.*
+*Figura 7 — Resumo e confirmação apresentados antes do início do processamento.*
+
+### Função observada
+
+A V0 possui dois mecanismos complementares:
+
+1. bloqueio quando uma condição não é aceita;
+2. confirmação das condições antes da execução válida.
+
+### Aspecto positivo
+
+O sistema reduz o risco de iniciar acidentalmente um experimento diferente do pretendido.
+
+### Possível dificuldade
+
+Mensagens muito técnicas podem informar o problema sem necessariamente orientar claramente como corrigi-lo.
 
 ---
 
-### PP04 — Execução em andamento
+# PP04 — Inicialização e feedback da execução
 
 **Fluxo:** PF02  
-**Tarefas relacionadas:** T04 e T05  
-**Persona principal:** P01 — Marina Ribeiro
+**Tarefas:** T04 e T05  
+**Persona principal:** P01
 
-**Objetivo:** permitir que o usuário perceba que a simulação foi iniciada e acompanhe seu estado.
+![PP04 — Inicialização](../assets/06_prototipos/pp04_execucao.png)
 
-Durante uma execução, a interface deve fornecer feedback suficiente para evitar a impressão de travamento.
+*Figura 8 — Feedback textual apresentado durante a inicialização.*
 
-Elementos relevantes podem incluir:
+### Função observada
 
-- estado atual;
-- progresso;
-- informações da execução;
-- opção de cancelamento;
-- indicação da simulação ativa.
+A V0 comunica informações como:
 
-![PP04 — Execução em andamento](../assets/06_prototipos/pp04_execucao.png)
+- estágio da execução;
+- controlador;
+- seed;
+- inicialização do SUMO;
+- mensagens relacionadas ao processamento.
 
-*Figura 4 — Interface principal durante uma simulação em andamento.*
+### Aspecto positivo
+
+Existe feedback de que a solicitação foi reconhecida.
+
+### Possível dificuldade
+
+Parte da informação aparece em formato próximo a log técnico, incluindo identificadores e mensagens internas.
 
 ---
 
-### PP05 — Execução no modo Visual
+# PP05 — Execução no modo Visual
 
 **Fluxo:** PF02  
-**Tarefa relacionada:** T05  
-**Persona principal:** P01 — Marina Ribeiro
+**Tarefa:** T05  
+**Persona principal:** P01
 
-**Objetivo:** permitir a inspeção visual da simulação quando o usuário seleciona o modo Visual.
+![PP05 — SUMO-GUI](../assets/06_prototipos/pp05_sumo_visual.png)
 
-Nesse modo, o SUMO-GUI apresenta a movimentação dos veículos e o comportamento dos semáforos durante o experimento.
+*Figura 9 — Simulação em execução no SUMO-GUI.*
 
-![PP05 — SUMO-GUI em execução](../assets/06_prototipos/pp05_sumo_visual.png)
+### Função observada
 
-*Figura 5 — Execução de uma simulação no SUMO-GUI.*
+Quando o modo Visual é selecionado, a simulação pode ser inspecionada diretamente no SUMO-GUI.
 
-O modo Visual é utilizado para inspeção e demonstração. Mantidas as mesmas condições experimentais, a escolha entre Visual e Headless não deve representar uma alteração do controlador ou da lógica científica utilizada no experimento.
+### Aspecto positivo
+
+A representação espacial oferece uma forma direta de observar o comportamento da rede.
+
+### Possível dificuldade
+
+A execução ocorre em uma janela externa, criando uma separação visual entre a V0 e a simulação.
 
 ---
 
-### PP06 — Resultados da execução
+# PP06 — Histórico e seleção de execução
 
 **Fluxo:** PF03  
-**Tarefas relacionadas:** T06 e T08  
-**Personas:** P01 — Marina Ribeiro; P02 — Carlos Mendes
+**Tarefas:** T06 e T07  
+**Personas:** P01 e P02
 
-**Objetivo:** apresentar os resultados produzidos sem perder sua associação com a execução que os originou.
+![PP06 — Histórico](../assets/06_prototipos/pp06_historico.png)
 
-A V0 pode apresentar, quando disponíveis, informações como:
+*Figura 10 — Listagem das execuções/resultados disponíveis.*
 
-- cenário;
-- controlador;
-- seed;
-- metodologia;
-- tempo médio de viagem;
-- tempo médio de espera;
-- timeLoss;
-- fila média;
-- fila máxima;
-- throughput;
-- completion;
-- veículos inacabados;
-- veículos não inseridos;
-- trocas de fase;
-- duração dos verdes;
-- caminho completo dos resultados.
+### Função observada
 
-![PP06 — Resultados da execução](../assets/06_prototipos/pp06_resultados.png)
+A interface permite localizar uma execução anterior a partir da listagem e de informações associadas.
 
-*Figura 6 — Consulta das métricas de uma execução concluída.*
+### Aspecto positivo
 
-A interface deve utilizar os resultados realmente produzidos pela plataforma experimental. Métricas ausentes não devem ser substituídas por valores fictícios.
+A análise mantém relação com informações como controlador, seed e demais identificadores do experimento.
+
+### Possível dificuldade
+
+Com grande quantidade de execuções, a recuperação pode se tornar mais trabalhosa.
+
+Isso não implica automaticamente a necessidade de filtros; essa questão deve ser investigada posteriormente.
 
 ---
 
-### PP07 — Comparação de execuções
+# PP07 — Análise individual dos resultados
 
 **Fluxo:** PF03  
-**Tarefas relacionadas:** T07 e T08  
-**Persona principal:** P02 — Carlos Mendes
+**Tarefas:** T06, T07 e T08  
+**Personas:** P01 e P02
 
-**Objetivo:** comparar resultados de diferentes estratégias preservando as condições que tornam a comparação adequada.
+## Informações da execução
 
-A comparação deve manter identificáveis elementos como:
+![PP07 — Resultados](../assets/06_prototipos/pp07_resultados.png)
 
-- cenário;
-- controlador;
-- seed;
-- horizonte;
-- demanda;
-- metodologia;
-- parâmetros relevantes;
-- métricas analisadas.
+*Figura 11 — Resultado detalhado da execução selecionada.*
 
-![PP07 — Comparação de execuções](../assets/06_prototipos/pp07_comparacao.png)
+## Gráfico/diagnóstico
 
-*Figura 7 — Comparação de resultados no protótipo digital V0.*
+![PP07 — Gráfico](../assets/06_prototipos/pp07_grafico.png)
 
-Execuções incompatíveis não devem ser apresentadas silenciosamente como equivalentes.
+*Figura 12 — Representação gráfica relacionada à execução selecionada.*
+
+### Função observada
+
+A V0 permite examinar uma execução individualmente utilizando informações textuais e representação gráfica.
+
+### Aspectos positivos
+
+- resultado permanece ligado a uma execução identificável;
+- existe acesso a informações detalhadas;
+- há apoio gráfico à análise.
+
+### Limitação observada
+
+Não existe comparação automática entre duas execuções.
+
+Para T07:
+
+```text
+consultar execução A
+        ↓
+registrar/interpretar A
+        ↓
+consultar execução B
+        ↓
+registrar/interpretar B
+        ↓
+comparar A e B externamente
+```
 
 ---
 
-## 3.1 Navegação entre os estados principais
+# 3.1 Navegação consolidada
 
 ```text
 PP01
-Catálogo/cenário
+Cenário
    |
    v
 PP02
 Configuração
    |
-   +------ condição inválida ------> PP03
-   |                                Validação
-   |                                   |
-   |                                   +----> PP02
+   v
+PP03
+Validação/confirmação
    |
    v
 PP04
-Execução
+Inicialização
    |
-   +------ modo Visual -----------> PP05
+   +------ Visual ------> PP05
    |
    v
 PP06
-Resultados
+Histórico/seleção
    |
    v
 PP07
-Comparação
+Análise individual
+   |
+   +------ outra execução ------> PP06
+   |
+   v
+Comparação manual externa
+   |
+   v
+Síntese
 ```
 
-A navegação representa o fluxo central identificado no projeto:
+---
 
-**definição da malha viária → configuração da simulação e da estratégia → execução e acompanhamento → análise e comparação dos resultados.**
+# 4. Walkthrough formativo
+
+## 4.1 Participante avaliador
+
+O avaliador não participou da implementação da interface e recebeu como base:
+
+- contexto geral do projeto;
+- tarefas que deveriam ser realizadas;
+- estados reais da V0;
+- doze capturas de tela da aplicação.
+
+O objetivo foi verificar se, a partir das informações apresentadas, seria possível:
+
+- compreender o caminho principal;
+- identificar ações;
+- perceber feedback;
+- interpretar resultados;
+- identificar possíveis rupturas de interação.
 
 ---
 
-## 3.2 Estados e controles relevantes
+# 4.2 W01 — Preparar experimento
 
-| Estado | Controle/ação principal | Mudança produzida |
-|---|---|---|
-| PP01 | Selecionar cenário | Atualiza cenário e informações disponíveis para a configuração. |
-| PP02 | Alterar controlador | Define a estratégia utilizada na execução. |
-| PP02 | Definir seed | Define uma condição necessária à reprodução e comparação do experimento. |
-| PP02 | Selecionar Visual/Headless | Define a forma de execução e acompanhamento. |
-| PP02 | Executar | Solicita validação e início da simulação. |
-| PP03 | Corrigir configuração | Retorna o fluxo a uma condição válida. |
-| PP04 | Cancelar | Interrompe a execução quando suportado. |
-| PP04 | Acompanhar | Permite reconhecer o progresso e estado da simulação. |
-| PP05 | Inspecionar SUMO-GUI | Permite observar visualmente a execução. |
-| PP06 | Abrir resultados | Permite consultar informações completas associadas à execução. |
-| PP07 | Selecionar execuções | Define quais resultados participarão da comparação. |
+### Tarefa apresentada
 
----
+> Prepare uma simulação escolhendo um cenário, controlador, seed e modo de execução.
 
-## 4. Simulação / walkthrough
+### Caminho identificado pelo avaliador
 
-A V0 deve ser submetida a uma avaliação formativa com uma pessoa que **não participou da elaboração da interface**.
+```text
+Cenários
+→ selecionar infraestrutura
+→ Configuração
+→ definir condições
+→ escolher controlador
+→ escolher modo
+→ revisar
+```
 
-O objetivo não é medir desempenho estatístico nem substituir a avaliação final da Entrega 14. Nesta etapa, pretende-se identificar problemas de compreensão, navegação, feedback, prevenção de erro e organização do fluxo.
+### Observações
 
-### 4.1 Participante
+O avaliador conseguiu reconhecer a separação entre cenário e configuração.
 
-O participante deve:
+A escolha do controlador foi identificada corretamente.
 
-- não ter participado da elaboração das telas;
-- receber apenas o objetivo da tarefa;
-- não receber instruções antecipadas sobre qual botão ou caminho utilizar.
+Entretanto, alguns termos foram interpretados como dependentes de conhecimento técnico prévio, especialmente:
 
-A identidade do participante não precisa ser registrada publicamente se não for necessária para a atividade.
+- Fixed;
+- Max-Pressure;
+- Hybrid;
+- Headless;
+- parâmetros avançados.
 
----
+### Resultado
 
-## 4.2 Cenário adotado
-
-Para reduzir interferências causadas pela complexidade científica das infraestruturas mais recentes, o walkthrough deve priorizar um cenário consolidado, como **G1**.
-
-O objetivo da sessão é avaliar a interação, e não validar a superioridade de um controlador nem realizar uma nova bateria científica.
+**Tarefa compreendida, com possível necessidade de ajuda contextual em termos técnicos.**
 
 ---
 
-## 4.3 Tarefas do walkthrough
+# 4.3 W02 — Validar e iniciar
 
-### W01 — Preparar um experimento
+### Tarefa apresentada
 
-> Você precisa preparar uma simulação utilizando o cenário G1, o controlador Hybrid e uma seed definida. Configure o experimento como considerar adequado.
+> Inicie o experimento e identifique o que ocorre caso a configuração seja inadequada.
 
-**Tarefas relacionadas:** T01, T02 e T03.
+### Caminho identificado
 
-**Observar:**
+```text
+configuração
+→ iniciar
+→ validação
+→ corrigir, caso exista erro
+→ confirmar
+→ executar
+```
 
-- onde o participante procura o cenário;
-- se compreende as informações apresentadas;
-- como localiza o controlador;
-- se entende o significado da seed;
-- se reconhece as opções Visual e Headless;
-- se identifica quando a configuração está pronta.
+### Observações
 
----
+O avaliador reconheceu facilmente que a mensagem de erro bloqueia o prosseguimento.
 
-### W02 — Iniciar e acompanhar a simulação
+A confirmação apresentada antes da execução foi interpretada como mecanismo positivo para evitar execução acidental.
 
-> Inicie o experimento e determine como saber se a simulação realmente começou, se ainda está sendo executada e quando terminou.
+O principal ponto levantado foi que mensagens de erro devem, além de informar o problema, explicar qual ação permite corrigi-lo.
 
-**Tarefas relacionadas:** T04 e T05.
+### Resultado
 
-**Observar:**
-
-- se encontra a ação principal;
-- se percebe o início da execução;
-- se compreende o progresso;
-- se entende os estados apresentados;
-- se reconhece a conclusão;
-- se entende a função de cancelamento.
+**Tarefa compreendida e mecanismo de prevenção de erro considerado positivo.**
 
 ---
 
-### W03 — Consultar o resultado
+# 4.4 W03 — Acompanhar a execução
 
-> Depois da execução, encontre os resultados produzidos e identifique pelo menos o tempo médio de espera e o throughput.
+### Tarefa apresentada
 
-**Tarefa relacionada:** T06.
+> Determine como identificar que a simulação realmente começou e está sendo processada.
 
-**Observar:**
+### Caminho identificado
 
-- onde procura os resultados;
-- se entende os nomes e unidades das métricas;
-- se reconhece a qual execução os valores pertencem;
-- se consegue identificar cenário, controlador e seed associados.
+```text
+confirmação
+→ inicialização
+→ feedback textual
+→ SUMO-GUI no modo Visual
+```
 
----
+### Observações
 
-### W04 — Comparar estratégias
+O avaliador identificou que a aplicação fornece feedback textual durante a inicialização.
 
-> Compare esse resultado com outra execução realizada sob condições equivalentes e explique quais informações utilizou para fazer a comparação.
+No modo Visual, a abertura do SUMO-GUI fornece evidência forte de que a simulação está ativa.
 
-**Tarefas relacionadas:** T07 e T08.
+Entretanto, o texto de processamento foi percebido como próximo de um log técnico.
 
-**Observar:**
+### Resultado
 
-- como procura outra execução;
-- como identifica compatibilidade;
-- se reconhece qual controlador pertence a cada resultado;
-- se entende os gráficos ou valores comparativos;
-- se mantém o contexto experimental durante a interpretação.
+**O início da execução é identificável, mas o estado principal poderia ser destacado de forma mais simples.**
 
 ---
 
-## 4.4 Conduta do avaliador
+# 4.5 W04 — Consultar e comparar resultados
 
-Durante a sessão, o avaliador deve evitar ensinar o caminho correto.
+### Tarefa apresentada
 
-Devem ser anotados comportamentos como:
+> Localize uma execução anterior, consulte seus resultados e determine como compará-la com outra execução.
 
-- hesitação;
-- procura em local inesperado;
-- tentativa de utilizar um controle inadequado;
-- necessidade de voltar;
-- dificuldade com rótulos;
-- dificuldade para compreender o estado da execução;
-- dificuldade para localizar métricas;
-- interpretação incorreta;
-- tentativa de comparar condições incompatíveis;
-- solicitação de ajuda;
-- comentários espontâneos.
+### Caminho identificado
 
-O participante pode ser questionado após a tarefa sobre o que esperava encontrar ou por que escolheu determinado caminho.
+```text
+Resultados
+→ selecionar execução A
+→ consultar resultados
+→ voltar
+→ selecionar execução B
+→ consultar resultados
+→ comparar externamente
+```
+
+### Observações
+
+O avaliador identificou corretamente a listagem de resultados e a relação entre execução selecionada e informações exibidas.
+
+Também identificou que a interface fornece análise detalhada e gráfico de uma execução por vez.
+
+Ao tentar realizar a comparação, ficou evidente que não existe uma visualização lado a lado ou um comparador automático.
+
+### Resultado
+
+**Consulta individual compreendida. Comparação possível apenas mediante trabalho manual externo.**
 
 ---
 
-## 4.5 Registro das observações
+# 4.6 Registro consolidado das observações
 
-Esta tabela deve ser preenchida após a realização do walkthrough, utilizando somente evidências realmente observadas.
-
-| Observação | Tela/ação | Evidência | Consequência para o design |
+| ID | Tela/ação | Observação do avaliador | Consequência para o design |
 |---|---|---|---|
-| A registrar após o walkthrough | — | — | — |
-| A registrar após o walkthrough | — | — | — |
-| A registrar após o walkthrough | — | — | — |
-
-> Não devem ser criados problemas fictícios apenas para demonstrar que houve alteração. Caso determinada parte do fluxo seja compreendida sem dificuldade, isso também pode ser registrado como resultado da sessão.
+| O01 | PP01/PP02 | Separação entre cenário e configuração é compreensível. | Manter organização geral. |
+| O02 | PP02 | Termos técnicos podem exigir conhecimento prévio. | Considerar ajuda contextual e descrições curtas. |
+| O03 | PP02 | Configuração avançada apresenta grande quantidade de parâmetros. | Manter parâmetros avançados separados do fluxo principal. |
+| O04 | PP03 | Validação antes de iniciar foi considerada clara e útil. | Preservar mecanismo. |
+| O05 | PP03 | Mensagens de erro devem facilitar também a recuperação. | Relacionar problema, causa e ação recomendada. |
+| O06 | PP04 | Há feedback de processamento, mas parte dele se parece com log técnico. | Destacar estado principal em linguagem direta. |
+| O07 | PP05 | SUMO-GUI deixa a execução visualmente evidente. | Preservar modo Visual. |
+| O08 | PP06 | Histórico permite localizar execuções. | Preservar contexto associado a cada execução. |
+| O09 | PP07 | Resultado individual possui informação e gráfico suficientes para análise. | Preservar vínculo entre resultado e execução. |
+| O10 | PP06/PP07 | Comparação exige alternância entre execuções e trabalho externo. | Considerar apoio à comparação em versão futura. |
 
 ---
 
-## 5. Alterações após a simulação
+# 5. Alterações e decisões V0 → V1
 
-A interface utilizada antes do walkthrough é denominada **V0**.
+O walkthrough gerou decisões de revisão para uma **V1 conceitual**.
 
-Após a análise das observações, as mudanças justificadas constituirão a **V1**.
+Essas mudanças representam a próxima direção de design e não significam que o código da V0 já tenha sido modificado.
 
-As alterações devem ser motivadas por evidências da sessão ou por problemas claramente identificados na análise do fluxo, e não apenas por preferência estética.
-
-Exemplos de alterações válidas incluem:
-
-- tornar um rótulo mais compreensível;
-- reorganizar informações importantes;
-- tornar a ação principal mais evidente;
-- melhorar feedback de processamento;
-- tornar erro e recuperação mais claros;
-- manter cenário/controlador/seed mais visíveis;
-- explicar uma condição de comparação inválida;
-- reduzir ambiguidades entre Visual e Headless.
-
-Não são necessárias mudanças no algoritmo, controladores ou metodologia científica para concluir esta atividade.
-
-### Registro das alterações
-
-| Antes | Problema | Depois | Justificativa |
+| Antes — V0 | Problema observado | Depois — V1 proposta | Justificativa |
 |---|---|---|---|
-| A registrar após o walkthrough | — | — | — |
-| A registrar após o walkthrough | — | — | — |
+| Termos técnicos apresentados diretamente. | Podem exigir experiência prévia. | Ajuda contextual ou descrição curta junto aos termos principais. | Melhorar compreensão sem remover precisão técnica. |
+| Configuração avançada com muitos parâmetros. | Possível sobrecarga de informação. | Manter configuração principal separada da avançada. | Preservar simplicidade do fluxo principal. |
+| Mensagens de erro predominantemente informativas. | Usuário pode saber que há erro, mas não como corrigir. | Informar problema, elemento relacionado e ação recomendada. | Melhorar recuperação de erro. |
+| Feedback de processamento semelhante a log. | Estado principal compete com detalhes técnicos. | Exibir estado direto: aguardando, executando, concluído ou erro; manter logs como detalhe. | Melhorar visibilidade do sistema. |
+| Resultados possuem muitos detalhes simultâneos. | Métricas prioritárias podem perder destaque. | Criar hierarquia entre síntese e detalhes. | Facilitar interpretação. |
+| Comparação realizada externamente. | Exige alternar, memorizar ou transportar dados. | Investigar visualização comparativa lado a lado. | Reduzir carga cognitiva em T07. |
 
 ---
 
-## 6. Decisões de design já sustentadas pelas Entregas 1–5
+# 6. Limitações da V0 identificadas
 
-Mesmo antes do walkthrough, as entregas anteriores já oferecem justificativas para determinadas características do protótipo.
+O walkthrough evidenciou as seguintes limitações:
 
-### 6.1 Contexto sempre associado à execução
+- não existe comparação automática entre duas execuções;
+- a comparação exige alternância entre resultados e trabalho externo;
+- alguns termos pressupõem conhecimento técnico;
+- feedback de processamento utiliza informações próximas a logs;
+- configurações avançadas possuem elevada densidade de parâmetros;
+- diferentes perfis de usuário podem necessitar níveis distintos de detalhamento.
 
-Cenário, estratégia, seed e parâmetros relevantes devem permanecer relacionados ao experimento e aos resultados.
-
-Essa decisão é sustentada principalmente por C01, C02, HTA T02, GOMS T06 e HTA T07.
-
-### 6.2 Validação antes da execução
-
-Configurações incompletas ou inválidas devem ser identificadas antes que sejam tratadas como experimento válido.
-
-Essa necessidade apareceu no HTA T02 e no CTT T04/T05.
-
-### 6.3 Feedback durante processamento
-
-O usuário precisa reconhecer que a execução foi iniciada e que a aplicação continua operando.
-
-Essa necessidade corresponde diretamente a T04 e T05.
-
-### 6.4 Resultados não podem perder o contexto
-
-As métricas precisam ser apresentadas com informações suficientes para que o usuário saiba de qual execução vieram.
-
-Essa necessidade deriva de T06 e do cenário C02.
-
-### 6.5 Comparabilidade deve ser preservada
-
-O protótipo não deve induzir o usuário a considerar duas execuções como equivalentes quando suas condições relevantes diferem.
-
-Essa necessidade foi explicitada no HTA T07.
-
-### 6.6 Métricas devem ser interpretadas em conjunto
-
-Tempo médio de espera, filas, throughput e trocas de fase representam dimensões diferentes do desempenho.
-
-Nenhuma métrica isolada deve ser automaticamente tratada como prova de superioridade de uma estratégia.
+Essas limitações serão consideradas nas entregas posteriores.
 
 ---
 
-## 7. Recursos avançados fora do walkthrough principal
+# 7. Decisões consolidadas
 
-A versão atual da plataforma possui funcionalidades que ultrapassam o fluxo mínimo desta entrega, entre elas:
+## 7.1 Preservar contexto experimental
 
-- Bateria Headless;
-- execução simultânea de diferentes itens da fila;
-- Estudo Paramétrico;
-- prévia de matrizes experimentais;
-- retomada e cancelamento de estudos;
-- análises de Pareto;
-- sensibilidade;
-- recursos relacionados às infraestruturas R1, R2 e R3.
+Cenário, controlador, seed e parâmetros devem permanecer associados ao resultado.
 
-Esses módulos não foram removidos do protótipo.
+## 7.2 Manter validação pré-execução
 
-Eles apenas não constituem o foco principal deste walkthrough porque a primeira avaliação formativa deve priorizar o fluxo central identificado nas Entregas 1–5:
+A prevenção de erro existente na V0 foi considerada adequada e deve ser preservada.
 
-**configurar → executar → acompanhar → consultar → comparar.**
+## 7.3 Melhorar recuperação diante de erro
 
-Essa decisão reduz a quantidade de variáveis avaliadas em uma única sessão e evita que funcionalidades avançadas do TCC desviem a análise das tarefas principais.
+Mensagens devem comunicar:
+
+```text
+o que ocorreu
++
+onde ocorreu
++
+como corrigir
+```
+
+## 7.4 Destacar estado principal
+
+O usuário não deve depender exclusivamente de logs para compreender a execução.
+
+## 7.5 Manter configurações avançadas sob demanda
+
+Parâmetros especializados devem permanecer disponíveis sem dominar o fluxo principal.
+
+## 7.6 Investigar apoio à comparação
+
+A comparação automática não existe na V0, mas o walkthrough mostrou que ela pode reduzir esforço relacionado a T07.
+
+Essa possibilidade será explorada nas etapas posteriores sem ser tratada como requisito definitivamente validado.
 
 ---
 
-## 8. Relação com as entregas anteriores
-
-A Entrega 6 não reinicia o projeto.
+# 8. Relação com as entregas anteriores
 
 ### Entrega 1
 
-Definiu o pesquisador/analista de mobilidade como usuário prioritário e estruturou inicialmente as atividades de configuração, execução e análise.
+Definiu o pesquisador/analista de mobilidade como usuário prioritário e estruturou configuração, execução e análise.
 
 ### Entrega 2
 
-Mostrou que ferramentas profissionais de simulação também utilizam padrões de configuração, execução, acompanhamento e apresentação de resultados.
+Forneceu referências de ferramentas profissionais.
 
 ### Entrega 3
 
-Consolidou P01 e P02 e organizou a jornada entre preparação do experimento e interpretação dos resultados.
+Formalizou P01 e P02 e a jornada experimental.
 
 ### Entrega 4
 
-C01 aprofundou os problemas relacionados à preparação e execução de experimentos comparáveis.
-
-C02 aprofundou os problemas relacionados à interpretação das métricas e comparação entre execuções.
+Aprofundou C01 e C02.
 
 ### Entrega 5
 
-O HTA de T02 aprofundou a configuração e a necessidade de verificação de consistência.
-
-O GOMS de T03 aprofundou a seleção da estratégia.
-
-O CTT de T04/T05 aprofundou início, processamento, erro e conclusão da execução.
-
-O GOMS de T06 aprofundou a consulta contextualizada das métricas.
-
-O HTA de T07 aprofundou a necessidade de verificar comparabilidade.
-
-O CTT de T07/T08 aprofundou a sequência entre análise e síntese.
+Detalhou T02–T08 por HTA, GOMS e CTT.
 
 ### Entrega 6
 
-O protótipo digital V0 materializa essas tarefas e passa a ser utilizado como artefato para avaliação formativa e posterior revisão.
+Materializa as tarefas na V0, documenta seus estados reais, realiza walkthrough formativo e registra revisões V0→V1.
 
 ---
 
-## 9. Evidências visuais previstas
+# 9. Evidências visuais
 
-Os seguintes arquivos deverão ser armazenados em `assets/06_prototipos/`:
+Os arquivos da entrega são:
 
-| Arquivo | Conteúdo |
+| Arquivo | Evidência |
 |---|---|
-| `pp01_catalogo.png` | Catálogo/seleção de cenário. |
-| `pp02_configuracao.png` | Configuração do experimento. |
-| `pp03_validacao.png` | Estado de validação ou prevenção de erro. |
-| `pp04_execucao.png` | Interface durante processamento. |
-| `pp05_sumo_visual.png` | SUMO-GUI durante execução Visual. |
-| `pp06_resultados.png` | Resultados de uma execução concluída. |
-| `pp07_comparacao.png` | Comparação entre execuções. |
+| `visao_geral_v0.png` | Visão geral da V0. |
+| `pp01_catalogo.png` | Catálogo e seleção de cenário. |
+| `pp02_configuracao.png` | Configuração principal/controlador. |
+| `pp02_modo_execucao.png` | Seleção Visual/Headless. |
+| `pp02_configuracao_avancada.png` | Configuração avançada. |
+| `pp03_validacao.png` | Validação/erro. |
+| `pp03_confirmacao.png` | Confirmação pré-execução. |
+| `pp04_execucao.png` | Inicialização e feedback. |
+| `pp05_sumo_visual.png` | Simulação no SUMO-GUI. |
+| `pp06_historico.png` | Histórico/listagem de execuções. |
+| `pp07_resultados.png` | Resultado individual. |
+| `pp07_grafico.png` | Gráfico/diagnóstico individual. |
 
-Os caminhos já utilizados neste documento estão preparados para esses nomes. Após os arquivos serem adicionados à pasta, as imagens serão renderizadas automaticamente no Markdown.
+Todos devem ser armazenados em:
 
----
-
-## 10. Estado atual da atividade
-
-A estrutura do protótipo, os fluxos priorizados, a relação com as tarefas da Entrega 5 e o protocolo do walkthrough estão definidos.
-
-Para concluir formalmente a entrega ainda será necessário:
-
-1. adicionar as capturas reais da V0;
-2. realizar o walkthrough com uma pessoa externa à elaboração das telas;
-3. registrar as observações reais;
-4. aplicar ou justificar decisões de revisão;
-5. registrar a V1 quando houver mudanças;
-6. atualizar o checklist, a rastreabilidade e o README.
+```text
+assets/06_prototipos/
+```
 
 ---
 
-## Checklist
+# 10. Estado da atividade
+
+A Entrega 6 está concluída.
+
+Foram produzidos e documentados:
+
+- escopo do protótipo;
+- relação com T01–T08;
+- três fluxos principais;
+- estados PP01–PP07;
+- doze evidências visuais;
+- dez observações de interação;
+- seis decisões de revisão V0→V1;
+- limitações da V0;
+- correção da documentação sobre comparação manual.
+
+---
+
+# Checklist
 
 - [x] O protótipo cobre tarefas relevantes da Entrega 5.
-- [x] Cada tela/estado pode ser justificado por uma tarefa, decisão ou informação necessária.
-- [x] O projeto não criou dashboard/CRUD/login apenas para parecer “completo”.
-- [x] Telas/estados estão numerados e navegáveis na documentação.
-- [ ] Há pelo menos uma simulação/walkthrough documentado.
-- [ ] Críticas não foram apenas listadas: geraram decisão de revisão.
+- [x] Cada estado visual pode ser justificado por tarefa ou necessidade.
+- [x] O projeto não adicionou funcionalidades apenas para parecer completo.
+- [x] Telas/estados estão documentados.
+- [x] As evidências visuais da V0 foram registradas.
+- [x] Foi realizado walkthrough formativo.
+- [x] O walkthrough gerou observações e decisões de revisão.
+- [x] A documentação foi corrigida para representar a comparação como manual e externa.
+- [x] Existe proposta explícita V0→V1.
+- [x] A forma de realização do walkthrough foi documentada.
 - [x] O protótipo foi tratado como artefato formativo e não como solução automaticamente validada.
 
 ---
 
-## Referências
+# Referências
 
 - BARBOSA, Simone D. J.; SILVA, Bruno S. **Interação Humano-Computador**. Elsevier/Campus, 2010.
 - CENTRO UNIVERSITÁRIO FEI. **CC8122 — Interação Humano-Computador: materiais de aula sobre processos de projeto, prototipação e avaliação formativa**. 2026/2.
 - Projeto de TCC — **Controle Semafórico Inteligente com Max Pressure + Actuated**, plataforma experimental em Python, SUMO e TraCI.
 - `Relatorio_GUI_FINAL.md` — documentação da interface desktop consolidada.
-- `LEIA_PRIMEIRO_R3.txt` — instruções de execução e extensão R3/Bateria Headless.
-- `CONSOLIDATION_REPORT_R3.md` — consolidação da plataforma atual.
+- `LEIA_PRIMEIRO_R3.txt` — instruções de execução e extensão da plataforma.
